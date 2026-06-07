@@ -1,0 +1,15 @@
+﻿case_id,cut_id,iter_no,score,selected,rhs,coef_count,gap_pct,policy_name
+AB_5c_6d_strict,cut_000,1,-491.1468200683594,False,39451.7109375,85.0,1.1382331848144531,learned_contextual_bandit_top_1
+AB_5c_6d_strict,cut_001,2,-211.89535522460938,True,52495.6953125,85.0,0.35980647802352905,learned_contextual_bandit_top_1
+AB_5c_6d_strict,cut_002,3,-301.4580993652344,False,26992.705078125,85.0,0.336989164352417,learned_contextual_bandit_top_1
+AB_5c_6d_strict,cut_003,4,-302.7044372558594,False,26992.705078125,85.0,0.27258747816085815,learned_contextual_bandit_top_1
+AB_5c_6d_strict,cut_004,5,-302.7112731933594,False,26992.705078125,85.0,0.27258747816085815,learned_contextual_bandit_top_1
+AB_7c_8d_strict,cut_000,1,3552.903564453125,True,60209.73046875,119.0,0.8637195825576782,learned_contextual_bandit_top_1
+AB_7c_8d_strict,cut_001,2,3314.132080078125,False,38629.82421875,119.0,0.4243985116481781,learned_contextual_bandit_top_1
+AB_7c_8d_strict,cut_002,3,3170.356689453125,False,31664.888671875,119.0,0.14218412339687347,learned_contextual_bandit_top_1
+AB_7c_8d_strict,cut_003,4,3172.852783203125,False,31664.888671875,119.0,0.041331879794597626,learned_contextual_bandit_top_1
+AB_9c_10d_strict,cut_000,1,2883.119140625,False,64627.2109375,153.0,1.0388911962509155,learned_contextual_bandit_top_1
+AB_9c_10d_strict,cut_001,2,400.44342041015625,False,57733.51953125,153.0,0.7102928161621094,learned_contextual_bandit_top_1
+AB_9c_10d_strict,cut_002,3,3681.865234375,False,73798.640625,153.0,0.17372046411037445,learned_contextual_bandit_top_1
+AB_9c_10d_strict,cut_003,4,5415.5234375,True,80806.3125,153.0,0.16125304996967316,learned_contextual_bandit_top_1
+AB_9c_10d_strict,cut_004,5,3028.197265625,False,67724.6484375,153.0,0.1530429571866989,learned_contextual_bandit_top_1

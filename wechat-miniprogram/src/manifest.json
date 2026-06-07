@@ -1,0 +1,85 @@
+{
+    "name" : "okra-cold-storage",
+    "appid" : "__UNI__F1A80B9",
+    "versionName" : "1.0.0",
+    "versionCode" : "100",
+    "description" : "秋葵冷库优化",
+    "uni-app" : {
+        "scripts" : {},
+        "uniStatistics" : {
+            "enable" : false
+        }
+    },
+    "quickapp" : {},
+    "app-plus" : {
+        "modules" : {
+            "Barcode" : {
+                "description" : "扫码入库"
+            },
+            "Camera" : {
+                "description" : "扫码入库拍摄"
+            },
+            "Geolocation" : {
+                "description" : "冷库设施定位"
+            },
+            "Maps" : {
+                "description" : "冷库设施地图"
+            }
+        },
+        "distribute" : {
+            "android" : {
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>"
+                ],
+                "icon" : "src/static/app-icon.png"
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "src/static/app-icon.png",
+                    "xhdpi" : "src/static/app-icon.png",
+                    "xxhdpi" : "src/static/app-icon.png",
+                    "xxxhdpi" : "src/static/app-icon.png"
+                }
+            },
+            "sdkConfigs" : {
+                "maps" : {
+                    "amap" : {
+                        "appkey_android" : "e03be4e94a344d17dae3488c922a2b6e",
+                        "appkey_ios" : ""
+                    }
+                }
+            },
+            "ios" : {
+                "dSYMs" : false
+            }
+        },
+        "privacy" : {
+            "prompt" : "template"
+        },
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "autoclose" : true,
+            "waiting" : true
+        }
+    },
+    "mp-weixin" : {
+        "appid" : "wx86af2a50cbca856a",
+        "setting" : {
+            "urlCheck" : true,
+            "es6" : true,
+            "postcss" : true,
+            "minified" : true
+        },
+        "usingComponents" : true,
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "您的位置信息将用于冷库设施地图展示"
+            }
+        },
+        "plugins" : {}
+    }
+}

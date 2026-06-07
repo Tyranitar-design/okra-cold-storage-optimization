@@ -1,0 +1,3274 @@
+{
+  "experiment": "osm_vs_haversine_distance_matrix",
+  "built_at": "2026-05-30T04:48:29Z",
+  "matrix_comparison": {
+    "haversine_mean_km": 55.44,
+    "osm_mean_km": 102.06,
+    "ratio_mean": 2.616,
+    "ratio_min": 0.0,
+    "ratio_max": 37.805,
+    "osm_longer_pct": 82.9,
+    "note": "OSM road distances compared to Haversine×random-factor. ratio>1 means OSM longer; ratio<1 means OSM shorter (fewer detours in graph)."
+  },
+  "results": {
+    "haversine": {
+      "label": "haversine",
+      "status": 9,
+      "status_name": "TIME_LIMIT",
+      "objective": 4205367.9926100625,
+      "bound": 4076842.9771768227,
+      "mip_gap_pct": 3.0562,
+      "elapsed_sec": 300.03,
+      "wall_sec": 300.14,
+      "sol_count": 10,
+      "num_vars": 4671,
+      "num_constrs": 4703,
+      "analysis": {
+        "model_version": "v3.0_capacity_chain",
+        "solver": {
+          "status_code": 9,
+          "status_name": "TIME_LIMIT",
+          "sol_count": 10,
+          "objective": 4205367.9926100625,
+          "mip_gap_pct": 3.0562132888035483,
+          "objective_bound": 4076842.9771768227,
+          "num_vars": 4671,
+          "num_constraints": 4703
+        },
+        "summary": {
+          "total_cost": 4205367.9926100625,
+          "fixed_cost": 3330000.0,
+          "operate_cost": 734000.0,
+          "transport_cost": 46893.28093774236,
+          "loss_cost": 94128.98331835777,
+          "carbon_cost": 345.728353962366,
+          "num_facilities": 6,
+          "total_annual_production_ton": 588.1834248373998,
+          "total_service_annual_flow_ton": 1176.3668496747998,
+          "total_peak_capacity_load_ton": 156.2607298651359,
+          "installed_capacity_ton": 175,
+          "fresh_chain_share": 0.9,
+          "frozen_or_processing_share": 0.1,
+          "downstream_share_sum": 0.9999999999999999,
+          "capacity_semantics": "peak_inventory_from_annual_flow",
+          "selected_storage_types": [
+            "ca",
+            "cold",
+            "frozen",
+            "precool"
+          ]
+        },
+        "facilities": [
+          {
+            "site": "C1",
+            "type": "precool",
+            "type_name": "预冷库",
+            "capacity": 5,
+            "capacity_idx": 0,
+            "fixed_cost": 8,
+            "operate_cost": 2.4,
+            "assigned_annual_flow_ton": 588.1834248373998,
+            "peak_capacity_load_ton": 0.980305708062333,
+            "utilization": 19.60611416124666
+          },
+          {
+            "site": "T4",
+            "type": "cold",
+            "type_name": "冷藏库",
+            "capacity": 50,
+            "capacity_idx": 2,
+            "fixed_cost": 65,
+            "operate_cost": 15.0,
+            "assigned_annual_flow_ton": 352.91005490244,
+            "peak_capacity_load_ton": 49.407407686341614,
+            "utilization": 98.81481537268323
+          },
+          {
+            "site": "T5",
+            "type": "frozen",
+            "type_name": "冷冻库",
+            "capacity": 20,
+            "capacity_idx": 0,
+            "fixed_cost": 30,
+            "operate_cost": 6.0,
+            "assigned_annual_flow_ton": 25.48500915040667,
+            "peak_capacity_load_ton": 15.291005490244002,
+            "utilization": 76.45502745122002
+          },
+          {
+            "site": "T6",
+            "type": "ca",
+            "type_name": "气调库",
+            "capacity": 50,
+            "capacity_idx": 2,
+            "fixed_cost": 120,
+            "operate_cost": 26.0,
+            "assigned_annual_flow_ton": 106.13183438550207,
+            "peak_capacity_load_ton": 42.452733754200835,
+            "utilization": 84.90546750840167
+          },
+          {
+            "site": "T7",
+            "type": "ca",
+            "type_name": "气调库",
+            "capacity": 30,
+            "capacity_idx": 1,
+            "fixed_cost": 80,
+            "operate_cost": 18.0,
+            "assigned_annual_flow_ton": 70.3231930657179,
+            "peak_capacity_load_ton": 28.12927722628716,
+            "utilization": 93.76425742095721
+          },
+          {
+            "site": "V21",
+            "type": "frozen",
+            "type_name": "冷冻库",
+            "capacity": 20,
+            "capacity_idx": 0,
+            "fixed_cost": 30,
+            "operate_cost": 6.0,
+            "assigned_annual_flow_ton": 33.333333333333314,
+            "peak_capacity_load_ton": 19.999999999999996,
+            "utilization": 99.99999999999997
+          }
+        ],
+        "annual_flow_by_type": {
+          "precool": 588.1834248373998,
+          "cold": 352.91005490244,
+          "ca": 176.45502745122,
+          "frozen": 58.818342483739976
+        },
+        "peak_load_by_type": {
+          "precool": 0.980305708062333,
+          "cold": 49.407407686341614,
+          "ca": 70.58201098048796,
+          "frozen": 35.29100549024398
+        },
+        "assignments": [
+          {
+            "demand_id": "C1",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 86.59969709057026,
+            "peak_capacity_load_ton": 0.14433282848428375,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "C1",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 51.95981825434215,
+            "peak_capacity_load_ton": 7.274374555607901,
+            "distance_km": 16.21793236769365,
+            "travel_time_h": 0.4054483091923412
+          },
+          {
+            "demand_id": "C1",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 25.979909127171076,
+            "peak_capacity_load_ton": 10.391963650868432,
+            "distance_km": 18.21783761105244,
+            "travel_time_h": 0.4554459402763109
+          },
+          {
+            "demand_id": "C1",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 8.659969709057027,
+            "peak_capacity_load_ton": 5.195981825434216,
+            "distance_km": 16.99080696371952,
+            "travel_time_h": 0.424770174092988
+          },
+          {
+            "demand_id": "T1",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 22.32334448672798,
+            "peak_capacity_load_ton": 0.03720557414454663,
+            "distance_km": 44.0503370991512,
+            "travel_time_h": 1.10125842747878
+          },
+          {
+            "demand_id": "T1",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 13.394006692036788,
+            "peak_capacity_load_ton": 1.8751609368851503,
+            "distance_km": 32.59867257747845,
+            "travel_time_h": 0.8149668144369613
+          },
+          {
+            "demand_id": "T1",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 2.232334448672798,
+            "peak_capacity_load_ton": 1.3394006692036788,
+            "distance_km": 44.98360306726016,
+            "travel_time_h": 1.124590076681504
+          },
+          {
+            "demand_id": "T1",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 6.697003346018394,
+            "peak_capacity_load_ton": 2.6788013384073577,
+            "distance_km": 43.48405098926627,
+            "travel_time_h": 1.0871012747316569
+          },
+          {
+            "demand_id": "T2",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 20.823379771832094,
+            "peak_capacity_load_ton": 0.03470563295305349,
+            "distance_km": 14.908654894789768,
+            "travel_time_h": 0.3727163723697442
+          },
+          {
+            "demand_id": "T2",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 12.494027863099257,
+            "peak_capacity_load_ton": 1.7491639008338957,
+            "distance_km": 32.575522508700075,
+            "travel_time_h": 0.8143880627175019
+          },
+          {
+            "demand_id": "T2",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 6.2470139315496285,
+            "peak_capacity_load_ton": 2.4988055726198515,
+            "distance_km": 15.362844921726271,
+            "travel_time_h": 0.3840711230431567
+          },
+          {
+            "demand_id": "T2",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 2.0823379771832093,
+            "peak_capacity_load_ton": 1.2494027863099257,
+            "distance_km": 8.156787595476843,
+            "travel_time_h": 0.203919689886921
+          },
+          {
+            "demand_id": "T3",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 27.272998688284027,
+            "peak_capacity_load_ton": 0.04545499781380671,
+            "distance_km": 41.4369058712622,
+            "travel_time_h": 1.035922646781555
+          },
+          {
+            "demand_id": "T3",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 16.363799212970417,
+            "peak_capacity_load_ton": 2.2909318898158584,
+            "distance_km": 56.59157140272098,
+            "travel_time_h": 1.4147892850680246
+          },
+          {
+            "demand_id": "T3",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 2.727299868828403,
+            "peak_capacity_load_ton": 1.6363799212970418,
+            "distance_km": 22.13075243351319,
+            "travel_time_h": 0.5532688108378297
+          },
+          {
+            "demand_id": "T3",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 8.181899606485208,
+            "peak_capacity_load_ton": 3.2727598425940836,
+            "distance_km": 26.225470709087507,
+            "travel_time_h": 0.6556367677271877
+          },
+          {
+            "demand_id": "T4",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 37.27780074568463,
+            "peak_capacity_load_ton": 0.062129667909474384,
+            "distance_km": 16.7767958418992,
+            "travel_time_h": 0.41941989604748
+          },
+          {
+            "demand_id": "T4",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 22.366680447410776,
+            "peak_capacity_load_ton": 3.1313352626375086,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "T4",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 1.7770224185423835,
+            "peak_capacity_load_ton": 1.0662134511254302,
+            "distance_km": 40.556078487489934,
+            "travel_time_h": 1.0139019621872485
+          },
+          {
+            "demand_id": "T4",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 11.183340223705388,
+            "peak_capacity_load_ton": 4.473336089482155,
+            "distance_km": 25.278742360824875,
+            "travel_time_h": 0.6319685590206219
+          },
+          {
+            "demand_id": "T4",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 1.9507576560260795,
+            "peak_capacity_load_ton": 1.1704545936156476,
+            "distance_km": 30.646524026977787,
+            "travel_time_h": 0.7661631006744447
+          },
+          {
+            "demand_id": "T5",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 31.685785941408724,
+            "peak_capacity_load_ton": 0.05280964323568121,
+            "distance_km": 39.413302953727,
+            "travel_time_h": 0.985332573843175
+          },
+          {
+            "demand_id": "T5",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 19.011471564845234,
+            "peak_capacity_load_ton": 2.661606019078333,
+            "distance_km": 40.22159338569335,
+            "travel_time_h": 1.005539834642334
+          },
+          {
+            "demand_id": "T5",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 3.1685785941408726,
+            "peak_capacity_load_ton": 1.9011471564845233,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "T5",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 9.505735782422617,
+            "peak_capacity_load_ton": 3.8022943129690465,
+            "distance_km": 7.928614372112156,
+            "travel_time_h": 0.1982153593028039
+          },
+          {
+            "demand_id": "T6",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 27.98695128633439,
+            "peak_capacity_load_ton": 0.046644918810557316,
+            "distance_km": 17.56426423821368,
+            "travel_time_h": 0.439106605955342
+          },
+          {
+            "demand_id": "T6",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 16.79217077180063,
+            "peak_capacity_load_ton": 2.3509039080520884,
+            "distance_km": 26.148849917975816,
+            "travel_time_h": 0.6537212479493955
+          },
+          {
+            "demand_id": "T6",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 8.396085385900316,
+            "peak_capacity_load_ton": 3.358434154360126,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "T6",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 2.798695128633439,
+            "peak_capacity_load_ton": 1.6792170771800632,
+            "distance_km": 6.432753635996082,
+            "travel_time_h": 0.160818840899902
+          },
+          {
+            "demand_id": "T7",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 44.30179407605753,
+            "peak_capacity_load_ton": 0.07383632346009589,
+            "distance_km": 43.83524606160753,
+            "travel_time_h": 1.0958811515401885
+          },
+          {
+            "demand_id": "T7",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 26.58107644563452,
+            "peak_capacity_load_ton": 3.7213507023888326,
+            "distance_km": 44.04266447794974,
+            "travel_time_h": 1.1010666119487436
+          },
+          {
+            "demand_id": "T7",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 4.4301794076057535,
+            "peak_capacity_load_ton": 2.6581076445634526,
+            "distance_km": 7.750352907576469,
+            "travel_time_h": 0.1937588226894117
+          },
+          {
+            "demand_id": "T7",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 13.29053822281726,
+            "peak_capacity_load_ton": 5.316215289126903,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "T8",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 58.62528132298237,
+            "peak_capacity_load_ton": 0.09770880220497061,
+            "distance_km": 48.92272952517688,
+            "travel_time_h": 1.223068238129422
+          },
+          {
+            "demand_id": "T8",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 35.17516879378942,
+            "peak_capacity_load_ton": 4.924523631130518,
+            "distance_km": 40.96766369254566,
+            "travel_time_h": 1.0241915923136415
+          },
+          {
+            "demand_id": "T8",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 17.58758439689471,
+            "peak_capacity_load_ton": 7.035033758757884,
+            "distance_km": 39.34971261101877,
+            "travel_time_h": 0.9837428152754693
+          },
+          {
+            "demand_id": "T8",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 5.862528132298237,
+            "peak_capacity_load_ton": 3.5175168793789426,
+            "distance_km": 48.51188940088424,
+            "travel_time_h": 1.212797235022106
+          },
+          {
+            "demand_id": "V1",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 10.89502934465804,
+            "peak_capacity_load_ton": 0.018158382241096734,
+            "distance_km": 51.1638243372012,
+            "travel_time_h": 1.27909560843003
+          },
+          {
+            "demand_id": "V1",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 6.537017606794824,
+            "peak_capacity_load_ton": 0.9151824649512752,
+            "distance_km": 49.42285390454515,
+            "travel_time_h": 1.2355713476136287
+          },
+          {
+            "demand_id": "V1",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 1.089502934465804,
+            "peak_capacity_load_ton": 0.6537017606794824,
+            "distance_km": 37.9146890551907,
+            "travel_time_h": 0.9478672263797676
+          },
+          {
+            "demand_id": "V1",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 3.268508803397412,
+            "peak_capacity_load_ton": 1.3074035213589648,
+            "distance_km": 35.78724116040353,
+            "travel_time_h": 0.8946810290100883
+          },
+          {
+            "demand_id": "V2",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 13.821165227024167,
+            "peak_capacity_load_ton": 0.023035275378373615,
+            "distance_km": 55.807377343753295,
+            "travel_time_h": 1.3951844335938324
+          },
+          {
+            "demand_id": "V2",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 8.2926991362145,
+            "peak_capacity_load_ton": 1.16097787907003,
+            "distance_km": 55.594633665560266,
+            "travel_time_h": 1.3898658416390066
+          },
+          {
+            "demand_id": "V2",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 1.3821165227024168,
+            "peak_capacity_load_ton": 0.8292699136214501,
+            "distance_km": 24.86225022376489,
+            "travel_time_h": 0.6215562555941223
+          },
+          {
+            "demand_id": "V2",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 4.14634956810725,
+            "peak_capacity_load_ton": 1.6585398272429002,
+            "distance_km": 16.736580060050297,
+            "travel_time_h": 0.4184145015012574
+          },
+          {
+            "demand_id": "V3",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 9.107233631462636,
+            "peak_capacity_load_ton": 0.015178722719104393,
+            "distance_km": 20.66991012951284,
+            "travel_time_h": 0.5167477532378209
+          },
+          {
+            "demand_id": "V3",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 5.464340178877581,
+            "peak_capacity_load_ton": 0.7650076250428615,
+            "distance_km": 5.169777376961911,
+            "travel_time_h": 0.1292444344240478
+          },
+          {
+            "demand_id": "V3",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 2.7321700894387906,
+            "peak_capacity_load_ton": 1.0928680357755163,
+            "distance_km": 26.713113460575688,
+            "travel_time_h": 0.6678278365143921
+          },
+          {
+            "demand_id": "V3",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 0.9107233631462637,
+            "peak_capacity_load_ton": 0.5464340178877581,
+            "distance_km": 32.6123708550201,
+            "travel_time_h": 0.8153092713755026
+          },
+          {
+            "demand_id": "V4",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 13.632755555559434,
+            "peak_capacity_load_ton": 0.02272125925926572,
+            "distance_km": 52.84744684407883,
+            "travel_time_h": 1.3211861711019708
+          },
+          {
+            "demand_id": "V4",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 8.17965333333566,
+            "peak_capacity_load_ton": 1.1451514666669924,
+            "distance_km": 70.55246542619736,
+            "travel_time_h": 1.763811635654934
+          },
+          {
+            "demand_id": "V4",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 4.08982666666783,
+            "peak_capacity_load_ton": 1.6359306666671318,
+            "distance_km": 47.38557984671979,
+            "travel_time_h": 1.184639496167995
+          },
+          {
+            "demand_id": "V4",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 1.3632755555559435,
+            "peak_capacity_load_ton": 0.8179653333335661,
+            "distance_km": 39.035980493089546,
+            "travel_time_h": 0.9758995123272388
+          },
+          {
+            "demand_id": "V5",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 2.587954755836994,
+            "peak_capacity_load_ton": 0.00431325792639499,
+            "distance_km": 65.82331208096471,
+            "travel_time_h": 1.645582802024118
+          },
+          {
+            "demand_id": "V5",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 1.5527728535021965,
+            "peak_capacity_load_ton": 0.21738819949030752,
+            "distance_km": 51.10107330330883,
+            "travel_time_h": 1.2775268325827207
+          },
+          {
+            "demand_id": "V5",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.2587954755836994,
+            "peak_capacity_load_ton": 0.15527728535021965,
+            "distance_km": 62.3053356781885,
+            "travel_time_h": 1.5576333919547125
+          },
+          {
+            "demand_id": "V5",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 0.7763864267510983,
+            "peak_capacity_load_ton": 0.3105545707004393,
+            "distance_km": 58.12289282788736,
+            "travel_time_h": 1.453072320697184
+          },
+          {
+            "demand_id": "V6",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 6.637793247016661,
+            "peak_capacity_load_ton": 0.011062988745027766,
+            "distance_km": 37.60973556003979,
+            "travel_time_h": 0.9402433890009948
+          },
+          {
+            "demand_id": "V6",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 3.9826759482099963,
+            "peak_capacity_load_ton": 0.5575746327493994,
+            "distance_km": 33.044300024281675,
+            "travel_time_h": 0.8261075006070419
+          },
+          {
+            "demand_id": "V6",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 1.9913379741049981,
+            "peak_capacity_load_ton": 0.7965351896419992,
+            "distance_km": 27.673608186690146,
+            "travel_time_h": 0.6918402046672536
+          },
+          {
+            "demand_id": "V6",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 0.6637793247016661,
+            "peak_capacity_load_ton": 0.39826759482099966,
+            "distance_km": 33.148065473201925,
+            "travel_time_h": 0.8287016368300482
+          },
+          {
+            "demand_id": "V7",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 2.9691583678370206,
+            "peak_capacity_load_ton": 0.004948597279728367,
+            "distance_km": 51.29586157181973,
+            "travel_time_h": 1.2823965392954932
+          },
+          {
+            "demand_id": "V7",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 1.7814950207022122,
+            "peak_capacity_load_ton": 0.24940930289830973,
+            "distance_km": 38.60441929224066,
+            "travel_time_h": 0.9651104823060164
+          },
+          {
+            "demand_id": "V7",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 0.8907475103511061,
+            "peak_capacity_load_ton": 0.35629900414044247,
+            "distance_km": 40.23540382315918,
+            "travel_time_h": 1.0058850955789795
+          },
+          {
+            "demand_id": "V7",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 0.2969158367837021,
+            "peak_capacity_load_ton": 0.17814950207022126,
+            "distance_km": 46.081889030387735,
+            "travel_time_h": 1.1520472257596934
+          },
+          {
+            "demand_id": "V8",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 12.600998569912845,
+            "peak_capacity_load_ton": 0.021001664283188073,
+            "distance_km": 64.84203911736604,
+            "travel_time_h": 1.621050977934151
+          },
+          {
+            "demand_id": "V8",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 7.560599141947707,
+            "peak_capacity_load_ton": 1.058483879872679,
+            "distance_km": 60.671427942907286,
+            "travel_time_h": 1.5167856985726822
+          },
+          {
+            "demand_id": "V8",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 1.2600998569912845,
+            "peak_capacity_load_ton": 0.7560599141947707,
+            "distance_km": 57.04092340698086,
+            "travel_time_h": 1.4260230851745217
+          },
+          {
+            "demand_id": "V8",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 3.7802995709738534,
+            "peak_capacity_load_ton": 1.5121198283895414,
+            "distance_km": 46.66703568609912,
+            "travel_time_h": 1.166675892152478
+          },
+          {
+            "demand_id": "V9",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 6.660054471075544,
+            "peak_capacity_load_ton": 0.011100090785125905,
+            "distance_km": 60.09492596026316,
+            "travel_time_h": 1.502373149006579
+          },
+          {
+            "demand_id": "V9",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 3.996032682645326,
+            "peak_capacity_load_ton": 0.5594445755703457,
+            "distance_km": 75.17980476616344,
+            "travel_time_h": 1.879495119154086
+          },
+          {
+            "demand_id": "V9",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.6660054471075544,
+            "peak_capacity_load_ton": 0.39960326826453263,
+            "distance_km": 28.22612577306874,
+            "travel_time_h": 0.7056531443267186
+          },
+          {
+            "demand_id": "V9",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 1.998016341322663,
+            "peak_capacity_load_ton": 0.7992065365290653,
+            "distance_km": 27.322889114060654,
+            "travel_time_h": 0.6830722278515164
+          },
+          {
+            "demand_id": "V10",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 2.826258553718308,
+            "peak_capacity_load_ton": 0.004710430922863847,
+            "distance_km": 29.423751246653158,
+            "travel_time_h": 0.7355937811663289
+          },
+          {
+            "demand_id": "V10",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 1.6957551322309847,
+            "peak_capacity_load_ton": 0.23740571851233785,
+            "distance_km": 36.66199454854636,
+            "travel_time_h": 0.916549863713659
+          },
+          {
+            "demand_id": "V10",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.28262585537183077,
+            "peak_capacity_load_ton": 0.1695755132230985,
+            "distance_km": 11.440528938963627,
+            "travel_time_h": 0.2860132234740907
+          },
+          {
+            "demand_id": "V10",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 0.8478775661154924,
+            "peak_capacity_load_ton": 0.339151026446197,
+            "distance_km": 20.183653584482823,
+            "travel_time_h": 0.5045913396120707
+          },
+          {
+            "demand_id": "V11",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 13.533765653492246,
+            "peak_capacity_load_ton": 0.022556276089153744,
+            "distance_km": 30.69995153240183,
+            "travel_time_h": 0.7674987883100457
+          },
+          {
+            "demand_id": "V11",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 8.120259392095347,
+            "peak_capacity_load_ton": 1.1368363148933487,
+            "distance_km": 49.487474717601565,
+            "travel_time_h": 1.237186867940039
+          },
+          {
+            "demand_id": "V11",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 4.060129696047674,
+            "peak_capacity_load_ton": 1.6240518784190696,
+            "distance_km": 33.98056795084311,
+            "travel_time_h": 0.8495141987710777
+          },
+          {
+            "demand_id": "V11",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 1.3533765653492247,
+            "peak_capacity_load_ton": 0.8120259392095348,
+            "distance_km": 25.32623772726888,
+            "travel_time_h": 0.6331559431817221
+          },
+          {
+            "demand_id": "V12",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 9.296603568403452,
+            "peak_capacity_load_ton": 0.015494339280672417,
+            "distance_km": 34.24566061090203,
+            "travel_time_h": 0.8561415152725507
+          },
+          {
+            "demand_id": "V12",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 5.577962141042071,
+            "peak_capacity_load_ton": 0.7809146997458899,
+            "distance_km": 52.72478491510015,
+            "travel_time_h": 1.3181196228775036
+          },
+          {
+            "demand_id": "V12",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 2.7889810705210354,
+            "peak_capacity_load_ton": 1.1155924282084142,
+            "distance_km": 29.6383168335955,
+            "travel_time_h": 0.7409579208398875
+          },
+          {
+            "demand_id": "V12",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 0.9296603568403452,
+            "peak_capacity_load_ton": 0.5577962141042071,
+            "distance_km": 23.338943974071704,
+            "travel_time_h": 0.5834735993517925
+          },
+          {
+            "demand_id": "V13",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 2.3304486476732373,
+            "peak_capacity_load_ton": 0.0038840810794553956,
+            "distance_km": 15.258627641104788,
+            "travel_time_h": 0.3814656910276197
+          },
+          {
+            "demand_id": "V13",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 1.3982691886039424,
+            "peak_capacity_load_ton": 0.19575768640455193,
+            "distance_km": 22.470591668380973,
+            "travel_time_h": 0.5617647917095243
+          },
+          {
+            "demand_id": "V13",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.23304486476732375,
+            "peak_capacity_load_ton": 0.13982691886039425,
+            "distance_km": 23.82515809491416,
+            "travel_time_h": 0.595628952372854
+          },
+          {
+            "demand_id": "V13",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 0.6991345943019712,
+            "peak_capacity_load_ton": 0.2796538377207885,
+            "distance_km": 30.44685370507049,
+            "travel_time_h": 0.7611713426267623
+          },
+          {
+            "demand_id": "V14",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 8.611418985141135,
+            "peak_capacity_load_ton": 0.014352364975235227,
+            "distance_km": 34.33761758659137,
+            "travel_time_h": 0.8584404396647842
+          },
+          {
+            "demand_id": "V14",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 5.166851391084681,
+            "peak_capacity_load_ton": 0.7233591947518553,
+            "distance_km": 43.81547052580272,
+            "travel_time_h": 1.095386763145068
+          },
+          {
+            "demand_id": "V14",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.8611418985141136,
+            "peak_capacity_load_ton": 0.5166851391084681,
+            "distance_km": 11.835506223229013,
+            "travel_time_h": 0.2958876555807253
+          },
+          {
+            "demand_id": "V14",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 2.5834256955423407,
+            "peak_capacity_load_ton": 1.0333702782169363,
+            "distance_km": 19.60753808270696,
+            "travel_time_h": 0.4901884520676739
+          },
+          {
+            "demand_id": "V15",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 4.974376151391092,
+            "peak_capacity_load_ton": 0.008290626918985152,
+            "distance_km": 24.76700750728928,
+            "travel_time_h": 0.619175187682232
+          },
+          {
+            "demand_id": "V15",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 2.984625690834655,
+            "peak_capacity_load_ton": 0.41784759671685173,
+            "distance_km": 26.416208089922403,
+            "travel_time_h": 0.6604052022480601
+          },
+          {
+            "demand_id": "V15",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 1.4923128454173276,
+            "peak_capacity_load_ton": 0.596925138166931,
+            "distance_km": 8.07097316631953,
+            "travel_time_h": 0.2017743291579882
+          },
+          {
+            "demand_id": "V15",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 0.4974376151391092,
+            "peak_capacity_load_ton": 0.2984625690834656,
+            "distance_km": 15.684843332740613,
+            "travel_time_h": 0.3921210833185152
+          },
+          {
+            "demand_id": "V16",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 12.50556493433742,
+            "peak_capacity_load_ton": 0.0208426082238957,
+            "distance_km": 59.43378290434087,
+            "travel_time_h": 1.4858445726085217
+          },
+          {
+            "demand_id": "V16",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 7.503338960602451,
+            "peak_capacity_load_ton": 1.0504674544843433,
+            "distance_km": 53.48366952467419,
+            "travel_time_h": 1.3370917381168548
+          },
+          {
+            "demand_id": "V16",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 3.7516694803012256,
+            "peak_capacity_load_ton": 1.5006677921204903,
+            "distance_km": 47.89654063704601,
+            "travel_time_h": 1.1974135159261503
+          },
+          {
+            "demand_id": "V16",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 1.250556493433742,
+            "peak_capacity_load_ton": 0.7503338960602454,
+            "distance_km": 47.88949342772764,
+            "travel_time_h": 1.197237335693191
+          },
+          {
+            "demand_id": "V17",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 13.60326698036971,
+            "peak_capacity_load_ton": 0.022672111633949513,
+            "distance_km": 59.30757439065015,
+            "travel_time_h": 1.4826893597662536
+          },
+          {
+            "demand_id": "V17",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 8.161960188221826,
+            "peak_capacity_load_ton": 1.1426744263510558,
+            "distance_km": 69.76164979091146,
+            "travel_time_h": 1.7440412447727869
+          },
+          {
+            "demand_id": "V17",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 1.360326698036971,
+            "peak_capacity_load_ton": 0.8161960188221826,
+            "distance_km": 27.162527639159133,
+            "travel_time_h": 0.6790631909789784
+          },
+          {
+            "demand_id": "V17",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 4.080980094110913,
+            "peak_capacity_load_ton": 1.6323920376443652,
+            "distance_km": 29.60584451290427,
+            "travel_time_h": 0.7401461128226068
+          },
+          {
+            "demand_id": "V18",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 3.430675018859798,
+            "peak_capacity_load_ton": 0.005717791698099664,
+            "distance_km": 58.52014326666598,
+            "travel_time_h": 1.4630035816666496
+          },
+          {
+            "demand_id": "V18",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 2.058405011315879,
+            "peak_capacity_load_ton": 0.2881767015842231,
+            "distance_km": 73.67387148112462,
+            "travel_time_h": 1.8418467870281157
+          },
+          {
+            "demand_id": "V18",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.34306750188597984,
+            "peak_capacity_load_ton": 0.20584050113158794,
+            "distance_km": 40.27902256433234,
+            "travel_time_h": 1.006975564108309
+          },
+          {
+            "demand_id": "V18",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 1.0292025056579395,
+            "peak_capacity_load_ton": 0.4116810022631758,
+            "distance_km": 43.16044158263093,
+            "travel_time_h": 1.0790110395657733
+          },
+          {
+            "demand_id": "V19",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 2.0903776969054797,
+            "peak_capacity_load_ton": 0.0034839628281757994,
+            "distance_km": 50.51853155311653,
+            "travel_time_h": 1.2629632888279132
+          },
+          {
+            "demand_id": "V19",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 1.2542266181432877,
+            "peak_capacity_load_ton": 0.17559172654006028,
+            "distance_km": 64.66449450293597,
+            "travel_time_h": 1.6166123625733992
+          },
+          {
+            "demand_id": "V19",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 0.6271133090716439,
+            "peak_capacity_load_ton": 0.2508453236286575,
+            "distance_km": 47.54508489685061,
+            "travel_time_h": 1.1886271224212652
+          },
+          {
+            "demand_id": "V19",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 0.209037769690548,
+            "peak_capacity_load_ton": 0.1254226618143288,
+            "distance_km": 43.15894248652825,
+            "travel_time_h": 1.0789735621632062
+          },
+          {
+            "demand_id": "V20",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 6.388997228247163,
+            "peak_capacity_load_ton": 0.010648328713745273,
+            "distance_km": 60.02804109581476,
+            "travel_time_h": 1.500701027395369
+          },
+          {
+            "demand_id": "V20",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 3.8333983369482976,
+            "peak_capacity_load_ton": 0.5366757671727617,
+            "distance_km": 47.551586333215816,
+            "travel_time_h": 1.1887896583303954
+          },
+          {
+            "demand_id": "V20",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.6388997228247164,
+            "peak_capacity_load_ton": 0.3833398336948299,
+            "distance_km": 46.14262741777425,
+            "travel_time_h": 1.1535656854443563
+          },
+          {
+            "demand_id": "V20",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 1.9166991684741488,
+            "peak_capacity_load_ton": 0.7666796673896596,
+            "distance_km": 43.40543159547981,
+            "travel_time_h": 1.085135789886995
+          },
+          {
+            "demand_id": "V21",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 6.727184830930822,
+            "peak_capacity_load_ton": 0.011211974718218037,
+            "distance_km": 15.391241602493915,
+            "travel_time_h": 0.3847810400623479
+          },
+          {
+            "demand_id": "V21",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 4.036310898558493,
+            "peak_capacity_load_ton": 0.565083525798189,
+            "distance_km": 29.029624503637933,
+            "travel_time_h": 0.7257406125909484
+          },
+          {
+            "demand_id": "V21",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 2.0181554492792464,
+            "peak_capacity_load_ton": 0.8072621797116986,
+            "distance_km": 6.83168833886955,
+            "travel_time_h": 0.1707922084717387
+          },
+          {
+            "demand_id": "V21",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 0.6727184830930822,
+            "peak_capacity_load_ton": 0.40363108985584933,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "V22",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 5.911418027618005,
+            "peak_capacity_load_ton": 0.009852363379363342,
+            "distance_km": 28.31582644531029,
+            "travel_time_h": 0.7078956611327571
+          },
+          {
+            "demand_id": "V22",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 3.546850816570803,
+            "peak_capacity_load_ton": 0.4965591143199124,
+            "distance_km": 12.940599648222252,
+            "travel_time_h": 0.3235149912055562
+          },
+          {
+            "demand_id": "V22",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 1.7734254082854015,
+            "peak_capacity_load_ton": 0.7093701633141607,
+            "distance_km": 34.29467795575186,
+            "travel_time_h": 0.8573669488937965
+          },
+          {
+            "demand_id": "V22",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 0.5911418027618005,
+            "peak_capacity_load_ton": 0.35468508165708035,
+            "distance_km": 42.2072946442828,
+            "travel_time_h": 1.05518236610707
+          },
+          {
+            "demand_id": "V23",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 2.669223766249861,
+            "peak_capacity_load_ton": 0.0044487062770831014,
+            "distance_km": 17.20389421564693,
+            "travel_time_h": 0.4300973553911732
+          },
+          {
+            "demand_id": "V23",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 1.6015342597499165,
+            "peak_capacity_load_ton": 0.2242147963649883,
+            "distance_km": 30.512816737063936,
+            "travel_time_h": 0.7628204184265984
+          },
+          {
+            "demand_id": "V23",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.26692237662498614,
+            "peak_capacity_load_ton": 0.16015342597499166,
+            "distance_km": 28.6738588922437,
+            "travel_time_h": 0.7168464723060926
+          },
+          {
+            "demand_id": "V23",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 0.8007671298749582,
+            "peak_capacity_load_ton": 0.32030685194998326,
+            "distance_km": 30.940291136723005,
+            "travel_time_h": 0.7735072784180751
+          },
+          {
+            "demand_id": "V24",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 8.36288588360832,
+            "peak_capacity_load_ton": 0.0139381431393472,
+            "distance_km": 50.53162038455402,
+            "travel_time_h": 1.2632905096138507
+          },
+          {
+            "demand_id": "V24",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 5.017731530164991,
+            "peak_capacity_load_ton": 0.7024824142230988,
+            "distance_km": 45.1367091268724,
+            "travel_time_h": 1.1284177281718102
+          },
+          {
+            "demand_id": "V24",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.836288588360832,
+            "peak_capacity_load_ton": 0.5017731530164993,
+            "distance_km": 45.77371611079196,
+            "travel_time_h": 1.1443429027697989
+          },
+          {
+            "demand_id": "V24",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 2.5088657650824957,
+            "peak_capacity_load_ton": 1.0035463060329983,
+            "distance_km": 43.26065918464568,
+            "travel_time_h": 1.0815164796161418
+          },
+          {
+            "demand_id": "V25",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 5.089288071901196,
+            "peak_capacity_load_ton": 0.008482146786501993,
+            "distance_km": 34.46471123399633,
+            "travel_time_h": 0.8616177808499084
+          },
+          {
+            "demand_id": "V25",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 3.0535728431407176,
+            "peak_capacity_load_ton": 0.42750019803970046,
+            "distance_km": 50.19230217890357,
+            "travel_time_h": 1.2548075544725894
+          },
+          {
+            "demand_id": "V25",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 1.5267864215703588,
+            "peak_capacity_load_ton": 0.6107145686281436,
+            "distance_km": 26.77767122218827,
+            "travel_time_h": 0.6694417805547068
+          },
+          {
+            "demand_id": "V25",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 0.5089288071901196,
+            "peak_capacity_load_ton": 0.3053572843140718,
+            "distance_km": 20.939363658112416,
+            "travel_time_h": 0.5234840914528104
+          },
+          {
+            "demand_id": "V26",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 8.965070892971859,
+            "peak_capacity_load_ton": 0.014941784821619765,
+            "distance_km": 21.10529175368764,
+            "travel_time_h": 0.5276322938421909
+          },
+          {
+            "demand_id": "V26",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 5.379042535783115,
+            "peak_capacity_load_ton": 0.7530659550096361,
+            "distance_km": 37.16883421957345,
+            "travel_time_h": 0.9292208554893362
+          },
+          {
+            "demand_id": "V26",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 2.6895212678915574,
+            "peak_capacity_load_ton": 1.075808507156623,
+            "distance_km": 21.791044200700107,
+            "travel_time_h": 0.5447761050175026
+          },
+          {
+            "demand_id": "V26",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 0.8965070892971859,
+            "peak_capacity_load_ton": 0.5379042535783116,
+            "distance_km": 16.098384368014642,
+            "travel_time_h": 0.402459609200366
+          },
+          {
+            "demand_id": "V27",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 2.530076840211931,
+            "peak_capacity_load_ton": 0.004216794733686551,
+            "distance_km": 45.99218017747036,
+            "travel_time_h": 1.149804504436759
+          },
+          {
+            "demand_id": "V27",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 1.5180461041271585,
+            "peak_capacity_load_ton": 0.2125264545778022,
+            "distance_km": 34.03443443173038,
+            "travel_time_h": 0.8508608607932595
+          },
+          {
+            "demand_id": "V27",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.2530076840211931,
+            "peak_capacity_load_ton": 0.15180461041271587,
+            "distance_km": 35.15408535913494,
+            "travel_time_h": 0.8788521339783735
+          },
+          {
+            "demand_id": "V27",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 0.7590230520635792,
+            "peak_capacity_load_ton": 0.3036092208254317,
+            "distance_km": 29.31685681449965,
+            "travel_time_h": 0.7329214203624914
+          },
+          {
+            "demand_id": "V28",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 4.944445077573193,
+            "peak_capacity_load_ton": 0.008240741795955322,
+            "distance_km": 56.17823787736345,
+            "travel_time_h": 1.4044559469340865
+          },
+          {
+            "demand_id": "V28",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 2.966667046543916,
+            "peak_capacity_load_ton": 0.41533338651614826,
+            "distance_km": 43.96026681872835,
+            "travel_time_h": 1.0990066704682089
+          },
+          {
+            "demand_id": "V28",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 1.483333523271958,
+            "peak_capacity_load_ton": 0.5933334093087832,
+            "distance_km": 58.97956910261434,
+            "travel_time_h": 1.4744892275653585
+          },
+          {
+            "demand_id": "V28",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 0.49444450775731935,
+            "peak_capacity_load_ton": 0.2966667046543916,
+            "distance_km": 65.86946238158939,
+            "travel_time_h": 1.6467365595397347
+          },
+          {
+            "demand_id": "V29",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 14.17748985357755,
+            "peak_capacity_load_ton": 0.023629149755962583,
+            "distance_km": 29.95361183146631,
+            "travel_time_h": 0.7488402957866578
+          },
+          {
+            "demand_id": "V29",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 8.50649391214653,
+            "peak_capacity_load_ton": 1.1909091477005143,
+            "distance_km": 42.997049552946926,
+            "travel_time_h": 1.074926238823673
+          },
+          {
+            "demand_id": "V29",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 1.417748985357755,
+            "peak_capacity_load_ton": 0.850649391214653,
+            "distance_km": 20.33318646688669,
+            "travel_time_h": 0.5083296616721673
+          },
+          {
+            "demand_id": "V29",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 4.253246956073265,
+            "peak_capacity_load_ton": 1.701298782429306,
+            "distance_km": 30.52088667323968,
+            "travel_time_h": 0.763022166830992
+          },
+          {
+            "demand_id": "V30",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 13.405411593952753,
+            "peak_capacity_load_ton": 0.02234235265658792,
+            "distance_km": 63.36717581948546,
+            "travel_time_h": 1.5841793954871366
+          },
+          {
+            "demand_id": "V30",
+            "site": "T4",
+            "type": "cold",
+            "annual_flow_ton": 8.043246956371652,
+            "peak_capacity_load_ton": 1.1260545738920313,
+            "distance_km": 56.57262782399451,
+            "travel_time_h": 1.4143156955998628
+          },
+          {
+            "demand_id": "V30",
+            "site": "T6",
+            "type": "ca",
+            "annual_flow_ton": 4.021623478185826,
+            "peak_capacity_load_ton": 1.6086493912743305,
+            "distance_km": 48.92879551649476,
+            "travel_time_h": 1.223219887912369
+          },
+          {
+            "demand_id": "V30",
+            "site": "V21",
+            "type": "frozen",
+            "annual_flow_ton": 1.3405411593952754,
+            "peak_capacity_load_ton": 0.8043246956371652,
+            "distance_km": 55.51283125636695,
+            "travel_time_h": 1.387820781409174
+          }
+        ],
+        "assumptions": {
+          "harvest_window_days": 90.0,
+          "harvest_peak_factor": 1.8,
+          "max_facilities": 8,
+          "carbon_price": 50.0,
+          "loss_price": 3000.0,
+          "channels": [
+            {
+              "type_id": "precool",
+              "label": "first-mile precooling",
+              "annual_share": 1.0,
+              "storage_days": 0.08333333333333333,
+              "loss_rate": 0.01,
+              "transport_loss_multiplier": 1.0,
+              "channel_note": "Mandatory first-mile handling within 2 hours; not interpreted as long-term storage."
+            },
+            {
+              "type_id": "cold",
+              "label": "fresh cold storage",
+              "annual_share": 0.6,
+              "storage_days": 7.0,
+              "loss_rate": 0.02,
+              "transport_loss_multiplier": 0.45,
+              "channel_note": "Fresh-market channel using 7-10 C literature target; current cost table uses closest cold-storage type."
+            },
+            {
+              "type_id": "ca",
+              "label": "controlled-atmosphere storage",
+              "annual_share": 0.3,
+              "storage_days": 20.0,
+              "loss_rate": 0.012,
+              "transport_loss_multiplier": 0.35,
+              "channel_note": "Quality-preserving MAP/CA channel for longer holding."
+            },
+            {
+              "type_id": "frozen",
+              "label": "processing/frozen fallback",
+              "annual_share": 0.1,
+              "storage_days": 30.0,
+              "loss_rate": 0.04,
+              "transport_loss_multiplier": 0.35,
+              "channel_note": "Explicitly capped processing or frozen fallback share; not all fresh okra is frozen."
+            }
+          ]
+        },
+        "risk_response": {
+          "capacity_semantics": "uses peak load instead of annual production in capacity constraints",
+          "temperature_chain": "requires positive precool, cold, CA, and capped frozen/processing channels",
+          "frozen_only_prevented": true,
+          "paper_claim_boundary": "v3.0 is a corrected scenario baseline. Channel shares are auditable assumptions until real enterprise sales/processing data are ingested."
+        }
+      }
+    },
+    "osm_road": {
+      "label": "osm_road",
+      "status": 9,
+      "status_name": "TIME_LIMIT",
+      "objective": 4433112.274860298,
+      "bound": 4358444.091219237,
+      "mip_gap_pct": 1.6843,
+      "elapsed_sec": 300.06,
+      "wall_sec": 300.37,
+      "sol_count": 7,
+      "num_vars": 4671,
+      "num_constrs": 5040,
+      "analysis": {
+        "model_version": "v3.0_capacity_chain",
+        "solver": {
+          "status_code": 9,
+          "status_name": "TIME_LIMIT",
+          "sol_count": 7,
+          "objective": 4433112.274860298,
+          "mip_gap_pct": 1.6843287291525733,
+          "objective_bound": 4358444.091219237,
+          "num_vars": 4671,
+          "num_constraints": 5040
+        },
+        "summary": {
+          "total_cost": 4433112.274860299,
+          "fixed_cost": 3490000.0,
+          "operate_cost": 782000.0,
+          "transport_cost": 66018.9867761562,
+          "loss_cost": 94667.86928918645,
+          "carbon_cost": 425.41879495575677,
+          "num_facilities": 8,
+          "total_annual_production_ton": 588.1834248373998,
+          "total_service_annual_flow_ton": 1176.3668496747998,
+          "total_peak_capacity_load_ton": 156.2607298651359,
+          "installed_capacity_ton": 185,
+          "fresh_chain_share": 0.9,
+          "frozen_or_processing_share": 0.1,
+          "downstream_share_sum": 0.9999999999999999,
+          "capacity_semantics": "peak_inventory_from_annual_flow",
+          "selected_storage_types": [
+            "ca",
+            "cold",
+            "frozen",
+            "precool"
+          ]
+        },
+        "facilities": [
+          {
+            "site": "C1",
+            "type": "precool",
+            "type_name": "预冷库",
+            "capacity": 5,
+            "capacity_idx": 0,
+            "fixed_cost": 8,
+            "operate_cost": 2.4,
+            "assigned_annual_flow_ton": 218.08799908526188,
+            "peak_capacity_load_ton": 0.3634799984754364,
+            "utilization": 7.269599969508728
+          },
+          {
+            "site": "T1",
+            "type": "cold",
+            "type_name": "冷藏库",
+            "capacity": 50,
+            "capacity_idx": 2,
+            "fixed_cost": 65,
+            "operate_cost": 15.0,
+            "assigned_annual_flow_ton": 352.91005490244,
+            "peak_capacity_load_ton": 49.407407686341614,
+            "utilization": 98.81481537268323
+          },
+          {
+            "site": "T4",
+            "type": "ca",
+            "type_name": "气调库",
+            "capacity": 50,
+            "capacity_idx": 2,
+            "fixed_cost": 120,
+            "operate_cost": 26.0,
+            "assigned_annual_flow_ton": 101.45502745121998,
+            "peak_capacity_load_ton": 40.582010980488,
+            "utilization": 81.164021960976
+          },
+          {
+            "site": "T5",
+            "type": "frozen",
+            "type_name": "冷冻库",
+            "capacity": 20,
+            "capacity_idx": 0,
+            "fixed_cost": 30,
+            "operate_cost": 6.0,
+            "assigned_annual_flow_ton": 25.48500915040646,
+            "peak_capacity_load_ton": 15.291005490243876,
+            "utilization": 76.45502745121938
+          },
+          {
+            "site": "T7",
+            "type": "ca",
+            "type_name": "气调库",
+            "capacity": 30,
+            "capacity_idx": 1,
+            "fixed_cost": 80,
+            "operate_cost": 18.0,
+            "assigned_annual_flow_ton": 75.0,
+            "peak_capacity_load_ton": 29.999999999999996,
+            "utilization": 99.99999999999999
+          },
+          {
+            "site": "T8",
+            "type": "precool",
+            "type_name": "预冷库",
+            "capacity": 5,
+            "capacity_idx": 0,
+            "fixed_cost": 8,
+            "operate_cost": 2.4,
+            "assigned_annual_flow_ton": 104.99907257131741,
+            "peak_capacity_load_ton": 0.17499845428552901,
+            "utilization": 3.49996908571058
+          },
+          {
+            "site": "V17",
+            "type": "precool",
+            "type_name": "预冷库",
+            "capacity": 5,
+            "capacity_idx": 0,
+            "fixed_cost": 8,
+            "operate_cost": 2.4,
+            "assigned_annual_flow_ton": 265.0963531808206,
+            "peak_capacity_load_ton": 0.44182725530136757,
+            "utilization": 8.836545106027351
+          },
+          {
+            "site": "V28",
+            "type": "frozen",
+            "type_name": "冷冻库",
+            "capacity": 20,
+            "capacity_idx": 0,
+            "fixed_cost": 30,
+            "operate_cost": 6.0,
+            "assigned_annual_flow_ton": 33.33333333333352,
+            "peak_capacity_load_ton": 20.000000000000117,
+            "utilization": 100.00000000000058
+          }
+        ],
+        "annual_flow_by_type": {
+          "precool": 588.1834248373998,
+          "cold": 352.91005490244,
+          "ca": 176.45502745122,
+          "frozen": 58.818342483739976
+        },
+        "peak_load_by_type": {
+          "precool": 0.980305708062333,
+          "cold": 49.407407686341614,
+          "ca": 70.58201098048796,
+          "frozen": 35.29100549024399
+        },
+        "assignments": [
+          {
+            "demand_id": "C1",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 86.59969709057026,
+            "peak_capacity_load_ton": 0.14433282848428375,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "C1",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 51.95981825434215,
+            "peak_capacity_load_ton": 7.274374555607901,
+            "distance_km": 72.375,
+            "travel_time_h": 1.383867
+          },
+          {
+            "demand_id": "C1",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 25.979909127171076,
+            "peak_capacity_load_ton": 10.391963650868432,
+            "distance_km": 12.1529,
+            "travel_time_h": 0.1736
+          },
+          {
+            "demand_id": "C1",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 8.659969709057027,
+            "peak_capacity_load_ton": 5.195981825434216,
+            "distance_km": 82.7893,
+            "travel_time_h": 1.527983
+          },
+          {
+            "demand_id": "T1",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 13.394006692036788,
+            "peak_capacity_load_ton": 1.8751609368851503,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "T1",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 2.232334448672798,
+            "peak_capacity_load_ton": 1.3394006692036788,
+            "distance_km": 34.1841,
+            "travel_time_h": 0.854583
+          },
+          {
+            "demand_id": "T1",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 6.697003346018394,
+            "peak_capacity_load_ton": 2.6788013384073577,
+            "distance_km": 34.1841,
+            "travel_time_h": 0.854583
+          },
+          {
+            "demand_id": "T1",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 22.32334448672798,
+            "peak_capacity_load_ton": 0.03720557414454663,
+            "distance_km": 58.9863,
+            "travel_time_h": 1.43925
+          },
+          {
+            "demand_id": "T2",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 20.823379771832094,
+            "peak_capacity_load_ton": 0.03470563295305349,
+            "distance_km": 29.2592,
+            "travel_time_h": 0.525617
+          },
+          {
+            "demand_id": "T2",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 12.494027863099257,
+            "peak_capacity_load_ton": 1.7491639008338957,
+            "distance_km": 101.6342,
+            "travel_time_h": 1.8729
+          },
+          {
+            "demand_id": "T2",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 6.2470139315496285,
+            "peak_capacity_load_ton": 2.4988055726198515,
+            "distance_km": 41.412,
+            "travel_time_h": 0.699217
+          },
+          {
+            "demand_id": "T2",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 2.0823379771832093,
+            "peak_capacity_load_ton": 1.2494027863099257,
+            "distance_km": 112.0485,
+            "travel_time_h": 2.017017
+          },
+          {
+            "demand_id": "T3",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 16.363799212970417,
+            "peak_capacity_load_ton": 2.2909318898158584,
+            "distance_km": 69.2268,
+            "travel_time_h": 1.679283
+          },
+          {
+            "demand_id": "T3",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 2.727299868828403,
+            "peak_capacity_load_ton": 1.6363799212970418,
+            "distance_km": 35.0427,
+            "travel_time_h": 0.8247
+          },
+          {
+            "demand_id": "T3",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 8.181899606485208,
+            "peak_capacity_load_ton": 3.2727598425940836,
+            "distance_km": 35.0427,
+            "travel_time_h": 0.8247
+          },
+          {
+            "demand_id": "T3",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 27.272998688284027,
+            "peak_capacity_load_ton": 0.04545499781380671,
+            "distance_km": 16.3862,
+            "travel_time_h": 0.327733
+          },
+          {
+            "demand_id": "T4",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 37.27780074568463,
+            "peak_capacity_load_ton": 0.062129667909474384,
+            "distance_km": 12.1529,
+            "travel_time_h": 0.1736
+          },
+          {
+            "demand_id": "T4",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 22.366680447410776,
+            "peak_capacity_load_ton": 3.1313352626375086,
+            "distance_km": 60.2222,
+            "travel_time_h": 1.210267
+          },
+          {
+            "demand_id": "T4",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 11.183340223705388,
+            "peak_capacity_load_ton": 4.473336089482155,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "T4",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 3.727780074568463,
+            "peak_capacity_load_ton": 2.236668044741078,
+            "distance_km": 70.6365,
+            "travel_time_h": 1.354383
+          },
+          {
+            "demand_id": "T5",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 19.011471564845234,
+            "peak_capacity_load_ton": 2.661606019078333,
+            "distance_km": 34.1841,
+            "travel_time_h": 0.854583
+          },
+          {
+            "demand_id": "T5",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 3.1685785941408726,
+            "peak_capacity_load_ton": 1.9011471564845233,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "T5",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 9.505735782422617,
+            "peak_capacity_load_ton": 3.8022943129690465,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "T5",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 31.685785941408724,
+            "peak_capacity_load_ton": 0.05280964323568121,
+            "distance_km": 24.8022,
+            "travel_time_h": 0.584667
+          },
+          {
+            "demand_id": "T6",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 27.98695128633439,
+            "peak_capacity_load_ton": 0.046644918810557316,
+            "distance_km": 88.6331,
+            "travel_time_h": 1.644867
+          },
+          {
+            "demand_id": "T6",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 16.79217077180063,
+            "peak_capacity_load_ton": 2.3509039080520884,
+            "distance_km": 64.4363,
+            "travel_time_h": 1.352867
+          },
+          {
+            "demand_id": "T6",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 8.396085385900316,
+            "peak_capacity_load_ton": 3.358434154360126,
+            "distance_km": 76.4803,
+            "travel_time_h": 1.471267
+          },
+          {
+            "demand_id": "T6",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 2.798695128633439,
+            "peak_capacity_load_ton": 1.6792170771800632,
+            "distance_km": 57.1259,
+            "travel_time_h": 1.142483
+          },
+          {
+            "demand_id": "T7",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 26.58107644563452,
+            "peak_capacity_load_ton": 3.7213507023888326,
+            "distance_km": 34.1841,
+            "travel_time_h": 0.854583
+          },
+          {
+            "demand_id": "T7",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 4.4301794076057535,
+            "peak_capacity_load_ton": 2.6581076445634526,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "T7",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 13.29053822281726,
+            "peak_capacity_load_ton": 5.316215289126903,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "T7",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 44.30179407605753,
+            "peak_capacity_load_ton": 0.07383632346009589,
+            "distance_km": 24.8022,
+            "travel_time_h": 0.584667
+          },
+          {
+            "demand_id": "T8",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 35.17516879378942,
+            "peak_capacity_load_ton": 4.924523631130518,
+            "distance_km": 91.3268,
+            "travel_time_h": 2.04895
+          },
+          {
+            "demand_id": "T8",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 17.58758439689471,
+            "peak_capacity_load_ton": 7.035033758757884,
+            "distance_km": 103.3708,
+            "travel_time_h": 2.16735
+          },
+          {
+            "demand_id": "T8",
+            "site": "T8",
+            "type": "precool",
+            "annual_flow_ton": 58.62528132298237,
+            "peak_capacity_load_ton": 0.09770880220497061,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "T8",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 5.862528132298237,
+            "peak_capacity_load_ton": 3.5175168793789426,
+            "distance_km": 35.8809,
+            "travel_time_h": 0.8759
+          },
+          {
+            "demand_id": "V1",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 6.537017606794824,
+            "peak_capacity_load_ton": 0.9151824649512752,
+            "distance_km": 31.8193,
+            "travel_time_h": 0.6796
+          },
+          {
+            "demand_id": "V1",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 1.876766428974949,
+            "peak_capacity_load_ton": 0.7507065715899797,
+            "distance_km": 74.1649,
+            "travel_time_h": 1.4459
+          },
+          {
+            "demand_id": "V1",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 1.089502934465804,
+            "peak_capacity_load_ton": 0.6537017606794824,
+            "distance_km": 50.8134,
+            "travel_time_h": 1.247867
+          },
+          {
+            "demand_id": "V1",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 1.3917423744224628,
+            "peak_capacity_load_ton": 0.5566969497689851,
+            "distance_km": 50.8134,
+            "travel_time_h": 1.247867
+          },
+          {
+            "demand_id": "V1",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 10.89502934465804,
+            "peak_capacity_load_ton": 0.018158382241096734,
+            "distance_km": 75.6157,
+            "travel_time_h": 1.832533
+          },
+          {
+            "demand_id": "V2",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 8.2926991362145,
+            "peak_capacity_load_ton": 1.16097787907003,
+            "distance_km": 51.8662,
+            "travel_time_h": 1.01565
+          },
+          {
+            "demand_id": "V2",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.09869487944311822,
+            "peak_capacity_load_ton": 0.059216927665870944,
+            "distance_km": 66.6311,
+            "travel_time_h": 1.384767
+          },
+          {
+            "demand_id": "V2",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 4.14634956810725,
+            "peak_capacity_load_ton": 1.6585398272429002,
+            "distance_km": 66.6311,
+            "travel_time_h": 1.384767
+          },
+          {
+            "demand_id": "V2",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 13.821165227024167,
+            "peak_capacity_load_ton": 0.023035275378373615,
+            "distance_km": 91.4333,
+            "travel_time_h": 1.969433
+          },
+          {
+            "demand_id": "V2",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 1.2834216432592984,
+            "peak_capacity_load_ton": 0.770052985955579,
+            "distance_km": 67.5363,
+            "travel_time_h": 0.963283
+          },
+          {
+            "demand_id": "V3",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 9.107233631462636,
+            "peak_capacity_load_ton": 0.015178722719104393,
+            "distance_km": 61.1218,
+            "travel_time_h": 1.30285
+          },
+          {
+            "demand_id": "V3",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 5.464340178877581,
+            "peak_capacity_load_ton": 0.7650076250428615,
+            "distance_km": 44.4561,
+            "travel_time_h": 1.203983
+          },
+          {
+            "demand_id": "V3",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 2.7321700894387906,
+            "peak_capacity_load_ton": 1.0928680357755163,
+            "distance_km": 48.969,
+            "travel_time_h": 1.12925
+          },
+          {
+            "demand_id": "V3",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 0.9107233631462637,
+            "peak_capacity_load_ton": 0.5464340178877581,
+            "distance_km": 54.8704,
+            "travel_time_h": 1.3481
+          },
+          {
+            "demand_id": "V4",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 8.17965333333566,
+            "peak_capacity_load_ton": 1.1451514666669924,
+            "distance_km": 132.9722,
+            "travel_time_h": 2.579583
+          },
+          {
+            "demand_id": "V4",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 1.3632755555559435,
+            "peak_capacity_load_ton": 0.8179653333335661,
+            "distance_km": 104.6664,
+            "travel_time_h": 1.761733
+          },
+          {
+            "demand_id": "V4",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 4.08982666666783,
+            "peak_capacity_load_ton": 1.6359306666671318,
+            "distance_km": 104.6664,
+            "travel_time_h": 1.761733
+          },
+          {
+            "demand_id": "V4",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 13.632755555559434,
+            "peak_capacity_load_ton": 0.02272125925926572,
+            "distance_km": 79.8642,
+            "travel_time_h": 1.177067
+          },
+          {
+            "demand_id": "V5",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 2.587954755836994,
+            "peak_capacity_load_ton": 0.00431325792639499,
+            "distance_km": 73.0716,
+            "travel_time_h": 1.354583
+          },
+          {
+            "demand_id": "V5",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 1.5527728535021965,
+            "peak_capacity_load_ton": 0.21738819949030752,
+            "distance_km": 18.5731,
+            "travel_time_h": 0.414683
+          },
+          {
+            "demand_id": "V5",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 0.7763864267510983,
+            "peak_capacity_load_ton": 0.3105545707004393,
+            "distance_km": 60.9187,
+            "travel_time_h": 1.180983
+          },
+          {
+            "demand_id": "V5",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.2587954755836994,
+            "peak_capacity_load_ton": 0.15527728535021965,
+            "distance_km": 52.7572,
+            "travel_time_h": 1.269267
+          },
+          {
+            "demand_id": "V6",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 3.9826759482099963,
+            "peak_capacity_load_ton": 0.5575746327493994,
+            "distance_km": 91.2707,
+            "travel_time_h": 2.04755
+          },
+          {
+            "demand_id": "V6",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 1.9913379741049981,
+            "peak_capacity_load_ton": 0.7965351896419992,
+            "distance_km": 103.3148,
+            "travel_time_h": 2.16595
+          },
+          {
+            "demand_id": "V6",
+            "site": "T8",
+            "type": "precool",
+            "annual_flow_ton": 6.637793247016661,
+            "peak_capacity_load_ton": 0.011062988745027766,
+            "distance_km": 8.6797,
+            "travel_time_h": 0.217
+          },
+          {
+            "demand_id": "V6",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 0.6637793247016661,
+            "peak_capacity_load_ton": 0.39826759482099966,
+            "distance_km": 35.8249,
+            "travel_time_h": 0.8745
+          },
+          {
+            "demand_id": "V7",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 1.7814950207022122,
+            "peak_capacity_load_ton": 0.24940930289830973,
+            "distance_km": 87.9864,
+            "travel_time_h": 1.965433
+          },
+          {
+            "demand_id": "V7",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 0.8907475103511061,
+            "peak_capacity_load_ton": 0.35629900414044247,
+            "distance_km": 100.0304,
+            "travel_time_h": 2.083833
+          },
+          {
+            "demand_id": "V7",
+            "site": "T8",
+            "type": "precool",
+            "annual_flow_ton": 2.9691583678370206,
+            "peak_capacity_load_ton": 0.004948597279728367,
+            "distance_km": 3.3403,
+            "travel_time_h": 0.083517
+          },
+          {
+            "demand_id": "V7",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 0.2969158367837021,
+            "peak_capacity_load_ton": 0.17814950207022126,
+            "distance_km": 32.5406,
+            "travel_time_h": 0.792383
+          },
+          {
+            "demand_id": "V8",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 7.560599141947707,
+            "peak_capacity_load_ton": 1.058483879872679,
+            "distance_km": 37.6952,
+            "travel_time_h": 0.797117
+          },
+          {
+            "demand_id": "V8",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 1.2600998569912845,
+            "peak_capacity_load_ton": 0.7560599141947707,
+            "distance_km": 56.6893,
+            "travel_time_h": 1.365383
+          },
+          {
+            "demand_id": "V8",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 3.7802995709738534,
+            "peak_capacity_load_ton": 1.5121198283895414,
+            "distance_km": 56.6893,
+            "travel_time_h": 1.365383
+          },
+          {
+            "demand_id": "V8",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 12.600998569912845,
+            "peak_capacity_load_ton": 0.021001664283188073,
+            "distance_km": 81.4916,
+            "travel_time_h": 1.95005
+          },
+          {
+            "demand_id": "V9",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 3.996032682645326,
+            "peak_capacity_load_ton": 0.5594445755703457,
+            "distance_km": 67.98,
+            "travel_time_h": 1.636817
+          },
+          {
+            "demand_id": "V9",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.6660054471075544,
+            "peak_capacity_load_ton": 0.39960326826453263,
+            "distance_km": 33.7959,
+            "travel_time_h": 0.782233
+          },
+          {
+            "demand_id": "V9",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 1.998016341322663,
+            "peak_capacity_load_ton": 0.7992065365290653,
+            "distance_km": 33.7959,
+            "travel_time_h": 0.782233
+          },
+          {
+            "demand_id": "V9",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 6.660054471075544,
+            "peak_capacity_load_ton": 0.011100090785125905,
+            "distance_km": 8.9937,
+            "travel_time_h": 0.197567
+          },
+          {
+            "demand_id": "V10",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 2.826258553718308,
+            "peak_capacity_load_ton": 0.004710430922863847,
+            "distance_km": 23.8983,
+            "travel_time_h": 0.441683
+          },
+          {
+            "demand_id": "V10",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 1.6957551322309847,
+            "peak_capacity_load_ton": 0.23740571851233785,
+            "distance_km": 96.2734,
+            "travel_time_h": 1.82555
+          },
+          {
+            "demand_id": "V10",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 0.8478775661154924,
+            "peak_capacity_load_ton": 0.339151026446197,
+            "distance_km": 36.0512,
+            "travel_time_h": 0.615283
+          },
+          {
+            "demand_id": "V10",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 0.28262585537183077,
+            "peak_capacity_load_ton": 0.1695755132230985,
+            "distance_km": 106.6877,
+            "travel_time_h": 1.969667
+          },
+          {
+            "demand_id": "V11",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 8.120259392095347,
+            "peak_capacity_load_ton": 1.1368363148933487,
+            "distance_km": 135.2312,
+            "travel_time_h": 2.880917
+          },
+          {
+            "demand_id": "V11",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 1.3533765653492247,
+            "peak_capacity_load_ton": 0.8120259392095348,
+            "distance_km": 101.0471,
+            "travel_time_h": 2.026333
+          },
+          {
+            "demand_id": "V11",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 4.060129696047674,
+            "peak_capacity_load_ton": 1.6240518784190696,
+            "distance_km": 101.0471,
+            "travel_time_h": 2.026333
+          },
+          {
+            "demand_id": "V11",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 13.533765653492246,
+            "peak_capacity_load_ton": 0.022556276089153744,
+            "distance_km": 76.2448,
+            "travel_time_h": 1.441667
+          },
+          {
+            "demand_id": "V12",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 5.577962141042071,
+            "peak_capacity_load_ton": 0.7809146997458899,
+            "distance_km": 143.4751,
+            "travel_time_h": 3.10335
+          },
+          {
+            "demand_id": "V12",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.9296603568403452,
+            "peak_capacity_load_ton": 0.5577962141042071,
+            "distance_km": 109.291,
+            "travel_time_h": 2.248767
+          },
+          {
+            "demand_id": "V12",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 2.7889810705210354,
+            "peak_capacity_load_ton": 1.1155924282084142,
+            "distance_km": 109.291,
+            "travel_time_h": 2.248767
+          },
+          {
+            "demand_id": "V12",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 9.296603568403452,
+            "peak_capacity_load_ton": 0.015494339280672417,
+            "distance_km": 84.4888,
+            "travel_time_h": 1.6641
+          },
+          {
+            "demand_id": "V13",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 2.3304486476732373,
+            "peak_capacity_load_ton": 0.0038840810794553956,
+            "distance_km": 37.0183,
+            "travel_time_h": 0.63645
+          },
+          {
+            "demand_id": "V13",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 1.3982691886039424,
+            "peak_capacity_load_ton": 0.19575768640455193,
+            "distance_km": 95.6433,
+            "travel_time_h": 1.7162
+          },
+          {
+            "demand_id": "V13",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 0.6991345943019712,
+            "peak_capacity_load_ton": 0.2796538377207885,
+            "distance_km": 49.1711,
+            "travel_time_h": 0.81005
+          },
+          {
+            "demand_id": "V13",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 0.23304486476732375,
+            "peak_capacity_load_ton": 0.13982691886039425,
+            "distance_km": 106.0577,
+            "travel_time_h": 1.860317
+          },
+          {
+            "demand_id": "V14",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 5.166851391084681,
+            "peak_capacity_load_ton": 0.7233591947518553,
+            "distance_km": 41.8838,
+            "travel_time_h": 1.047083
+          },
+          {
+            "demand_id": "V14",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.8611418985141136,
+            "peak_capacity_load_ton": 0.5166851391084681,
+            "distance_km": 7.6997,
+            "travel_time_h": 0.1925
+          },
+          {
+            "demand_id": "V14",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 2.5834256955423407,
+            "peak_capacity_load_ton": 1.0333702782169363,
+            "distance_km": 7.6997,
+            "travel_time_h": 0.1925
+          },
+          {
+            "demand_id": "V14",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 8.611418985141135,
+            "peak_capacity_load_ton": 0.014352364975235227,
+            "distance_km": 17.1026,
+            "travel_time_h": 0.392167
+          },
+          {
+            "demand_id": "V15",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 4.974376151391092,
+            "peak_capacity_load_ton": 0.008290626918985152,
+            "distance_km": 78.9747,
+            "travel_time_h": 1.4517
+          },
+          {
+            "demand_id": "V15",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 2.984625690834655,
+            "peak_capacity_load_ton": 0.41784759671685173,
+            "distance_km": 54.7778,
+            "travel_time_h": 1.1597
+          },
+          {
+            "demand_id": "V15",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 1.4923128454173276,
+            "peak_capacity_load_ton": 0.596925138166931,
+            "distance_km": 66.8218,
+            "travel_time_h": 1.2781
+          },
+          {
+            "demand_id": "V15",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 0.4974376151391092,
+            "peak_capacity_load_ton": 0.2984625690834656,
+            "distance_km": 47.4675,
+            "travel_time_h": 0.949317
+          },
+          {
+            "demand_id": "V16",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 7.503338960602451,
+            "peak_capacity_load_ton": 1.0504674544843433,
+            "distance_km": 92.5778,
+            "travel_time_h": 2.0847
+          },
+          {
+            "demand_id": "V16",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 3.7516694803012256,
+            "peak_capacity_load_ton": 1.5006677921204903,
+            "distance_km": 104.6218,
+            "travel_time_h": 2.2031
+          },
+          {
+            "demand_id": "V16",
+            "site": "T8",
+            "type": "precool",
+            "annual_flow_ton": 12.50556493433742,
+            "peak_capacity_load_ton": 0.0208426082238957,
+            "distance_km": 1.251,
+            "travel_time_h": 0.03575
+          },
+          {
+            "demand_id": "V16",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 1.250556493433742,
+            "peak_capacity_load_ton": 0.7503338960602454,
+            "distance_km": 37.132,
+            "travel_time_h": 0.91165
+          },
+          {
+            "demand_id": "V17",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 8.161960188221826,
+            "peak_capacity_load_ton": 1.1426744263510558,
+            "distance_km": 58.9863,
+            "travel_time_h": 1.43925
+          },
+          {
+            "demand_id": "V17",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 1.360326698036971,
+            "peak_capacity_load_ton": 0.8161960188221826,
+            "distance_km": 24.8023,
+            "travel_time_h": 0.584667
+          },
+          {
+            "demand_id": "V17",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 4.080980094110913,
+            "peak_capacity_load_ton": 1.6323920376443652,
+            "distance_km": 24.8023,
+            "travel_time_h": 0.584667
+          },
+          {
+            "demand_id": "V17",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 13.60326698036971,
+            "peak_capacity_load_ton": 0.022672111633949513,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "V18",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 2.058405011315879,
+            "peak_capacity_load_ton": 0.2881767015842231,
+            "distance_km": 70.585,
+            "travel_time_h": 1.641083
+          },
+          {
+            "demand_id": "V18",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.34306750188597984,
+            "peak_capacity_load_ton": 0.20584050113158794,
+            "distance_km": 36.4009,
+            "travel_time_h": 0.7865
+          },
+          {
+            "demand_id": "V18",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 1.0292025056579395,
+            "peak_capacity_load_ton": 0.4116810022631758,
+            "distance_km": 36.4009,
+            "travel_time_h": 0.7865
+          },
+          {
+            "demand_id": "V18",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 3.430675018859798,
+            "peak_capacity_load_ton": 0.005717791698099664,
+            "distance_km": 11.5986,
+            "travel_time_h": 0.201833
+          },
+          {
+            "demand_id": "V19",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 1.2542266181432877,
+            "peak_capacity_load_ton": 0.17559172654006028,
+            "distance_km": 119.8356,
+            "travel_time_h": 2.391917
+          },
+          {
+            "demand_id": "V19",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.209037769690548,
+            "peak_capacity_load_ton": 0.1254226618143288,
+            "distance_km": 91.5298,
+            "travel_time_h": 1.574067
+          },
+          {
+            "demand_id": "V19",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 0.6271133090716439,
+            "peak_capacity_load_ton": 0.2508453236286575,
+            "distance_km": 91.5298,
+            "travel_time_h": 1.574067
+          },
+          {
+            "demand_id": "V19",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 2.0903776969054797,
+            "peak_capacity_load_ton": 0.0034839628281757994,
+            "distance_km": 66.7275,
+            "travel_time_h": 0.9894
+          },
+          {
+            "demand_id": "V20",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 3.8333983369482976,
+            "peak_capacity_load_ton": 0.5366757671727617,
+            "distance_km": 27.8632,
+            "travel_time_h": 0.600483
+          },
+          {
+            "demand_id": "V20",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 1.9166991684741488,
+            "peak_capacity_load_ton": 0.7666796673896596,
+            "distance_km": 70.2088,
+            "travel_time_h": 1.366783
+          },
+          {
+            "demand_id": "V20",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.6388997228247164,
+            "peak_capacity_load_ton": 0.3833398336948299,
+            "distance_km": 46.8573,
+            "travel_time_h": 1.16875
+          },
+          {
+            "demand_id": "V20",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 6.388997228247163,
+            "peak_capacity_load_ton": 0.010648328713745273,
+            "distance_km": 71.6596,
+            "travel_time_h": 1.753417
+          },
+          {
+            "demand_id": "V21",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 6.727184830930822,
+            "peak_capacity_load_ton": 0.011211974718218037,
+            "distance_km": 88.6331,
+            "travel_time_h": 1.644867
+          },
+          {
+            "demand_id": "V21",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 4.036310898558493,
+            "peak_capacity_load_ton": 0.565083525798189,
+            "distance_km": 64.4363,
+            "travel_time_h": 1.352867
+          },
+          {
+            "demand_id": "V21",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 2.0181554492792464,
+            "peak_capacity_load_ton": 0.8072621797116986,
+            "distance_km": 76.4803,
+            "travel_time_h": 1.471267
+          },
+          {
+            "demand_id": "V21",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 0.6727184830930822,
+            "peak_capacity_load_ton": 0.40363108985584933,
+            "distance_km": 57.1259,
+            "travel_time_h": 1.142483
+          },
+          {
+            "demand_id": "V22",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 3.546850816570803,
+            "peak_capacity_load_ton": 0.4965591143199124,
+            "distance_km": 47.5388,
+            "travel_time_h": 0.99515
+          },
+          {
+            "demand_id": "V22",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 1.7734254082854015,
+            "peak_capacity_load_ton": 0.7093701633141607,
+            "distance_km": 62.3037,
+            "travel_time_h": 1.364267
+          },
+          {
+            "demand_id": "V22",
+            "site": "T8",
+            "type": "precool",
+            "annual_flow_ton": 5.911418027618005,
+            "peak_capacity_load_ton": 0.009852363379363342,
+            "distance_km": 77.7284,
+            "travel_time_h": 1.53205
+          },
+          {
+            "demand_id": "V22",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 0.5911418027618005,
+            "peak_capacity_load_ton": 0.35468508165708035,
+            "distance_km": 41.8475,
+            "travel_time_h": 0.65615
+          },
+          {
+            "demand_id": "V23",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 2.669223766249861,
+            "peak_capacity_load_ton": 0.0044487062770831014,
+            "distance_km": 29.2592,
+            "travel_time_h": 0.525617
+          },
+          {
+            "demand_id": "V23",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 1.6015342597499165,
+            "peak_capacity_load_ton": 0.2242147963649883,
+            "distance_km": 101.6342,
+            "travel_time_h": 1.8729
+          },
+          {
+            "demand_id": "V23",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 0.8007671298749582,
+            "peak_capacity_load_ton": 0.32030685194998326,
+            "distance_km": 41.412,
+            "travel_time_h": 0.699217
+          },
+          {
+            "demand_id": "V23",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 0.26692237662498614,
+            "peak_capacity_load_ton": 0.16015342597499166,
+            "distance_km": 112.0485,
+            "travel_time_h": 2.017017
+          },
+          {
+            "demand_id": "V24",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 5.017731530164991,
+            "peak_capacity_load_ton": 0.7024824142230988,
+            "distance_km": 27.3259,
+            "travel_time_h": 0.589733
+          },
+          {
+            "demand_id": "V24",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 2.5088657650824957,
+            "peak_capacity_load_ton": 1.0035463060329983,
+            "distance_km": 69.6715,
+            "travel_time_h": 1.356033
+          },
+          {
+            "demand_id": "V24",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.836288588360832,
+            "peak_capacity_load_ton": 0.5017731530164993,
+            "distance_km": 46.32,
+            "travel_time_h": 1.158
+          },
+          {
+            "demand_id": "V24",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 8.36288588360832,
+            "peak_capacity_load_ton": 0.0139381431393472,
+            "distance_km": 71.1223,
+            "travel_time_h": 1.742667
+          },
+          {
+            "demand_id": "V25",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 3.0535728431407176,
+            "peak_capacity_load_ton": 0.42750019803970046,
+            "distance_km": 143.4751,
+            "travel_time_h": 3.10335
+          },
+          {
+            "demand_id": "V25",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.5089288071901196,
+            "peak_capacity_load_ton": 0.3053572843140718,
+            "distance_km": 109.291,
+            "travel_time_h": 2.248767
+          },
+          {
+            "demand_id": "V25",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 1.5267864215703588,
+            "peak_capacity_load_ton": 0.6107145686281436,
+            "distance_km": 109.291,
+            "travel_time_h": 2.248767
+          },
+          {
+            "demand_id": "V25",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 5.089288071901196,
+            "peak_capacity_load_ton": 0.008482146786501993,
+            "distance_km": 84.4888,
+            "travel_time_h": 1.6641
+          },
+          {
+            "demand_id": "V26",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 5.379042535783115,
+            "peak_capacity_load_ton": 0.7530659550096361,
+            "distance_km": 138.9017,
+            "travel_time_h": 2.972683
+          },
+          {
+            "demand_id": "V26",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.8965070892971859,
+            "peak_capacity_load_ton": 0.5379042535783116,
+            "distance_km": 104.7176,
+            "travel_time_h": 2.1181
+          },
+          {
+            "demand_id": "V26",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 2.6895212678915574,
+            "peak_capacity_load_ton": 1.075808507156623,
+            "distance_km": 104.7176,
+            "travel_time_h": 2.1181
+          },
+          {
+            "demand_id": "V26",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 8.965070892971859,
+            "peak_capacity_load_ton": 0.014941784821619765,
+            "distance_km": 79.9153,
+            "travel_time_h": 1.533433
+          },
+          {
+            "demand_id": "V27",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 1.5180461041271585,
+            "peak_capacity_load_ton": 0.2125264545778022,
+            "distance_km": 20.9352,
+            "travel_time_h": 0.523383
+          },
+          {
+            "demand_id": "V27",
+            "site": "T5",
+            "type": "frozen",
+            "annual_flow_ton": 0.2530076840211931,
+            "peak_capacity_load_ton": 0.15180461041271587,
+            "distance_km": 34.2041,
+            "travel_time_h": 0.8551
+          },
+          {
+            "demand_id": "V27",
+            "site": "T7",
+            "type": "ca",
+            "annual_flow_ton": 0.7590230520635792,
+            "peak_capacity_load_ton": 0.3036092208254317,
+            "distance_km": 34.2041,
+            "travel_time_h": 0.8551
+          },
+          {
+            "demand_id": "V27",
+            "site": "V17",
+            "type": "precool",
+            "annual_flow_ton": 2.530076840211931,
+            "peak_capacity_load_ton": 0.004216794733686551,
+            "distance_km": 59.0064,
+            "travel_time_h": 1.439767
+          },
+          {
+            "demand_id": "V28",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 2.966667046543916,
+            "peak_capacity_load_ton": 0.41533338651614826,
+            "distance_km": 58.5925,
+            "travel_time_h": 1.235983
+          },
+          {
+            "demand_id": "V28",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 1.483333523271958,
+            "peak_capacity_load_ton": 0.5933334093087832,
+            "distance_km": 70.6365,
+            "travel_time_h": 1.354383
+          },
+          {
+            "demand_id": "V28",
+            "site": "T8",
+            "type": "precool",
+            "annual_flow_ton": 4.944445077573193,
+            "peak_capacity_load_ton": 0.008240741795955322,
+            "distance_km": 35.8809,
+            "travel_time_h": 0.8759
+          },
+          {
+            "demand_id": "V28",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 0.49444450775731935,
+            "peak_capacity_load_ton": 0.2966667046543916,
+            "distance_km": 0.0,
+            "travel_time_h": 0.0
+          },
+          {
+            "demand_id": "V29",
+            "site": "C1",
+            "type": "precool",
+            "annual_flow_ton": 14.17748985357755,
+            "peak_capacity_load_ton": 0.023629149755962583,
+            "distance_km": 26.9662,
+            "travel_time_h": 0.488917
+          },
+          {
+            "demand_id": "V29",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 8.50649391214653,
+            "peak_capacity_load_ton": 1.1909091477005143,
+            "distance_km": 99.3413,
+            "travel_time_h": 1.872783
+          },
+          {
+            "demand_id": "V29",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 4.253246956073265,
+            "peak_capacity_load_ton": 1.701298782429306,
+            "distance_km": 39.1191,
+            "travel_time_h": 0.662517
+          },
+          {
+            "demand_id": "V29",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 1.417748985357755,
+            "peak_capacity_load_ton": 0.850649391214653,
+            "distance_km": 109.7556,
+            "travel_time_h": 2.0169
+          },
+          {
+            "demand_id": "V30",
+            "site": "T1",
+            "type": "cold",
+            "annual_flow_ton": 8.043246956371652,
+            "peak_capacity_load_ton": 1.1260545738920313,
+            "distance_km": 92.5778,
+            "travel_time_h": 2.0847
+          },
+          {
+            "demand_id": "V30",
+            "site": "T4",
+            "type": "ca",
+            "annual_flow_ton": 4.021623478185826,
+            "peak_capacity_load_ton": 1.6086493912743305,
+            "distance_km": 104.6218,
+            "travel_time_h": 2.2031
+          },
+          {
+            "demand_id": "V30",
+            "site": "T8",
+            "type": "precool",
+            "annual_flow_ton": 13.405411593952753,
+            "peak_capacity_load_ton": 0.02234235265658792,
+            "distance_km": 1.251,
+            "travel_time_h": 0.03575
+          },
+          {
+            "demand_id": "V30",
+            "site": "V28",
+            "type": "frozen",
+            "annual_flow_ton": 1.3405411593952754,
+            "peak_capacity_load_ton": 0.8043246956371652,
+            "distance_km": 37.132,
+            "travel_time_h": 0.91165
+          }
+        ],
+        "assumptions": {
+          "harvest_window_days": 90.0,
+          "harvest_peak_factor": 1.8,
+          "max_facilities": 8,
+          "carbon_price": 50.0,
+          "loss_price": 3000.0,
+          "channels": [
+            {
+              "type_id": "precool",
+              "label": "first-mile precooling",
+              "annual_share": 1.0,
+              "storage_days": 0.08333333333333333,
+              "loss_rate": 0.01,
+              "transport_loss_multiplier": 1.0,
+              "channel_note": "Mandatory first-mile handling within 2 hours; not interpreted as long-term storage."
+            },
+            {
+              "type_id": "cold",
+              "label": "fresh cold storage",
+              "annual_share": 0.6,
+              "storage_days": 7.0,
+              "loss_rate": 0.02,
+              "transport_loss_multiplier": 0.45,
+              "channel_note": "Fresh-market channel using 7-10 C literature target; current cost table uses closest cold-storage type."
+            },
+            {
+              "type_id": "ca",
+              "label": "controlled-atmosphere storage",
+              "annual_share": 0.3,
+              "storage_days": 20.0,
+              "loss_rate": 0.012,
+              "transport_loss_multiplier": 0.35,
+              "channel_note": "Quality-preserving MAP/CA channel for longer holding."
+            },
+            {
+              "type_id": "frozen",
+              "label": "processing/frozen fallback",
+              "annual_share": 0.1,
+              "storage_days": 30.0,
+              "loss_rate": 0.04,
+              "transport_loss_multiplier": 0.35,
+              "channel_note": "Explicitly capped processing or frozen fallback share; not all fresh okra is frozen."
+            }
+          ]
+        },
+        "risk_response": {
+          "capacity_semantics": "uses peak load instead of annual production in capacity constraints",
+          "temperature_chain": "requires positive precool, cold, CA, and capped frozen/processing channels",
+          "frozen_only_prevented": true,
+          "paper_claim_boundary": "v3.0 is a corrected scenario baseline. Channel shares are auditable assumptions until real enterprise sales/processing data are ingested."
+        }
+      }
+    }
+  },
+  "cost_comparison": {
+    "obj_haversine": 4205367.99,
+    "obj_osm": 4433112.27,
+    "obj_diff_yuan": 227744.28,
+    "obj_diff_pct": 5.416,
+    "interpretation": "正值 = OSM 路网下总成本更高（实际道路更迂回）；负值 = OSM 路网下成本更低（Haversine 高估了部分距离）。"
+  },
+  "solver_improvement_suggestions": {
+    "haversine_run": [
+      "Gap 3.06% > 1%: 启用更长 time_limit（900s）或 MIPFocus=3 + Cuts=2 profile。",
+      "改进方向 1 — Valid inequalities: 对 z[j,t,c] 加 'at most one capacity level per site' 组合约束，收紧 LP 松弛。",
+      "改进方向 2 — Warm start: 用 Haversine 最优解作为 OSM 求解的初始 MIP start（heuristic warmstart），减少根节点 gap。",
+      "改进方向 3 — Symmetry breaking: 对相同 capacity 的候选点加字典序约束，减少对称解。",
+      "改进方向 4 — Benders decomposition: 对大规模问题，把 x[i,j,t] 放入子问题，z[j,t,c] 留主问题，可大幅降低主问题规模。"
+    ],
+    "osm_run": [
+      "Gap 1.68% > 1%: 启用更长 time_limit（900s）或 MIPFocus=3 + Cuts=2 profile。",
+      "改进方向 1 — Valid inequalities: 对 z[j,t,c] 加 'at most one capacity level per site' 组合约束，收紧 LP 松弛。",
+      "改进方向 2 — Warm start: 用 Haversine 最优解作为 OSM 求解的初始 MIP start（heuristic warmstart），减少根节点 gap。",
+      "改进方向 3 — Symmetry breaking: 对相同 capacity 的候选点加字典序约束，减少对称解。",
+      "改进方向 4 — Benders decomposition: 对大规模问题，把 x[i,j,t] 放入子问题，z[j,t,c] 留主问题，可大幅降低主问题规模。"
+    ]
+  },
+  "claim_boundary": "OSM-matrix run uses road-network distances from Overpass API (county-level bbox). Haversine-matrix uses random road-factor (1.3-1.5, no fixed seed). Both runs use the same v3.0 capacity-chain MIP with identical solver params. This is a county-level case study (39 nodes), not enterprise-scale validation."
+}

@@ -1,0 +1,229 @@
+{
+  "source_name": "Baseline v3.0 capacity-chain report",
+  "source": "results/baseline_v3_capacity_chain_result.pkl",
+  "source_backend": "pickle_report",
+  "result_paths": {
+    "pickle": "D:\\秋葵冷库优化项目\\results\\baseline_v3_capacity_chain_result.pkl",
+    "json": "D:\\秋葵冷库优化项目\\results\\baseline_v3_capacity_chain_report.json",
+    "md": "D:\\秋葵冷库优化项目\\results\\baseline_v3_capacity_chain_report.md"
+  },
+  "exists": {
+    "pickle": true,
+    "analysis": true
+  },
+  "solver": {
+    "status_code": 9,
+    "status_name": "TIME_LIMIT",
+    "sol_count": 10,
+    "objective": 4205367.9926100625,
+    "mip_gap_pct": 6.106300572603626,
+    "objective_bound": 3948575.5827972246,
+    "num_vars": 4671,
+    "num_constraints": 4703
+  },
+  "summary": {
+    "total_cost": 4205367.9926100625,
+    "fixed_cost": 3330000.0,
+    "operate_cost": 734000.0,
+    "transport_cost": 46893.28093774236,
+    "loss_cost": 94128.98331835776,
+    "carbon_cost": 345.728353962366,
+    "num_facilities": 6,
+    "total_annual_production_ton": 588.1834248373999,
+    "total_service_annual_flow_ton": 1176.3668496747998,
+    "total_peak_capacity_load_ton": 156.2607298651359,
+    "installed_capacity_ton": 175,
+    "fresh_chain_share": 0.9,
+    "frozen_or_processing_share": 0.1,
+    "downstream_share_sum": 1.0,
+    "capacity_semantics": "peak_inventory_from_annual_flow",
+    "selected_storage_types": [
+      "ca",
+      "cold",
+      "frozen",
+      "precool"
+    ]
+  },
+  "facilities": [
+    {
+      "site": "C1",
+      "type": "precool",
+      "type_name": "预冷库",
+      "capacity": 5,
+      "capacity_idx": 0,
+      "fixed_cost": 8,
+      "operate_cost": 2.4,
+      "assigned_annual_flow_ton": 588.1834248373999,
+      "peak_capacity_load_ton": 0.9803057080623331,
+      "utilization": 19.606114161246662
+    },
+    {
+      "site": "T4",
+      "type": "cold",
+      "type_name": "冷藏库",
+      "capacity": 50,
+      "capacity_idx": 2,
+      "fixed_cost": 65,
+      "operate_cost": 15.0,
+      "assigned_annual_flow_ton": 352.9100549024399,
+      "peak_capacity_load_ton": 49.407407686341585,
+      "utilization": 98.81481537268317
+    },
+    {
+      "site": "T5",
+      "type": "frozen",
+      "type_name": "冷冻库",
+      "capacity": 20,
+      "capacity_idx": 0,
+      "fixed_cost": 30,
+      "operate_cost": 6.0,
+      "assigned_annual_flow_ton": 25.485009150406665,
+      "peak_capacity_load_ton": 15.291005490243998,
+      "utilization": 76.45502745121999
+    },
+    {
+      "site": "T6",
+      "type": "ca",
+      "type_name": "气调库",
+      "capacity": 50,
+      "capacity_idx": 2,
+      "fixed_cost": 120,
+      "operate_cost": 26.0,
+      "assigned_annual_flow_ton": 106.13183438550206,
+      "peak_capacity_load_ton": 42.45273375420082,
+      "utilization": 84.90546750840164
+    },
+    {
+      "site": "T7",
+      "type": "ca",
+      "type_name": "气调库",
+      "capacity": 30,
+      "capacity_idx": 1,
+      "fixed_cost": 80,
+      "operate_cost": 18.0,
+      "assigned_annual_flow_ton": 70.3231930657179,
+      "peak_capacity_load_ton": 28.12927722628716,
+      "utilization": 93.76425742095721
+    },
+    {
+      "site": "V21",
+      "type": "frozen",
+      "type_name": "冷冻库",
+      "capacity": 20,
+      "capacity_idx": 0,
+      "fixed_cost": 30,
+      "operate_cost": 6.0,
+      "assigned_annual_flow_ton": 33.33333333333333,
+      "peak_capacity_load_ton": 19.999999999999996,
+      "utilization": 99.99999999999997
+    }
+  ],
+  "channel_mix": [
+    {
+      "type": "precool",
+      "annual_flow_ton": 588.1834248373998,
+      "annual_share_pct": 49.999999999999986,
+      "peak_capacity_load_ton": 0.980305708062333
+    },
+    {
+      "type": "cold",
+      "annual_flow_ton": 352.91005490244,
+      "annual_share_pct": 30.000000000000004,
+      "peak_capacity_load_ton": 49.407407686341614
+    },
+    {
+      "type": "ca",
+      "annual_flow_ton": 176.45502745122,
+      "annual_share_pct": 15.000000000000002,
+      "peak_capacity_load_ton": 70.58201098048796
+    },
+    {
+      "type": "frozen",
+      "annual_flow_ton": 58.818342483739976,
+      "annual_share_pct": 4.999999999999999,
+      "peak_capacity_load_ton": 35.29100549024398
+    }
+  ],
+  "checks": [
+    {
+      "id": "solver_status",
+      "state": "feasible_gap_open",
+      "detail": "status=TIME_LIMIT, sol_count=10, objective=4205367.993, bound=3948575.583, gap=6.1063%",
+      "boundary": "A time-limit incumbent is useful evidence, but it is not a proven optimum."
+    },
+    {
+      "id": "capacity_semantics",
+      "state": "corrected",
+      "detail": "peak_load=156.261t, installed_capacity=175.000t",
+      "boundary": "Peak-capacity semantics improve construct validity but still depend on scenario harvest assumptions."
+    },
+    {
+      "id": "temperature_chain",
+      "state": "corrected",
+      "detail": "selected_storage_types=['ca', 'cold', 'frozen', 'precool']",
+      "boundary": "Service channels are auditable assumptions until enterprise sales/processing shares are available."
+    },
+    {
+      "id": "frozen_cap",
+      "state": "corrected",
+      "detail": "frozen_or_processing_share=0.100",
+      "boundary": "Frozen flow is capped as processing/fallback, not interpreted as all fresh okra."
+    }
+  ],
+  "risk_response": {
+    "capacity_semantics": "uses peak load instead of annual production in capacity constraints",
+    "temperature_chain": "requires positive precool, cold, CA, and capped frozen/processing channels",
+    "frozen_only_prevented": true,
+    "paper_claim_boundary": "v3.0 is a corrected scenario baseline. Channel shares are auditable assumptions until real enterprise sales/processing data are ingested."
+  },
+  "claim_boundary": {
+    "solver_claim_state": "feasible_time_limit_incumbent",
+    "allowed_claim": "The v3.0 run can be cited as a feasible incumbent with an open MIP gap (6.1063%), not as a proven optimum."
+  },
+  "assumptions": {
+    "harvest_window_days": 90.0,
+    "harvest_peak_factor": 1.8,
+    "max_facilities": 8,
+    "carbon_price": 50.0,
+    "loss_price": 3000.0,
+    "channels": [
+      {
+        "type_id": "precool",
+        "label": "first-mile precooling",
+        "annual_share": 1.0,
+        "storage_days": 0.08333333333333333,
+        "loss_rate": 0.01,
+        "transport_loss_multiplier": 1.0,
+        "channel_note": "Mandatory first-mile handling within 2 hours; not interpreted as long-term storage."
+      },
+      {
+        "type_id": "cold",
+        "label": "fresh cold storage",
+        "annual_share": 0.6,
+        "storage_days": 7.0,
+        "loss_rate": 0.02,
+        "transport_loss_multiplier": 0.45,
+        "channel_note": "Fresh-market channel using 7-10 C literature target; current cost table uses closest cold-storage type."
+      },
+      {
+        "type_id": "ca",
+        "label": "controlled-atmosphere storage",
+        "annual_share": 0.3,
+        "storage_days": 20.0,
+        "loss_rate": 0.012,
+        "transport_loss_multiplier": 0.35,
+        "channel_note": "Quality-preserving MAP/CA channel for longer holding."
+      },
+      {
+        "type_id": "frozen",
+        "label": "processing/frozen fallback",
+        "annual_share": 0.1,
+        "storage_days": 30.0,
+        "loss_rate": 0.04,
+        "transport_loss_multiplier": 0.35,
+        "channel_note": "Explicitly capped processing or frozen fallback share; not all fresh okra is frozen."
+      }
+    ]
+  },
+  "research_boundary": "This report packages the v3.0 corrected baseline. It improves capacity and service-chain semantics, but channel shares remain scenario assumptions until real enterprise or official channel data are ingested."
+}

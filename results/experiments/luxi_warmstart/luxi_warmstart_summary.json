@@ -1,0 +1,784 @@
+{
+  "experiment": "luxi_cross_region_warmstart",
+  "case": "luxi_county",
+  "built_at": "2026-06-02T15:52:00Z",
+  "data": {
+    "nodes": 40,
+    "candidates": 26,
+    "demands": 40,
+    "total_production_ton": 9224.1,
+    "distance_source": "haversine_detour_factor",
+    "data_dir": "D:\\秋葵冷库优化项目\\data\\luxi_county"
+  },
+  "config": {
+    "model": "v3.0_capacity_chain",
+    "time_limit": 1200.0,
+    "mip_gap": 0.02,
+    "top_k": 8,
+    "training_source": "j_county_priority_runs_transfer",
+    "max_facilities": 22,
+    "min_facilities_needed": 20
+  },
+  "ai_top_k": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T7",
+    "T8"
+  ],
+  "recommended_version": "site_only",
+  "recommended_label": "V1 site-only",
+  "recommended_speedup": 2.7,
+  "results": [
+    {
+      "label": "cold_start",
+      "status": "OPTIMAL",
+      "objective": 44231677.272906266,
+      "bound": 43399611.2898015,
+      "mip_gap_pct": 1.8812,
+      "elapsed_sec": 277.73,
+      "warm_sites": [],
+      "warm_sites_injected": 0,
+      "warm_facilities": [],
+      "warm_facilities_injected": 0,
+      "warm_strategy_version": null,
+      "warm_strategy_name": null,
+      "assignment_source_breakdown": {},
+      "solved_to_tol": true
+    },
+    {
+      "label": "warm_v1_site_only",
+      "status": "OPTIMAL",
+      "objective": 44240293.74736984,
+      "bound": 43387142.77099017,
+      "mip_gap_pct": 1.9284,
+      "elapsed_sec": 102.83,
+      "warm_sites": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "T7",
+        "T8"
+      ],
+      "warm_sites_injected": 8,
+      "warm_facilities": [
+        {
+          "site": "T1",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T2",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T3",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T4",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T5",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T6",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T7",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T8",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        }
+      ],
+      "warm_facilities_injected": 8,
+      "warm_strategy_version": "site_only",
+      "warm_strategy_name": "site_ranking + default_type_capacity_fallback",
+      "assignment_source_breakdown": {
+        "default_site_only_fallback": 8
+      },
+      "solved_to_tol": true
+    },
+    {
+      "label": "warm_v2_site_type",
+      "status": "OPTIMAL",
+      "objective": 44240293.74736984,
+      "bound": 43396060.26960697,
+      "mip_gap_pct": 1.9083,
+      "elapsed_sec": 134.35,
+      "warm_sites": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "T7",
+        "T8"
+      ],
+      "warm_sites_injected": 8,
+      "warm_facilities": [
+        {
+          "site": "T1",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 1,
+          "score": 0.961546,
+          "assignment_source": "nearest_neighbor_type",
+          "matched_site": "T2"
+        },
+        {
+          "site": "T2",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 2,
+          "score": 0.961546,
+          "assignment_source": "site_history_type",
+          "matched_site": "T2"
+        },
+        {
+          "site": "T3",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 3,
+          "score": 0.961546,
+          "assignment_source": "nearest_neighbor_type",
+          "matched_site": "T4"
+        },
+        {
+          "site": "T4",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 4,
+          "score": 0.961546,
+          "assignment_source": "site_history_type",
+          "matched_site": "T4"
+        },
+        {
+          "site": "T5",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 5,
+          "score": 0.961546,
+          "assignment_source": "site_history_type",
+          "matched_site": "T5"
+        },
+        {
+          "site": "T6",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 6,
+          "score": 0.961546,
+          "assignment_source": "site_history_type",
+          "matched_site": "T6"
+        },
+        {
+          "site": "T7",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 7,
+          "score": 0.961546,
+          "assignment_source": "site_history_type",
+          "matched_site": "T7"
+        },
+        {
+          "site": "T8",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 8,
+          "score": 0.961546,
+          "assignment_source": "site_history_type",
+          "matched_site": "T8"
+        }
+      ],
+      "warm_facilities_injected": 8,
+      "warm_strategy_version": "site_type",
+      "warm_strategy_name": "site_ranking + site_history_or_nearest_neighbor_type + default_capacity",
+      "assignment_source_breakdown": {
+        "nearest_neighbor_type": 2,
+        "site_history_type": 6
+      },
+      "solved_to_tol": true
+    },
+    {
+      "label": "warm_v3_site_type_capacity",
+      "status": "OPTIMAL",
+      "objective": 44231677.272906266,
+      "bound": 43351763.518397585,
+      "mip_gap_pct": 1.9893,
+      "elapsed_sec": 270.17,
+      "warm_sites": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "T7",
+        "T8"
+      ],
+      "warm_sites_injected": 8,
+      "warm_facilities": [
+        {
+          "site": "T1",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 1,
+          "score": 0.961546,
+          "assignment_source": "nearest_neighbor",
+          "matched_site": "T2"
+        },
+        {
+          "site": "T2",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 2,
+          "score": 0.961546,
+          "assignment_source": "site_history",
+          "matched_site": "T2"
+        },
+        {
+          "site": "T3",
+          "type": "cold",
+          "capacity_idx": 2,
+          "capacity": 50,
+          "site_rank": 3,
+          "score": 0.961546,
+          "assignment_source": "nearest_neighbor",
+          "matched_site": "T4"
+        },
+        {
+          "site": "T4",
+          "type": "cold",
+          "capacity_idx": 2,
+          "capacity": 50,
+          "site_rank": 4,
+          "score": 0.961546,
+          "assignment_source": "site_history",
+          "matched_site": "T4"
+        },
+        {
+          "site": "T5",
+          "type": "frozen",
+          "capacity_idx": 0,
+          "capacity": 20,
+          "site_rank": 5,
+          "score": 0.961546,
+          "assignment_source": "site_history",
+          "matched_site": "T5"
+        },
+        {
+          "site": "T6",
+          "type": "frozen",
+          "capacity_idx": 0,
+          "capacity": 20,
+          "site_rank": 6,
+          "score": 0.961546,
+          "assignment_source": "site_history",
+          "matched_site": "T6"
+        },
+        {
+          "site": "T7",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 7,
+          "score": 0.961546,
+          "assignment_source": "site_history",
+          "matched_site": "T7"
+        },
+        {
+          "site": "T8",
+          "type": "cold",
+          "capacity_idx": 0,
+          "capacity": 10,
+          "site_rank": 8,
+          "score": 0.961546,
+          "assignment_source": "site_history",
+          "matched_site": "T8"
+        }
+      ],
+      "warm_facilities_injected": 8,
+      "warm_strategy_version": "site_type_capacity",
+      "warm_strategy_name": "site_ranking + site_history_or_nearest_neighbor_type_capacity",
+      "assignment_source_breakdown": {
+        "nearest_neighbor": 2,
+        "site_history": 6
+      },
+      "solved_to_tol": true
+    }
+  ],
+  "results_by_version": {
+    "site_only": {
+      "label": "warm_v1_site_only",
+      "status": "OPTIMAL",
+      "objective": 44240293.74736984,
+      "bound": 43387142.77099017,
+      "mip_gap_pct": 1.9284,
+      "elapsed_sec": 102.83,
+      "warm_sites": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "T7",
+        "T8"
+      ],
+      "warm_sites_injected": 8,
+      "warm_facilities": [
+        {
+          "site": "T1",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T2",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T3",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T4",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T5",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T6",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T7",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T8",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        }
+      ],
+      "warm_facilities_injected": 8,
+      "warm_strategy_version": "site_only",
+      "warm_strategy_name": "site_ranking + default_type_capacity_fallback",
+      "assignment_source_breakdown": {
+        "default_site_only_fallback": 8
+      },
+      "solved_to_tol": true
+    },
+    "site_type": {
+      "label": "warm_v2_site_type",
+      "status": "OPTIMAL",
+      "objective": 44240293.74736984,
+      "bound": 43396060.26960697,
+      "mip_gap_pct": 1.9083,
+      "elapsed_sec": 134.35,
+      "warm_sites": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "T7",
+        "T8"
+      ],
+      "warm_sites_injected": 8,
+      "warm_facilities": [
+        {
+          "site": "T1",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 1,
+          "score": 0.961546,
+          "assignment_source": "nearest_neighbor_type",
+          "matched_site": "T2"
+        },
+        {
+          "site": "T2",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 2,
+          "score": 0.961546,
+          "assignment_source": "site_history_type",
+          "matched_site": "T2"
+        },
+        {
+          "site": "T3",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 3,
+          "score": 0.961546,
+          "assignment_source": "nearest_neighbor_type",
+          "matched_site": "T4"
+        },
+        {
+          "site": "T4",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 4,
+          "score": 0.961546,
+          "assignment_source": "site_history_type",
+          "matched_site": "T4"
+        },
+        {
+          "site": "T5",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 5,
+          "score": 0.961546,
+          "assignment_source": "site_history_type",
+          "matched_site": "T5"
+        },
+        {
+          "site": "T6",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 6,
+          "score": 0.961546,
+          "assignment_source": "site_history_type",
+          "matched_site": "T6"
+        },
+        {
+          "site": "T7",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 7,
+          "score": 0.961546,
+          "assignment_source": "site_history_type",
+          "matched_site": "T7"
+        },
+        {
+          "site": "T8",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 8,
+          "score": 0.961546,
+          "assignment_source": "site_history_type",
+          "matched_site": "T8"
+        }
+      ],
+      "warm_facilities_injected": 8,
+      "warm_strategy_version": "site_type",
+      "warm_strategy_name": "site_ranking + site_history_or_nearest_neighbor_type + default_capacity",
+      "assignment_source_breakdown": {
+        "nearest_neighbor_type": 2,
+        "site_history_type": 6
+      },
+      "solved_to_tol": true
+    },
+    "site_type_capacity": {
+      "label": "warm_v3_site_type_capacity",
+      "status": "OPTIMAL",
+      "objective": 44231677.272906266,
+      "bound": 43351763.518397585,
+      "mip_gap_pct": 1.9893,
+      "elapsed_sec": 270.17,
+      "warm_sites": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "T7",
+        "T8"
+      ],
+      "warm_sites_injected": 8,
+      "warm_facilities": [
+        {
+          "site": "T1",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 1,
+          "score": 0.961546,
+          "assignment_source": "nearest_neighbor",
+          "matched_site": "T2"
+        },
+        {
+          "site": "T2",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 2,
+          "score": 0.961546,
+          "assignment_source": "site_history",
+          "matched_site": "T2"
+        },
+        {
+          "site": "T3",
+          "type": "cold",
+          "capacity_idx": 2,
+          "capacity": 50,
+          "site_rank": 3,
+          "score": 0.961546,
+          "assignment_source": "nearest_neighbor",
+          "matched_site": "T4"
+        },
+        {
+          "site": "T4",
+          "type": "cold",
+          "capacity_idx": 2,
+          "capacity": 50,
+          "site_rank": 4,
+          "score": 0.961546,
+          "assignment_source": "site_history",
+          "matched_site": "T4"
+        },
+        {
+          "site": "T5",
+          "type": "frozen",
+          "capacity_idx": 0,
+          "capacity": 20,
+          "site_rank": 5,
+          "score": 0.961546,
+          "assignment_source": "site_history",
+          "matched_site": "T5"
+        },
+        {
+          "site": "T6",
+          "type": "frozen",
+          "capacity_idx": 0,
+          "capacity": 20,
+          "site_rank": 6,
+          "score": 0.961546,
+          "assignment_source": "site_history",
+          "matched_site": "T6"
+        },
+        {
+          "site": "T7",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 7,
+          "score": 0.961546,
+          "assignment_source": "site_history",
+          "matched_site": "T7"
+        },
+        {
+          "site": "T8",
+          "type": "cold",
+          "capacity_idx": 0,
+          "capacity": 10,
+          "site_rank": 8,
+          "score": 0.961546,
+          "assignment_source": "site_history",
+          "matched_site": "T8"
+        }
+      ],
+      "warm_facilities_injected": 8,
+      "warm_strategy_version": "site_type_capacity",
+      "warm_strategy_name": "site_ranking + site_history_or_nearest_neighbor_type_capacity",
+      "assignment_source_breakdown": {
+        "nearest_neighbor": 2,
+        "site_history": 6
+      },
+      "solved_to_tol": true
+    }
+  },
+  "cold_start": {
+    "label": "cold_start",
+    "status": "OPTIMAL",
+    "objective": 44231677.272906266,
+    "bound": 43399611.2898015,
+    "mip_gap_pct": 1.8812,
+    "elapsed_sec": 277.73,
+    "warm_sites": [],
+    "warm_sites_injected": 0,
+    "warm_facilities": [],
+    "warm_facilities_injected": 0,
+    "warm_strategy_version": null,
+    "warm_strategy_name": null,
+    "assignment_source_breakdown": {},
+    "solved_to_tol": true
+  },
+  "ai_warm": {
+    "label": "warm_v1_site_only",
+    "status": "OPTIMAL",
+    "objective": 44240293.74736984,
+    "bound": 43387142.77099017,
+    "mip_gap_pct": 1.9284,
+    "elapsed_sec": 102.83,
+    "warm_sites": [
+      "T1",
+      "T2",
+      "T3",
+      "T4",
+      "T5",
+      "T6",
+      "T7",
+      "T8"
+    ],
+    "warm_sites_injected": 8,
+    "warm_facilities": [
+      {
+        "site": "T1",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T2",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T3",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T4",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T5",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T6",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T7",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T8",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      }
+    ],
+    "warm_facilities_injected": 8,
+    "warm_strategy_version": "site_only",
+    "warm_strategy_name": "site_ranking + default_type_capacity_fallback",
+    "assignment_source_breakdown": {
+      "default_site_only_fallback": 8
+    },
+    "solved_to_tol": true
+  },
+  "claim_boundary": "Cross-region validation of v3.0 capacity-chain MIP + AI warm start on Luxi County data. AI ranker trained on J County priority scenario labels and applied via transfer inference to Luxi features. Best warm-start version: V1 site-only with 2.7x speedup. Distance matrix is Haversine + detour factor (not OSM). This validates model generalizability, not enterprise-scale deployment."
+}

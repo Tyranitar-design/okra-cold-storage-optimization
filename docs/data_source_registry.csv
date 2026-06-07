@@ -1,0 +1,11 @@
+source_id,source_name,source_category,owner,access_url,status,priority,key_fields,intended_use,notes
+"SRC-C-001","秋葵县域案例节点数据","case_data","项目内部","D:/秋葵冷库优化项目/data/nodes.csv; D:/秋葵冷库优化项目/data/nodes.xlsx","available","P0","node_id,name,lat,lon,demand,production","县域需求点、候选点、坐标与产量输入","当前是项目基线数据，适合作为论文主案例"
+"SRC-C-002","秋葵距离矩阵","case_data","项目内部","D:/秋葵冷库优化项目/data/distance_matrix.csv","available","P0","origin,destination,distance_km","运输成本与选址评估","如使用 Haversine 估算需在论文中注明"
+"SRC-C-003","秋葵运输时间矩阵","case_data","项目内部","D:/秋葵冷库优化项目/data/transport_time_matrix.csv","available","P0","origin,destination,time_h","预冷约束、运输时间与损耗输入","如使用道路估算需说明估算方法"
+"SRC-D-001","国家数据 / 年度统计公报","official","国家统计局","https://data.stats.gov.cn/index.htm?pageId=0; https://www.stats.gov.cn/sj/tjgb/","entry_verified","P1","各地区农业总产值,各地区农产品价格指数,农业基本情况","县域农业背景、外部有效性、宏观对照","公开门户，可作为论文背景和地区对照来源"
+"SRC-D-002","农业农村部数据平台","official","农业农村部信息中心","https://data.moa.gov.cn/; https://ncpscxx.moa.gov.cn/","entry_verified","P0","农产品批发价格200指数,分品类价格,日度/周度报告","价格情景、损耗价值、市场侧验证","优先接入，适合构建价格序列与市场情景"
+"SRC-D-003","中国气象数据网","official","国家气象信息中心","https://m.data.cma.cn/","entry_verified","P0","温度,湿度,降水,风,日照,地温","损耗参数学习、季节性分析、极端天气敏感性","部分数据需实名注册或申请"
+"SRC-D-004","ERA5-Land","official","Copernicus / ECMWF","https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land","entry_verified","P1","air temperature, humidity, soil variables","气象补全、空间插值、稳健性对照","公开可获取，适合作为站点缺失时的补充"
+"SRC-E-001","Overpass API / OpenStreetMap","official","OpenStreetMap 社区","https://wiki.openstreetmap.org/wiki/Overpass_API; https://overpass-api.de/api/interpreter","entry_verified","P0","road network, POI, warehouse, road class","路网、地图图层、候选点发现、距离/时间矩阵","只读 API，适合批量查询和 GeoJSON 导出"
+"SRC-D-005","FAOSTAT","official","FAO","https://www.fao.org/faostat/en/","entry_verified","P2","crop production, harvested area, value","国际对照、论文背景、外部有效性","适合综述与跨国比较"
+"SRC-F-001","企业数据采集模板","template","项目内部","D:/秋葵冷库优化项目/docs/真实数据拓展与证据链方案_v1.md","template_ready","P2","batches,storage_logs,transport_logs,quality_records,orders","真实企业数据接入与脱敏采集","模板先行，后续再接脱敏企业数据"

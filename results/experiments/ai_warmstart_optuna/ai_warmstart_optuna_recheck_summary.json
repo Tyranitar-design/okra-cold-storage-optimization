@@ -1,0 +1,406 @@
+{
+  "experiment": "v3_ai_warmstart_optuna_best_recheck",
+  "built_at": "2026-06-05T14:21:24Z",
+  "source_summary": "D:\\秋葵冷库优化项目\\results\\experiments\\ai_warmstart_optuna\\ai_warmstart_optuna_summary.json",
+  "reference_best_trial": {
+    "number": 21,
+    "value": 31.87,
+    "params": {
+      "xgb_n_estimators": 84,
+      "xgb_max_depth": 5,
+      "xgb_learning_rate": 0.1236013350161545,
+      "xgb_subsample": 0.8466083945935197,
+      "xgb_colsample_bytree": 0.9956519112864175,
+      "xgb_reg_lambda": 1.6445994748372113,
+      "xgb_min_child_weight": 3,
+      "gurobi_MIPFocus": 1,
+      "gurobi_Cuts": 2,
+      "gurobi_Heuristics": 0.05146208328996727,
+      "gurobi_Presolve": 1,
+      "top_k": 7,
+      "warm_strategy": "site_type"
+    },
+    "elapsed_sec": 31.87,
+    "gap_pct": 0.0,
+    "objective": 4433112.274860297,
+    "objective_delta_pct": 2.10083236532697e-14,
+    "objective_consistent": true,
+    "solved_to_tol": true,
+    "speedup_vs_cold": 5.6498,
+    "top_sites": [
+      "C1",
+      "T4",
+      "T6",
+      "T7",
+      "T5",
+      "V21",
+      "T8"
+    ],
+    "warm_strategy_label": "V2 site + type",
+    "strategy_name": "site_ranking + site_history_or_nearest_neighbor_type + default_capacity",
+    "solver_params": {
+      "MIPFocus": 1,
+      "Cuts": 2,
+      "Heuristics": 0.05146208328996727,
+      "Presolve": 1
+    },
+    "xgb_params": {
+      "n_estimators": 84,
+      "max_depth": 5,
+      "learning_rate": 0.1236013350161545,
+      "subsample": 0.8466083945935197,
+      "colsample_bytree": 0.9956519112864175,
+      "reg_lambda": 1.6445994748372113,
+      "min_child_weight": 3,
+      "n_jobs": 1,
+      "verbosity": 0
+    },
+    "warm_facilities": [
+      {
+        "site": "C1",
+        "type": "precool",
+        "capacity_idx": 1,
+        "capacity": 10,
+        "site_rank": 1,
+        "score": 0.991992,
+        "assignment_source": "site_history_type",
+        "matched_site": "C1"
+      },
+      {
+        "site": "T4",
+        "type": "ca",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "site_rank": 2,
+        "score": 0.990377,
+        "assignment_source": "site_history_type",
+        "matched_site": "T4"
+      },
+      {
+        "site": "T6",
+        "type": "frozen",
+        "capacity_idx": 1,
+        "capacity": 50,
+        "site_rank": 3,
+        "score": 0.986653,
+        "assignment_source": "site_history_type",
+        "matched_site": "T6"
+      },
+      {
+        "site": "T7",
+        "type": "ca",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "site_rank": 4,
+        "score": 0.793603,
+        "assignment_source": "site_history_type",
+        "matched_site": "T7"
+      },
+      {
+        "site": "T5",
+        "type": "frozen",
+        "capacity_idx": 1,
+        "capacity": 50,
+        "site_rank": 5,
+        "score": 0.74727,
+        "assignment_source": "site_history_type",
+        "matched_site": "T5"
+      },
+      {
+        "site": "V21",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "site_rank": 6,
+        "score": 0.593993,
+        "assignment_source": "site_history_type",
+        "matched_site": "V21"
+      },
+      {
+        "site": "T8",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "site_rank": 7,
+        "score": 0.583921,
+        "assignment_source": "site_history_type",
+        "matched_site": "T8"
+      }
+    ]
+  },
+  "trial_params": {
+    "xgb_params": {
+      "n_estimators": 84,
+      "max_depth": 5,
+      "learning_rate": 0.1236013350161545,
+      "subsample": 0.8466083945935197,
+      "colsample_bytree": 0.9956519112864175,
+      "reg_lambda": 1.6445994748372113,
+      "min_child_weight": 3,
+      "n_jobs": 1,
+      "verbosity": 0
+    },
+    "solver_params": {
+      "MIPFocus": 1,
+      "Cuts": 2,
+      "Heuristics": 0.05146208328996727,
+      "Presolve": 1
+    },
+    "top_k": 7,
+    "warm_strategy": "site_type"
+  },
+  "trial_time_limit": 180.0,
+  "mip_gap": 0.01,
+  "cold_start": {
+    "label": "optuna_cold_start",
+    "status": "TIME_LIMIT",
+    "objective": 4433112.274860298,
+    "bound": 4358137.740895784,
+    "mip_gap_pct": 1.6912,
+    "elapsed_sec": 180.06,
+    "warm_sites": [],
+    "warm_sites_injected": 0,
+    "warm_facilities": [],
+    "warm_facilities_injected": 0,
+    "warm_strategy_version": null,
+    "warm_strategy_name": null,
+    "assignment_source_breakdown": {},
+    "solved_to_tol": false,
+    "solver_params": {
+      "MIPFocus": 3,
+      "Cuts": 2
+    }
+  },
+  "replications": [
+    {
+      "replication": 1,
+      "label": "optuna_best_recheck_1",
+      "status": "OPTIMAL",
+      "elapsed_sec": 37.23,
+      "gap_pct": 0.0,
+      "objective": 4433112.274860297,
+      "objective_delta_pct": 2.10083236532697e-14,
+      "objective_consistent": true,
+      "solved_to_tol": true,
+      "speedup_vs_cold": 4.8364,
+      "top_sites": "C1|T4|T6|T7|T5|V21|T8",
+      "warm_facilities_injected": 7,
+      "warm_strategy_version": "site_type",
+      "warm_strategy_name": "site_ranking + site_history_or_nearest_neighbor_type + default_capacity"
+    }
+  ],
+  "replication_stats": {
+    "replication_count": 1,
+    "elapsed_sec_min": 37.23,
+    "elapsed_sec_mean": 37.23,
+    "elapsed_sec_max": 37.23,
+    "elapsed_sec_stdev": 0.0,
+    "speedup_vs_cold_mean": 4.8364,
+    "gap_pct_max": 0.0,
+    "all_objective_consistent": true,
+    "all_solved_to_tol": true
+  },
+  "raw_results": [
+    {
+      "row": {
+        "label": "optuna_best_recheck_1",
+        "status": "OPTIMAL",
+        "objective": 4433112.274860297,
+        "bound": 4433112.274860297,
+        "mip_gap_pct": 0.0,
+        "elapsed_sec": 37.23,
+        "warm_sites": [
+          "C1",
+          "T4",
+          "T6",
+          "T7",
+          "T5",
+          "V21",
+          "T8"
+        ],
+        "warm_sites_injected": 7,
+        "warm_facilities": [
+          {
+            "site": "C1",
+            "type": "precool",
+            "capacity_idx": 1,
+            "capacity": 10,
+            "site_rank": 1,
+            "score": 0.991992,
+            "assignment_source": "site_history_type",
+            "matched_site": "C1"
+          },
+          {
+            "site": "T4",
+            "type": "ca",
+            "capacity_idx": 1,
+            "capacity": 30,
+            "site_rank": 2,
+            "score": 0.990377,
+            "assignment_source": "site_history_type",
+            "matched_site": "T4"
+          },
+          {
+            "site": "T6",
+            "type": "frozen",
+            "capacity_idx": 1,
+            "capacity": 50,
+            "site_rank": 3,
+            "score": 0.986653,
+            "assignment_source": "site_history_type",
+            "matched_site": "T6"
+          },
+          {
+            "site": "T7",
+            "type": "ca",
+            "capacity_idx": 1,
+            "capacity": 30,
+            "site_rank": 4,
+            "score": 0.793603,
+            "assignment_source": "site_history_type",
+            "matched_site": "T7"
+          },
+          {
+            "site": "T5",
+            "type": "frozen",
+            "capacity_idx": 1,
+            "capacity": 50,
+            "site_rank": 5,
+            "score": 0.74727,
+            "assignment_source": "site_history_type",
+            "matched_site": "T5"
+          },
+          {
+            "site": "V21",
+            "type": "cold",
+            "capacity_idx": 1,
+            "capacity": 30,
+            "site_rank": 6,
+            "score": 0.593993,
+            "assignment_source": "site_history_type",
+            "matched_site": "V21"
+          },
+          {
+            "site": "T8",
+            "type": "cold",
+            "capacity_idx": 1,
+            "capacity": 30,
+            "site_rank": 7,
+            "score": 0.583921,
+            "assignment_source": "site_history_type",
+            "matched_site": "T8"
+          }
+        ],
+        "warm_facilities_injected": 7,
+        "warm_strategy_version": "site_type",
+        "warm_strategy_name": "site_ranking + site_history_or_nearest_neighbor_type + default_capacity",
+        "assignment_source_breakdown": {
+          "site_history_type": 7
+        },
+        "solved_to_tol": true,
+        "solver_params": {
+          "MIPFocus": 1,
+          "Cuts": 2,
+          "Heuristics": 0.05146208328996727,
+          "Presolve": 1
+        }
+      },
+      "penalized_elapsed": 37.23,
+      "elapsed_sec": 37.23,
+      "gap_pct": 0.0,
+      "objective": 4433112.274860297,
+      "objective_delta_pct": 2.10083236532697e-14,
+      "objective_consistent": true,
+      "solved_to_tol": true,
+      "speedup_vs_cold": 4.8364,
+      "top_sites": [
+        "C1",
+        "T4",
+        "T6",
+        "T7",
+        "T5",
+        "V21",
+        "T8"
+      ],
+      "warm_facilities": [
+        {
+          "site": "C1",
+          "type": "precool",
+          "capacity_idx": 1,
+          "capacity": 10,
+          "site_rank": 1,
+          "score": 0.991992,
+          "assignment_source": "site_history_type",
+          "matched_site": "C1"
+        },
+        {
+          "site": "T4",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 2,
+          "score": 0.990377,
+          "assignment_source": "site_history_type",
+          "matched_site": "T4"
+        },
+        {
+          "site": "T6",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 3,
+          "score": 0.986653,
+          "assignment_source": "site_history_type",
+          "matched_site": "T6"
+        },
+        {
+          "site": "T7",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 4,
+          "score": 0.793603,
+          "assignment_source": "site_history_type",
+          "matched_site": "T7"
+        },
+        {
+          "site": "T5",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 5,
+          "score": 0.74727,
+          "assignment_source": "site_history_type",
+          "matched_site": "T5"
+        },
+        {
+          "site": "V21",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 6,
+          "score": 0.593993,
+          "assignment_source": "site_history_type",
+          "matched_site": "V21"
+        },
+        {
+          "site": "T8",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 7,
+          "score": 0.583921,
+          "assignment_source": "site_history_type",
+          "matched_site": "T8"
+        }
+      ],
+      "strategy_name": "site_ranking + site_history_or_nearest_neighbor_type + default_capacity"
+    }
+  ],
+  "claim_boundary": "This recheck reruns the fixed Optuna best configuration to assess timing stability. Optuna tunes XGBoost ranker parameters, warm-start construction, and selected Gurobi parameters for the v3.0 AI warm-start pipeline. Gurobi remains responsible for feasibility and configured-gap certification; this is county-case acceleration evidence, not enterprise-scale generalization or proof that AI replaces exact optimization.",
+  "outputs": {
+    "summary_json": "D:\\秋葵冷库优化项目\\results\\experiments\\ai_warmstart_optuna\\ai_warmstart_optuna_recheck_summary.json",
+    "trials_csv": "D:\\秋葵冷库优化项目\\results\\experiments\\ai_warmstart_optuna\\ai_warmstart_optuna_recheck_trials.csv",
+    "report_md": "D:\\秋葵冷库优化项目\\results\\experiments\\ai_warmstart_optuna\\ai_warmstart_optuna_recheck.md"
+  }
+}

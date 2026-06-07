@@ -1,0 +1,874 @@
+{
+  "cases": [
+    {
+      "case_id": "AB_5c_6d_strict",
+      "candidate_count": 5,
+      "demand_count": 6,
+      "max_facilities": 2,
+      "max_iterations": 5,
+      "mip_gap": 0.001,
+      "time_limit": 60
+    },
+    {
+      "case_id": "AB_7c_8d_strict",
+      "candidate_count": 7,
+      "demand_count": 8,
+      "max_facilities": 3,
+      "max_iterations": 5,
+      "mip_gap": 0.001,
+      "time_limit": 90
+    },
+    {
+      "case_id": "AB_9c_10d_strict",
+      "candidate_count": 9,
+      "demand_count": 10,
+      "max_facilities": 3,
+      "max_iterations": 5,
+      "mip_gap": 0.001,
+      "time_limit": 120
+    }
+  ],
+  "summary_rows": [
+    {
+      "case_id": "AB_5c_6d_strict",
+      "method": "classic_benders",
+      "candidate_count": 5,
+      "demand_count": 6,
+      "max_facilities": 2,
+      "max_iterations": 5,
+      "mip_gap_target": 0.001,
+      "upper_bound": 2589474.2537848735,
+      "lower_bound": 2582415.6711158035,
+      "final_gap_pct": 0.27258748214055034,
+      "cut_count": 5,
+      "iteration_count": 5,
+      "elapsed_sec": 0.060547828674316406
+    },
+    {
+      "case_id": "AB_5c_6d_strict",
+      "method": "ai_benders",
+      "candidate_count": 5,
+      "demand_count": 6,
+      "max_facilities": 2,
+      "max_iterations": 5,
+      "mip_gap_target": 0.001,
+      "upper_bound": 2589474.2537848735,
+      "lower_bound": 2582415.6711158035,
+      "final_gap_pct": 0.27258748214055034,
+      "cut_count": 5,
+      "iteration_count": 5,
+      "elapsed_sec": 0.06472587585449219
+    },
+    {
+      "case_id": "AB_7c_8d_strict",
+      "method": "classic_benders",
+      "candidate_count": 7,
+      "demand_count": 8,
+      "max_facilities": 3,
+      "max_iterations": 5,
+      "mip_gap_target": 0.001,
+      "upper_bound": 3268228.3274797862,
+      "lower_bound": 3266877.5072858813,
+      "final_gap_pct": 0.04133187949406734,
+      "cut_count": 4,
+      "iteration_count": 4,
+      "elapsed_sec": 0.08492183685302734
+    },
+    {
+      "case_id": "AB_7c_8d_strict",
+      "method": "ai_benders",
+      "candidate_count": 7,
+      "demand_count": 8,
+      "max_facilities": 3,
+      "max_iterations": 5,
+      "mip_gap_target": 0.001,
+      "upper_bound": 3268228.3274797862,
+      "lower_bound": 3266877.5072858813,
+      "final_gap_pct": 0.04133187949406734,
+      "cut_count": 4,
+      "iteration_count": 4,
+      "elapsed_sec": 0.08485651016235352
+    },
+    {
+      "case_id": "AB_9c_10d_strict",
+      "method": "classic_benders",
+      "candidate_count": 9,
+      "demand_count": 10,
+      "max_facilities": 3,
+      "max_iterations": 5,
+      "mip_gap_target": 0.001,
+      "upper_bound": 4122831.734174376,
+      "lower_bound": 4116522.0308021526,
+      "final_gap_pct": 0.15304295152096142,
+      "cut_count": 5,
+      "iteration_count": 5,
+      "elapsed_sec": 0.23031091690063477
+    },
+    {
+      "case_id": "AB_9c_10d_strict",
+      "method": "ai_benders",
+      "candidate_count": 9,
+      "demand_count": 10,
+      "max_facilities": 3,
+      "max_iterations": 5,
+      "mip_gap_target": 0.001,
+      "upper_bound": 4122831.734174376,
+      "lower_bound": 4116522.0308021526,
+      "final_gap_pct": 0.15304295152096142,
+      "cut_count": 5,
+      "iteration_count": 5,
+      "elapsed_sec": 0.16421890258789062
+    }
+  ],
+  "ai_details": [
+    {
+      "case_id": "AB_5c_6d_strict",
+      "ai_cut_policy": "learned_contextual_bandit_top_1",
+      "ai_training": {
+        "final_loss": 109202.125,
+        "epochs": 150,
+        "sample_count": 5,
+        "graph_embedding_dim": 32,
+        "selected_cut_indices": [
+          1
+        ]
+      },
+      "ai_graph_summary": {
+        "node_count": 11,
+        "edge_count": 30,
+        "demand_count": 6,
+        "facility_count": 5,
+        "embedding_dim": 32
+      },
+      "ai_feature_importance_top": [
+        {
+          "feature": "subproblem_obj",
+          "importance": 0.07203171402215958
+        },
+        {
+          "feature": "coef_abs_min",
+          "importance": 0.0719304084777832
+        },
+        {
+          "feature": "iteration_idx",
+          "importance": 0.07166644185781479
+        },
+        {
+          "feature": "coef_l1",
+          "importance": 0.0715787261724472
+        },
+        {
+          "feature": "gap_pct",
+          "importance": 0.07002770900726318
+        }
+      ],
+      "ai_cut_scores": [
+        {
+          "cut_id": "cut_000",
+          "iter_no": 1,
+          "policy_name": "learned_contextual_bandit_top_1",
+          "selected": false,
+          "score": -491.1468200683594,
+          "cut_type": null,
+          "rhs": 39451.7109375,
+          "coef_count": 85.0,
+          "gap_pct": 1.1382331848144531,
+          "cut_count": 1.0,
+          "features": {
+            "rhs": 39451.7109375,
+            "coef_count": 85.0,
+            "coef_abs_mean": 7523.0205078125,
+            "coef_abs_std": 6511.48779296875,
+            "coef_abs_max": 21014.08203125,
+            "coef_abs_min": 0.0,
+            "coef_l1": 639456.75,
+            "coef_l2": 91731.140625,
+            "coef_pos_ratio": 0.0,
+            "coef_neg_ratio": 0.8235294222831726,
+            "iteration_idx": 1.0,
+            "master_obj": 2560000.0,
+            "subproblem_obj": 29474.25390625,
+            "gap_pct": 1.1382331848144531,
+            "cut_count": 1.0
+          }
+        },
+        {
+          "cut_id": "cut_001",
+          "iter_no": 2,
+          "policy_name": "learned_contextual_bandit_top_1",
+          "selected": true,
+          "score": -211.89535522460938,
+          "cut_type": null,
+          "rhs": 52495.6953125,
+          "coef_count": 85.0,
+          "gap_pct": 0.35980647802352905,
+          "cut_count": 2.0,
+          "features": {
+            "rhs": 52495.6953125,
+            "coef_count": 85.0,
+            "coef_abs_mean": 14771.5859375,
+            "coef_abs_std": 10559.3720703125,
+            "coef_abs_max": 34058.06640625,
+            "coef_abs_min": 0.0,
+            "coef_l1": 1255584.75,
+            "coef_l2": 167405.21875,
+            "coef_pos_ratio": 0.0,
+            "coef_neg_ratio": 0.9411764740943909,
+            "iteration_idx": 2.0,
+            "master_obj": 2580157.25,
+            "subproblem_obj": 22670.865234375,
+            "gap_pct": 0.35980647802352905,
+            "cut_count": 2.0
+          }
+        },
+        {
+          "cut_id": "cut_002",
+          "iter_no": 3,
+          "policy_name": "learned_contextual_bandit_top_1",
+          "selected": false,
+          "score": -301.4580993652344,
+          "cut_type": null,
+          "rhs": 26992.705078125,
+          "coef_count": 85.0,
+          "gap_pct": 0.336989164352417,
+          "cut_count": 3.0,
+          "features": {
+            "rhs": 26992.705078125,
+            "coef_count": 85.0,
+            "coef_abs_mean": 2531.62255859375,
+            "coef_abs_std": 2606.208984375,
+            "coef_abs_max": 8555.0771484375,
+            "coef_abs_min": 0.0,
+            "coef_l1": 215187.90625,
+            "coef_l2": 33498.09375,
+            "coef_pos_ratio": 0.0,
+            "coef_neg_ratio": 0.7176470756530762,
+            "iteration_idx": 3.0,
+            "master_obj": 2580748.0,
+            "subproblem_obj": 22415.671875,
+            "gap_pct": 0.336989164352417,
+            "cut_count": 3.0
+          }
+        },
+        {
+          "cut_id": "cut_003",
+          "iter_no": 4,
+          "policy_name": "learned_contextual_bandit_top_1",
+          "selected": false,
+          "score": -302.7044372558594,
+          "cut_type": null,
+          "rhs": 26992.705078125,
+          "coef_count": 85.0,
+          "gap_pct": 0.27258747816085815,
+          "cut_count": 4.0,
+          "features": {
+            "rhs": 26992.705078125,
+            "coef_count": 85.0,
+            "coef_abs_mean": 2531.62255859375,
+            "coef_abs_std": 2606.208984375,
+            "coef_abs_max": 8555.0771484375,
+            "coef_abs_min": 0.0,
+            "coef_l1": 215187.90625,
+            "coef_l2": 33498.09375,
+            "coef_pos_ratio": 0.0,
+            "coef_neg_ratio": 0.7176470756530762,
+            "iteration_idx": 4.0,
+            "master_obj": 2582415.75,
+            "subproblem_obj": 22415.671875,
+            "gap_pct": 0.27258747816085815,
+            "cut_count": 4.0
+          }
+        },
+        {
+          "cut_id": "cut_004",
+          "iter_no": 5,
+          "policy_name": "learned_contextual_bandit_top_1",
+          "selected": false,
+          "score": -302.7112731933594,
+          "cut_type": null,
+          "rhs": 26992.705078125,
+          "coef_count": 85.0,
+          "gap_pct": 0.27258747816085815,
+          "cut_count": 5.0,
+          "features": {
+            "rhs": 26992.705078125,
+            "coef_count": 85.0,
+            "coef_abs_mean": 2531.62255859375,
+            "coef_abs_std": 2606.208984375,
+            "coef_abs_max": 8555.0771484375,
+            "coef_abs_min": 0.0,
+            "coef_l1": 215187.90625,
+            "coef_l2": 33498.09375,
+            "coef_pos_ratio": 0.0,
+            "coef_neg_ratio": 0.7176470756530762,
+            "iteration_idx": 5.0,
+            "master_obj": 2582415.75,
+            "subproblem_obj": 22415.671875,
+            "gap_pct": 0.27258747816085815,
+            "cut_count": 5.0
+          }
+        }
+      ],
+      "ai_selected_iterations": [
+        {
+          "iteration": 2,
+          "master_obj": 2580157.1578123537,
+          "subproblem_obj": 22670.86595518935,
+          "upper_bound": 2589474.2537848735,
+          "lower_bound": 2580157.1578123537,
+          "gap_pct": 0.359806472642144,
+          "cut_count": 2
+        }
+      ],
+      "upper_bound": 2589474.2537848735,
+      "lower_bound": 2582415.6711158035,
+      "final_gap_pct": 0.27258748214055034,
+      "cut_count": 5
+    },
+    {
+      "case_id": "AB_7c_8d_strict",
+      "ai_cut_policy": "learned_contextual_bandit_top_1",
+      "ai_training": {
+        "final_loss": 897340.3125,
+        "epochs": 150,
+        "sample_count": 4,
+        "graph_embedding_dim": 32,
+        "selected_cut_indices": [
+          0
+        ]
+      },
+      "ai_graph_summary": {
+        "node_count": 15,
+        "edge_count": 56,
+        "demand_count": 8,
+        "facility_count": 7,
+        "embedding_dim": 32
+      },
+      "ai_feature_importance_top": [
+        {
+          "feature": "subproblem_obj",
+          "importance": 0.0725117176771164
+        },
+        {
+          "feature": "gap_pct",
+          "importance": 0.07170554995536804
+        },
+        {
+          "feature": "coef_l1",
+          "importance": 0.07081343233585358
+        },
+        {
+          "feature": "coef_abs_std",
+          "importance": 0.07043008506298065
+        },
+        {
+          "feature": "coef_pos_ratio",
+          "importance": 0.06892316043376923
+        }
+      ],
+      "ai_cut_scores": [
+        {
+          "cut_id": "cut_000",
+          "iter_no": 1,
+          "policy_name": "learned_contextual_bandit_top_1",
+          "selected": true,
+          "score": 3552.903564453125,
+          "cut_type": null,
+          "rhs": 60209.73046875,
+          "coef_count": 119.0,
+          "gap_pct": 0.8637195825576782,
+          "cut_count": 1.0,
+          "features": {
+            "rhs": 60209.73046875,
+            "coef_count": 119.0,
+            "coef_abs_mean": 12439.5009765625,
+            "coef_abs_std": 10012.59375,
+            "coef_abs_max": 33010.56640625,
+            "coef_abs_min": 0.0,
+            "coef_l1": 1480300.625,
+            "coef_l2": 174195.84375,
+            "coef_pos_ratio": 0.0,
+            "coef_neg_ratio": 0.924369752407074,
+            "iteration_idx": 1.0,
+            "master_obj": 3240000.0,
+            "subproblem_obj": 28228.328125,
+            "gap_pct": 0.8637195825576782,
+            "cut_count": 1.0
+          }
+        },
+        {
+          "cut_id": "cut_001",
+          "iter_no": 2,
+          "policy_name": "learned_contextual_bandit_top_1",
+          "selected": false,
+          "score": 3314.132080078125,
+          "cut_type": null,
+          "rhs": 38629.82421875,
+          "coef_count": 119.0,
+          "gap_pct": 0.4243985116481781,
+          "cut_count": 2.0,
+          "features": {
+            "rhs": 38629.82421875,
+            "coef_count": 119.0,
+            "coef_abs_mean": 3830.0546875,
+            "coef_abs_std": 4352.2666015625,
+            "coef_abs_max": 13797.234375,
+            "coef_abs_min": 0.0,
+            "coef_l1": 455776.5,
+            "coef_l2": 63243.76171875,
+            "coef_pos_ratio": 0.0,
+            "coef_neg_ratio": 0.6134454011917114,
+            "iteration_idx": 2.0,
+            "master_obj": 3254358.0,
+            "subproblem_obj": 33006.0078125,
+            "gap_pct": 0.4243985116481781,
+            "cut_count": 2.0
+          }
+        },
+        {
+          "cut_id": "cut_002",
+          "iter_no": 3,
+          "policy_name": "learned_contextual_bandit_top_1",
+          "selected": false,
+          "score": 3170.356689453125,
+          "cut_type": null,
+          "rhs": 31664.888671875,
+          "coef_count": 119.0,
+          "gap_pct": 0.14218412339687347,
+          "cut_count": 3.0,
+          "features": {
+            "rhs": 31664.888671875,
+            "coef_count": 119.0,
+            "coef_abs_mean": 2197.188232421875,
+            "coef_abs_std": 2983.95458984375,
+            "coef_abs_max": 10950.5673828125,
+            "coef_abs_min": 0.0,
+            "coef_l1": 261465.390625,
+            "coef_l2": 40423.54296875,
+            "coef_pos_ratio": 0.0,
+            "coef_neg_ratio": 0.605042040348053,
+            "iteration_idx": 3.0,
+            "master_obj": 3263581.5,
+            "subproblem_obj": 25045.24609375,
+            "gap_pct": 0.14218412339687347,
+            "cut_count": 3.0
+          }
+        },
+        {
+          "cut_id": "cut_003",
+          "iter_no": 4,
+          "policy_name": "learned_contextual_bandit_top_1",
+          "selected": false,
+          "score": 3172.852783203125,
+          "cut_type": null,
+          "rhs": 31664.888671875,
+          "coef_count": 119.0,
+          "gap_pct": 0.041331879794597626,
+          "cut_count": 4.0,
+          "features": {
+            "rhs": 31664.888671875,
+            "coef_count": 119.0,
+            "coef_abs_mean": 2197.188232421875,
+            "coef_abs_std": 2983.95458984375,
+            "coef_abs_max": 10950.5673828125,
+            "coef_abs_min": 0.0,
+            "coef_l1": 261465.390625,
+            "coef_l2": 40423.54296875,
+            "coef_pos_ratio": 0.0,
+            "coef_neg_ratio": 0.605042040348053,
+            "iteration_idx": 4.0,
+            "master_obj": 3266877.5,
+            "subproblem_obj": 25045.24609375,
+            "gap_pct": 0.041331879794597626,
+            "cut_count": 4.0
+          }
+        }
+      ],
+      "ai_selected_iterations": [
+        {
+          "iteration": 1,
+          "master_obj": 3240000.0,
+          "subproblem_obj": 28228.327479786392,
+          "upper_bound": 3268228.3274797862,
+          "lower_bound": 3240000.0,
+          "gap_pct": 0.8637195645860465,
+          "cut_count": 1
+        }
+      ],
+      "upper_bound": 3268228.3274797862,
+      "lower_bound": 3266877.5072858813,
+      "final_gap_pct": 0.04133187949406734,
+      "cut_count": 4
+    },
+    {
+      "case_id": "AB_9c_10d_strict",
+      "ai_cut_policy": "learned_contextual_bandit_top_1",
+      "ai_training": {
+        "final_loss": 2757826.0,
+        "epochs": 150,
+        "sample_count": 5,
+        "graph_embedding_dim": 32,
+        "selected_cut_indices": [
+          3
+        ]
+      },
+      "ai_graph_summary": {
+        "node_count": 19,
+        "edge_count": 90,
+        "demand_count": 10,
+        "facility_count": 9,
+        "embedding_dim": 32
+      },
+      "ai_feature_importance_top": [
+        {
+          "feature": "coef_neg_ratio",
+          "importance": 0.07311630994081497
+        },
+        {
+          "feature": "coef_l1",
+          "importance": 0.07167255133390427
+        },
+        {
+          "feature": "coef_abs_std",
+          "importance": 0.07044030725955963
+        },
+        {
+          "feature": "iteration_idx",
+          "importance": 0.06938108056783676
+        },
+        {
+          "feature": "master_obj",
+          "importance": 0.06863058358430862
+        }
+      ],
+      "ai_cut_scores": [
+        {
+          "cut_id": "cut_000",
+          "iter_no": 1,
+          "policy_name": "learned_contextual_bandit_top_1",
+          "selected": false,
+          "score": 2883.119140625,
+          "cut_type": null,
+          "rhs": 64627.2109375,
+          "coef_count": 153.0,
+          "gap_pct": 1.0388911962509155,
+          "cut_count": 1.0,
+          "features": {
+            "rhs": 64627.2109375,
+            "coef_count": 153.0,
+            "coef_abs_mean": 10239.6064453125,
+            "coef_abs_std": 9745.8125,
+            "coef_abs_max": 31296.337890625,
+            "coef_abs_min": 0.0,
+            "coef_l1": 1566659.75,
+            "coef_l2": 174854.375,
+            "coef_pos_ratio": 0.0,
+            "coef_neg_ratio": 0.7843137383460999,
+            "iteration_idx": 1.0,
+            "master_obj": 4080000.0,
+            "subproblem_obj": 42831.734375,
+            "gap_pct": 1.0388911962509155,
+            "cut_count": 1.0
+          }
+        },
+        {
+          "cut_id": "cut_001",
+          "iter_no": 2,
+          "policy_name": "learned_contextual_bandit_top_1",
+          "selected": false,
+          "score": 400.44342041015625,
+          "cut_type": null,
+          "rhs": 57733.51953125,
+          "coef_count": 153.0,
+          "gap_pct": 0.7102928161621094,
+          "cut_count": 2.0,
+          "features": {
+            "rhs": 57733.51953125,
+            "coef_count": 153.0,
+            "coef_abs_mean": 6464.98974609375,
+            "coef_abs_std": 5954.23291015625,
+            "coef_abs_max": 19172.927734375,
+            "coef_abs_min": 0.0,
+            "coef_l1": 989143.4375,
+            "coef_l2": 108715.65625,
+            "coef_pos_ratio": 0.0,
+            "coef_neg_ratio": 0.8169934749603271,
+            "iteration_idx": 2.0,
+            "master_obj": 4093547.5,
+            "subproblem_obj": 42959.81640625,
+            "gap_pct": 0.7102928161621094,
+            "cut_count": 2.0
+          }
+        },
+        {
+          "cut_id": "cut_002",
+          "iter_no": 3,
+          "policy_name": "learned_contextual_bandit_top_1",
+          "selected": false,
+          "score": 3681.865234375,
+          "cut_type": null,
+          "rhs": 73798.640625,
+          "coef_count": 153.0,
+          "gap_pct": 0.17372046411037445,
+          "cut_count": 3.0,
+          "features": {
+            "rhs": 73798.640625,
+            "coef_count": 153.0,
+            "coef_abs_mean": 12599.1552734375,
+            "coef_abs_std": 9998.458984375,
+            "coef_abs_max": 35238.05078125,
+            "coef_abs_min": 0.0,
+            "coef_l1": 1927670.75,
+            "coef_l2": 198953.03125,
+            "coef_pos_ratio": 0.0,
+            "coef_neg_ratio": 0.843137264251709,
+            "iteration_idx": 3.0,
+            "master_obj": 4115669.5,
+            "subproblem_obj": 37037.28515625,
+            "gap_pct": 0.17372046411037445,
+            "cut_count": 3.0
+          }
+        },
+        {
+          "cut_id": "cut_003",
+          "iter_no": 4,
+          "policy_name": "learned_contextual_bandit_top_1",
+          "selected": true,
+          "score": 5415.5234375,
+          "cut_type": null,
+          "rhs": 80806.3125,
+          "coef_count": 153.0,
+          "gap_pct": 0.16125304996967316,
+          "cut_count": 4.0,
+          "features": {
+            "rhs": 80806.3125,
+            "coef_count": 153.0,
+            "coef_abs_mean": 16298.1728515625,
+            "coef_abs_std": 12444.12109375,
+            "coef_abs_max": 42245.71875,
+            "coef_abs_min": 0.0,
+            "coef_l1": 2493620.5,
+            "coef_l2": 253642.359375,
+            "coef_pos_ratio": 0.0,
+            "coef_neg_ratio": 0.9411764740943909,
+            "iteration_idx": 4.0,
+            "master_obj": 4116183.5,
+            "subproblem_obj": 48188.19140625,
+            "gap_pct": 0.16125304996967316,
+            "cut_count": 4.0
+          }
+        },
+        {
+          "cut_id": "cut_004",
+          "iter_no": 5,
+          "policy_name": "learned_contextual_bandit_top_1",
+          "selected": false,
+          "score": 3028.197265625,
+          "cut_type": null,
+          "rhs": 67724.6484375,
+          "coef_count": 153.0,
+          "gap_pct": 0.1530429571866989,
+          "cut_count": 5.0,
+          "features": {
+            "rhs": 67724.6484375,
+            "coef_count": 153.0,
+            "coef_abs_mean": 9977.2802734375,
+            "coef_abs_std": 8226.46484375,
+            "coef_abs_max": 29164.056640625,
+            "coef_abs_min": 0.0,
+            "coef_l1": 1526523.875,
+            "coef_l2": 159952.453125,
+            "coef_pos_ratio": 0.0,
+            "coef_neg_ratio": 0.843137264251709,
+            "iteration_idx": 5.0,
+            "master_obj": 4116522.0,
+            "subproblem_obj": 36620.53515625,
+            "gap_pct": 0.1530429571866989,
+            "cut_count": 5.0
+          }
+        }
+      ],
+      "ai_selected_iterations": [
+        {
+          "iteration": 4,
+          "master_obj": 4116183.542065193,
+          "subproblem_obj": 48188.191964323174,
+          "upper_bound": 4122831.734174376,
+          "lower_bound": 4116183.542065193,
+          "gap_pct": 0.16125305464386813,
+          "cut_count": 4
+        }
+      ],
+      "upper_bound": 4122831.734174376,
+      "lower_bound": 4116522.0308021526,
+      "final_gap_pct": 0.15304295152096142,
+      "cut_count": 5
+    }
+  ],
+  "cut_score_rows": [
+    {
+      "case_id": "AB_5c_6d_strict",
+      "cut_id": "cut_000",
+      "iter_no": 1,
+      "score": -491.1468200683594,
+      "selected": false,
+      "rhs": 39451.7109375,
+      "coef_count": 85.0,
+      "gap_pct": 1.1382331848144531,
+      "policy_name": "learned_contextual_bandit_top_1"
+    },
+    {
+      "case_id": "AB_5c_6d_strict",
+      "cut_id": "cut_001",
+      "iter_no": 2,
+      "score": -211.89535522460938,
+      "selected": true,
+      "rhs": 52495.6953125,
+      "coef_count": 85.0,
+      "gap_pct": 0.35980647802352905,
+      "policy_name": "learned_contextual_bandit_top_1"
+    },
+    {
+      "case_id": "AB_5c_6d_strict",
+      "cut_id": "cut_002",
+      "iter_no": 3,
+      "score": -301.4580993652344,
+      "selected": false,
+      "rhs": 26992.705078125,
+      "coef_count": 85.0,
+      "gap_pct": 0.336989164352417,
+      "policy_name": "learned_contextual_bandit_top_1"
+    },
+    {
+      "case_id": "AB_5c_6d_strict",
+      "cut_id": "cut_003",
+      "iter_no": 4,
+      "score": -302.7044372558594,
+      "selected": false,
+      "rhs": 26992.705078125,
+      "coef_count": 85.0,
+      "gap_pct": 0.27258747816085815,
+      "policy_name": "learned_contextual_bandit_top_1"
+    },
+    {
+      "case_id": "AB_5c_6d_strict",
+      "cut_id": "cut_004",
+      "iter_no": 5,
+      "score": -302.7112731933594,
+      "selected": false,
+      "rhs": 26992.705078125,
+      "coef_count": 85.0,
+      "gap_pct": 0.27258747816085815,
+      "policy_name": "learned_contextual_bandit_top_1"
+    },
+    {
+      "case_id": "AB_7c_8d_strict",
+      "cut_id": "cut_000",
+      "iter_no": 1,
+      "score": 3552.903564453125,
+      "selected": true,
+      "rhs": 60209.73046875,
+      "coef_count": 119.0,
+      "gap_pct": 0.8637195825576782,
+      "policy_name": "learned_contextual_bandit_top_1"
+    },
+    {
+      "case_id": "AB_7c_8d_strict",
+      "cut_id": "cut_001",
+      "iter_no": 2,
+      "score": 3314.132080078125,
+      "selected": false,
+      "rhs": 38629.82421875,
+      "coef_count": 119.0,
+      "gap_pct": 0.4243985116481781,
+      "policy_name": "learned_contextual_bandit_top_1"
+    },
+    {
+      "case_id": "AB_7c_8d_strict",
+      "cut_id": "cut_002",
+      "iter_no": 3,
+      "score": 3170.356689453125,
+      "selected": false,
+      "rhs": 31664.888671875,
+      "coef_count": 119.0,
+      "gap_pct": 0.14218412339687347,
+      "policy_name": "learned_contextual_bandit_top_1"
+    },
+    {
+      "case_id": "AB_7c_8d_strict",
+      "cut_id": "cut_003",
+      "iter_no": 4,
+      "score": 3172.852783203125,
+      "selected": false,
+      "rhs": 31664.888671875,
+      "coef_count": 119.0,
+      "gap_pct": 0.041331879794597626,
+      "policy_name": "learned_contextual_bandit_top_1"
+    },
+    {
+      "case_id": "AB_9c_10d_strict",
+      "cut_id": "cut_000",
+      "iter_no": 1,
+      "score": 2883.119140625,
+      "selected": false,
+      "rhs": 64627.2109375,
+      "coef_count": 153.0,
+      "gap_pct": 1.0388911962509155,
+      "policy_name": "learned_contextual_bandit_top_1"
+    },
+    {
+      "case_id": "AB_9c_10d_strict",
+      "cut_id": "cut_001",
+      "iter_no": 2,
+      "score": 400.44342041015625,
+      "selected": false,
+      "rhs": 57733.51953125,
+      "coef_count": 153.0,
+      "gap_pct": 0.7102928161621094,
+      "policy_name": "learned_contextual_bandit_top_1"
+    },
+    {
+      "case_id": "AB_9c_10d_strict",
+      "cut_id": "cut_002",
+      "iter_no": 3,
+      "score": 3681.865234375,
+      "selected": false,
+      "rhs": 73798.640625,
+      "coef_count": 153.0,
+      "gap_pct": 0.17372046411037445,
+      "policy_name": "learned_contextual_bandit_top_1"
+    },
+    {
+      "case_id": "AB_9c_10d_strict",
+      "cut_id": "cut_003",
+      "iter_no": 4,
+      "score": 5415.5234375,
+      "selected": true,
+      "rhs": 80806.3125,
+      "coef_count": 153.0,
+      "gap_pct": 0.16125304996967316,
+      "policy_name": "learned_contextual_bandit_top_1"
+    },
+    {
+      "case_id": "AB_9c_10d_strict",
+      "cut_id": "cut_004",
+      "iter_no": 5,
+      "score": 3028.197265625,
+      "selected": false,
+      "rhs": 67724.6484375,
+      "coef_count": 153.0,
+      "gap_pct": 0.1530429571866989,
+      "policy_name": "learned_contextual_bandit_top_1"
+    }
+  ],
+  "files": {
+    "csv": "D:\\秋葵冷库优化项目\\results\\experiments\\ai_benders_comparison\\ai_benders_comparison.csv",
+    "xlsx": "D:\\秋葵冷库优化项目\\results\\experiments\\ai_benders_comparison\\ai_benders_comparison.xlsx"
+  },
+  "cut_score_files": {
+    "csv": "D:\\秋葵冷库优化项目\\results\\experiments\\ai_benders_comparison\\ai_benders_cut_scores.csv",
+    "xlsx": "D:\\秋葵冷库优化项目\\results\\experiments\\ai_benders_comparison\\ai_benders_cut_scores.xlsx"
+  },
+  "markdown": "D:\\秋葵冷库优化项目\\results\\experiments\\ai_benders_comparison\\ai_benders_comparison.md",
+  "research_boundary": "Controlled small-to-medium comparison; not yet full benchmark proof."
+}

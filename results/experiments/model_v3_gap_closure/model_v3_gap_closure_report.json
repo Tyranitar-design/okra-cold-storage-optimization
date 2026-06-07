@@ -1,0 +1,418 @@
+{
+  "source_name": "Model v3.0 gap-closure report",
+  "source_backend": "gap_closure_artifacts",
+  "result_paths": {
+    "json": "D:\\秋葵冷库优化项目\\results\\experiments\\model_v3_gap_closure\\model_v3_gap_closure_report.json",
+    "md": "D:\\秋葵冷库优化项目\\results\\experiments\\model_v3_gap_closure\\model_v3_gap_closure_report.md",
+    "artifact_dir": "D:\\秋葵冷库优化项目\\results\\experiments\\model_v3_gap_closure",
+    "baseline_v3_report": "D:\\秋葵冷库优化项目\\results\\baseline_v3_capacity_chain_report.json"
+  },
+  "exists": {
+    "artifact_dir": true,
+    "report_json": true,
+    "report_md": true,
+    "baseline_v3_report": true
+  },
+  "profiles": [
+    {
+      "name": "baseline_300s",
+      "label": "Baseline 300s",
+      "time_limit": 300,
+      "mip_gap": 0.01,
+      "threads": 8,
+      "solver_params": {},
+      "note": "Matches the default v3.0 baseline run for apples-to-apples comparison."
+    },
+    {
+      "name": "bound_focus_60s",
+      "label": "Bound focus 60s",
+      "time_limit": 60,
+      "mip_gap": 0.01,
+      "threads": 8,
+      "solver_params": {
+        "MIPFocus": 3,
+        "Cuts": 2,
+        "Presolve": 2
+      },
+      "note": "Short bounded run emphasizing bound improvement before longer reruns are authorized."
+    },
+    {
+      "name": "incumbent_focus_60s",
+      "label": "Incumbent focus 60s",
+      "time_limit": 60,
+      "mip_gap": 0.01,
+      "threads": 8,
+      "solver_params": {
+        "MIPFocus": 1,
+        "Heuristics": 0.2
+      },
+      "note": "Short bounded run emphasizing incumbent improvement."
+    },
+    {
+      "name": "extended_bound_900s",
+      "label": "Extended bound 900s",
+      "time_limit": 900,
+      "mip_gap": 0.01,
+      "threads": 8,
+      "solver_params": {
+        "MIPFocus": 3,
+        "Cuts": 2,
+        "Presolve": 2
+      },
+      "note": "Longer paper-evidence run; use only when execution time is explicitly acceptable."
+    }
+  ],
+  "baseline_reference": {
+    "exists": true,
+    "solver": {
+      "status_code": 9,
+      "status_name": "TIME_LIMIT",
+      "sol_count": 10,
+      "objective": 4205367.9926100625,
+      "mip_gap_pct": 6.106300572603626,
+      "objective_bound": 3948575.5827972246,
+      "num_vars": 4671,
+      "num_constraints": 4703
+    },
+    "summary": {
+      "total_cost": 4205367.9926100625,
+      "num_facilities": 6,
+      "claim_state": "feasible_time_limit_incumbent"
+    }
+  },
+  "runs": [
+    {
+      "source_name": "v3.0 gap-closure run: bound_focus_60s",
+      "source_backend": "gurobi_profile_run",
+      "profile": {
+        "name": "bound_focus_60s",
+        "label": "Bound focus 60s",
+        "time_limit": 60,
+        "mip_gap": 0.01,
+        "threads": 8,
+        "solver_params": {
+          "MIPFocus": 3,
+          "Cuts": 2,
+          "Presolve": 2
+        },
+        "note": "Short bounded run emphasizing bound improvement before longer reruns are authorized."
+      },
+      "solver": {
+        "status_code": 9,
+        "status_name": "TIME_LIMIT",
+        "sol_count": 10,
+        "objective": 4205367.9926100625,
+        "mip_gap_pct": 4.199855630063971,
+        "objective_bound": 4028748.6082075206,
+        "num_vars": 4671,
+        "num_constraints": 4703
+      },
+      "summary": {
+        "total_cost": 4205367.9926100625,
+        "fixed_cost": 3330000.0,
+        "operate_cost": 734000.0,
+        "transport_cost": 46893.28093774236,
+        "loss_cost": 94128.98331835777,
+        "carbon_cost": 345.728353962366,
+        "num_facilities": 6,
+        "total_annual_production_ton": 588.1834248373999,
+        "total_service_annual_flow_ton": 1176.3668496747998,
+        "total_peak_capacity_load_ton": 156.2607298651359,
+        "installed_capacity_ton": 175,
+        "fresh_chain_share": 0.9,
+        "frozen_or_processing_share": 0.1,
+        "downstream_share_sum": 1.0,
+        "capacity_semantics": "peak_inventory_from_annual_flow",
+        "selected_storage_types": [
+          "ca",
+          "cold",
+          "frozen",
+          "precool"
+        ]
+      },
+      "facilities": [
+        {
+          "site": "C1",
+          "type": "precool",
+          "type_name": "预冷库",
+          "capacity": 5,
+          "capacity_idx": 0,
+          "fixed_cost": 8,
+          "operate_cost": 2.4,
+          "assigned_annual_flow_ton": 588.1834248373999,
+          "peak_capacity_load_ton": 0.9803057080623331,
+          "utilization": 19.606114161246662
+        },
+        {
+          "site": "T4",
+          "type": "cold",
+          "type_name": "冷藏库",
+          "capacity": 50,
+          "capacity_idx": 2,
+          "fixed_cost": 65,
+          "operate_cost": 15.0,
+          "assigned_annual_flow_ton": 352.9100549024399,
+          "peak_capacity_load_ton": 49.407407686341585,
+          "utilization": 98.81481537268317
+        },
+        {
+          "site": "T5",
+          "type": "frozen",
+          "type_name": "冷冻库",
+          "capacity": 20,
+          "capacity_idx": 0,
+          "fixed_cost": 30,
+          "operate_cost": 6.0,
+          "assigned_annual_flow_ton": 25.485009150406672,
+          "peak_capacity_load_ton": 15.291005490244004,
+          "utilization": 76.45502745122002
+        },
+        {
+          "site": "T6",
+          "type": "ca",
+          "type_name": "气调库",
+          "capacity": 50,
+          "capacity_idx": 2,
+          "fixed_cost": 120,
+          "operate_cost": 26.0,
+          "assigned_annual_flow_ton": 106.13183438550206,
+          "peak_capacity_load_ton": 42.45273375420082,
+          "utilization": 84.90546750840164
+        },
+        {
+          "site": "T7",
+          "type": "ca",
+          "type_name": "气调库",
+          "capacity": 30,
+          "capacity_idx": 1,
+          "fixed_cost": 80,
+          "operate_cost": 18.0,
+          "assigned_annual_flow_ton": 70.3231930657179,
+          "peak_capacity_load_ton": 28.12927722628716,
+          "utilization": 93.76425742095721
+        },
+        {
+          "site": "V21",
+          "type": "frozen",
+          "type_name": "冷冻库",
+          "capacity": 20,
+          "capacity_idx": 0,
+          "fixed_cost": 30,
+          "operate_cost": 6.0,
+          "assigned_annual_flow_ton": 33.33333333333332,
+          "peak_capacity_load_ton": 19.999999999999993,
+          "utilization": 99.99999999999997
+        }
+      ],
+      "channel_mix": [
+        {
+          "type": "precool",
+          "annual_flow_ton": 588.1834248373998,
+          "peak_capacity_load_ton": 0.980305708062333
+        },
+        {
+          "type": "cold",
+          "annual_flow_ton": 352.91005490244,
+          "peak_capacity_load_ton": 49.407407686341614
+        },
+        {
+          "type": "ca",
+          "annual_flow_ton": 176.45502745122,
+          "peak_capacity_load_ton": 70.58201098048796
+        },
+        {
+          "type": "frozen",
+          "annual_flow_ton": 58.818342483739976,
+          "peak_capacity_load_ton": 35.29100549024398
+        }
+      ],
+      "claim_boundary": {
+        "solver_claim_state": "feasible_time_limit_incumbent",
+        "allowed_claim": "This v3.0 gap-closure run can be cited as a feasible incumbent with an open MIP gap (4.1999%), not as a proven optimum."
+      },
+      "elapsed_sec": 60.052703619003296,
+      "result_paths": {
+        "pickle": "D:\\秋葵冷库优化项目\\results\\experiments\\model_v3_gap_closure\\bound_focus_60s_result.pkl",
+        "json": "D:\\秋葵冷库优化项目\\results\\experiments\\model_v3_gap_closure\\bound_focus_60s_run.json",
+        "md": "D:\\秋葵冷库优化项目\\results\\experiments\\model_v3_gap_closure\\bound_focus_60s_run.md"
+      },
+      "research_boundary": "This is a v3.0 solver-profile experiment for gap closure. It improves optimization evidence only to the extent indicated by solver status and MIP gap; channel shares remain scenario assumptions.",
+      "artifact_path": "D:\\秋葵冷库优化项目\\results\\experiments\\model_v3_gap_closure\\bound_focus_60s_run.json"
+    },
+    {
+      "source_name": "v3.0 gap-closure run: extended_bound_900s",
+      "source_backend": "gurobi_profile_run",
+      "profile": {
+        "name": "extended_bound_900s",
+        "label": "Extended bound 900s",
+        "time_limit": 900,
+        "mip_gap": 0.01,
+        "threads": 8,
+        "solver_params": {
+          "MIPFocus": 3,
+          "Cuts": 2,
+          "Presolve": 2
+        },
+        "note": "Longer paper-evidence run; use only when execution time is explicitly acceptable."
+      },
+      "solver": {
+        "status_code": 2,
+        "status_name": "OPTIMAL",
+        "sol_count": 10,
+        "objective": 4205367.9926100625,
+        "mip_gap_pct": 0.9956694458788419,
+        "objective_bound": 4163496.4284208757,
+        "num_vars": 4671,
+        "num_constraints": 4703
+      },
+      "summary": {
+        "total_cost": 4205367.9926100625,
+        "fixed_cost": 3330000.0,
+        "operate_cost": 734000.0,
+        "transport_cost": 46893.28093774236,
+        "loss_cost": 94128.98331835777,
+        "carbon_cost": 345.728353962366,
+        "num_facilities": 6,
+        "total_annual_production_ton": 588.1834248373999,
+        "total_service_annual_flow_ton": 1176.3668496747998,
+        "total_peak_capacity_load_ton": 156.2607298651359,
+        "installed_capacity_ton": 175,
+        "fresh_chain_share": 0.9,
+        "frozen_or_processing_share": 0.1,
+        "downstream_share_sum": 1.0,
+        "capacity_semantics": "peak_inventory_from_annual_flow",
+        "selected_storage_types": [
+          "ca",
+          "cold",
+          "frozen",
+          "precool"
+        ]
+      },
+      "facilities": [
+        {
+          "site": "C1",
+          "type": "precool",
+          "type_name": "预冷库",
+          "capacity": 5,
+          "capacity_idx": 0,
+          "fixed_cost": 8,
+          "operate_cost": 2.4,
+          "assigned_annual_flow_ton": 588.1834248373999,
+          "peak_capacity_load_ton": 0.9803057080623331,
+          "utilization": 19.606114161246662
+        },
+        {
+          "site": "T4",
+          "type": "cold",
+          "type_name": "冷藏库",
+          "capacity": 50,
+          "capacity_idx": 2,
+          "fixed_cost": 65,
+          "operate_cost": 15.0,
+          "assigned_annual_flow_ton": 352.9100549024399,
+          "peak_capacity_load_ton": 49.407407686341585,
+          "utilization": 98.81481537268317
+        },
+        {
+          "site": "T5",
+          "type": "frozen",
+          "type_name": "冷冻库",
+          "capacity": 20,
+          "capacity_idx": 0,
+          "fixed_cost": 30,
+          "operate_cost": 6.0,
+          "assigned_annual_flow_ton": 25.485009150406672,
+          "peak_capacity_load_ton": 15.291005490244004,
+          "utilization": 76.45502745122002
+        },
+        {
+          "site": "T6",
+          "type": "ca",
+          "type_name": "气调库",
+          "capacity": 50,
+          "capacity_idx": 2,
+          "fixed_cost": 120,
+          "operate_cost": 26.0,
+          "assigned_annual_flow_ton": 106.13183438550206,
+          "peak_capacity_load_ton": 42.45273375420082,
+          "utilization": 84.90546750840164
+        },
+        {
+          "site": "T7",
+          "type": "ca",
+          "type_name": "气调库",
+          "capacity": 30,
+          "capacity_idx": 1,
+          "fixed_cost": 80,
+          "operate_cost": 18.0,
+          "assigned_annual_flow_ton": 70.3231930657179,
+          "peak_capacity_load_ton": 28.12927722628716,
+          "utilization": 93.76425742095721
+        },
+        {
+          "site": "V21",
+          "type": "frozen",
+          "type_name": "冷冻库",
+          "capacity": 20,
+          "capacity_idx": 0,
+          "fixed_cost": 30,
+          "operate_cost": 6.0,
+          "assigned_annual_flow_ton": 33.333333333333314,
+          "peak_capacity_load_ton": 19.999999999999993,
+          "utilization": 99.99999999999997
+        }
+      ],
+      "channel_mix": [
+        {
+          "type": "precool",
+          "annual_flow_ton": 588.1834248373998,
+          "peak_capacity_load_ton": 0.980305708062333
+        },
+        {
+          "type": "cold",
+          "annual_flow_ton": 352.91005490244,
+          "peak_capacity_load_ton": 49.407407686341614
+        },
+        {
+          "type": "ca",
+          "annual_flow_ton": 176.45502745122,
+          "peak_capacity_load_ton": 70.58201098048796
+        },
+        {
+          "type": "frozen",
+          "annual_flow_ton": 58.818342483739976,
+          "peak_capacity_load_ton": 35.29100549024398
+        }
+      ],
+      "claim_boundary": {
+        "solver_claim_state": "gap_satisfied",
+        "allowed_claim": "This v3.0 gap-closure run can be cited as solved to the configured optimality tolerance."
+      },
+      "elapsed_sec": 869.9196591377258,
+      "result_paths": {
+        "pickle": "D:\\秋葵冷库优化项目\\results\\experiments\\model_v3_gap_closure\\extended_bound_900s_result.pkl",
+        "json": "D:\\秋葵冷库优化项目\\results\\experiments\\model_v3_gap_closure\\extended_bound_900s_run.json",
+        "md": "D:\\秋葵冷库优化项目\\results\\experiments\\model_v3_gap_closure\\extended_bound_900s_run.md"
+      },
+      "research_boundary": "This is a v3.0 solver-profile experiment for gap closure. It improves optimization evidence only to the extent indicated by solver status and MIP gap; channel shares remain scenario assumptions.",
+      "artifact_path": "D:\\秋葵冷库优化项目\\results\\experiments\\model_v3_gap_closure\\extended_bound_900s_run.json"
+    }
+  ],
+  "summary": {
+    "profile_count": 4,
+    "run_count": 2,
+    "baseline_status": "TIME_LIMIT",
+    "baseline_mip_gap_pct": 6.106300572603626,
+    "best_objective_profile": "bound_focus_60s",
+    "best_objective": 4205367.9926100625,
+    "best_bound_profile": "extended_bound_900s",
+    "best_bound": 4163496.4284208757,
+    "smallest_gap_profile": "extended_bound_900s",
+    "smallest_gap_pct": 0.9956694458788419,
+    "gap_improved_vs_baseline": true,
+    "any_gap_satisfied": true,
+    "evidence_state": "gap_satisfied"
+  },
+  "research_boundary": "Gap-closure runs are solver-profile experiments for the existing v3.0 scenario model. They can improve optimization evidence, but they do not replace real enterprise channel data or justify an optimality claim unless solver status and MIP gap support it.",
+  "next_action": "Use the gap-satisfied profile as current v3.0 solver evidence, then run v3.0 scenario/sensitivity and real-parameter calibration."
+}

@@ -1,0 +1,606 @@
+{
+  "experiment": "v3_four_methods_comparison",
+  "built_at": "2026-06-02T05:48:31Z",
+  "config": {
+    "model": "v3.0_capacity_chain",
+    "distance_matrix": "OSM_road_network",
+    "exact_time_limit": 600,
+    "heuristic_time_limit": 180,
+    "nsga_pop": 50,
+    "nsga_gen": 25,
+    "alns_iters": 1500,
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "exact_reference_obj": 4433112.274860297,
+  "recommended_version": "site_only",
+  "recommended_label": "V1 site-only",
+  "ai_top_k_sites": [
+    "C1",
+    "T6",
+    "T4",
+    "T5",
+    "T7",
+    "T8",
+    "V21",
+    "V10"
+  ],
+  "ai_warm_facilities": [
+    {
+      "site": "C1",
+      "type": "cold",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "assignment_source": "default_site_only_fallback",
+      "matched_site": null
+    },
+    {
+      "site": "T6",
+      "type": "cold",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "assignment_source": "default_site_only_fallback",
+      "matched_site": null
+    },
+    {
+      "site": "T4",
+      "type": "cold",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "assignment_source": "default_site_only_fallback",
+      "matched_site": null
+    },
+    {
+      "site": "T5",
+      "type": "cold",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "assignment_source": "default_site_only_fallback",
+      "matched_site": null
+    },
+    {
+      "site": "T7",
+      "type": "cold",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "assignment_source": "default_site_only_fallback",
+      "matched_site": null
+    },
+    {
+      "site": "T8",
+      "type": "cold",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "assignment_source": "default_site_only_fallback",
+      "matched_site": null
+    },
+    {
+      "site": "V21",
+      "type": "cold",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "assignment_source": "default_site_only_fallback",
+      "matched_site": null
+    },
+    {
+      "site": "V10",
+      "type": "cold",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "assignment_source": "default_site_only_fallback",
+      "matched_site": null
+    }
+  ],
+  "joint_strategy": "site_ranking + default_type_capacity_fallback",
+  "results": {
+    "gurobi_direct": {
+      "label": "gurobi_direct",
+      "status": "OPTIMAL",
+      "objective": 4433112.274860297,
+      "bound": 4392781.275002808,
+      "mip_gap_pct": 0.9098,
+      "elapsed_sec": 175.36,
+      "warm_sites": [],
+      "warm_sites_injected": 0,
+      "warm_facilities": [],
+      "warm_facilities_injected": 0,
+      "warm_strategy_version": null,
+      "warm_strategy_name": null,
+      "assignment_source_breakdown": {},
+      "solved_to_tol": true
+    },
+    "ai_warm": {
+      "label": "ai_warm",
+      "status": "OPTIMAL",
+      "objective": 4433112.274860297,
+      "bound": 4392452.524044325,
+      "mip_gap_pct": 0.9172,
+      "elapsed_sec": 24.34,
+      "warm_sites": [
+        "C1",
+        "T6",
+        "T4",
+        "T5",
+        "T7",
+        "T8",
+        "V21",
+        "V10"
+      ],
+      "warm_sites_injected": 8,
+      "warm_facilities": [
+        {
+          "site": "C1",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T6",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T4",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T5",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T7",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T8",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "V21",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "V10",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        }
+      ],
+      "warm_facilities_injected": 8,
+      "warm_strategy_version": "site_only",
+      "warm_strategy_name": "site_ranking + default_type_capacity_fallback",
+      "assignment_source_breakdown": {
+        "default_site_only_fallback": 8
+      },
+      "solved_to_tol": true
+    },
+    "nsga3_v3": {
+      "runs": [
+        {
+          "seed": 0,
+          "front_size": 9,
+          "best_cost": 5339249.448745959,
+          "cost_gap_pct": 20.4402035794191,
+          "elapsed_sec": 50.17336130142212,
+          "n_evaluations": 1300,
+          "generations": 25,
+          "archive_objs": [
+            [
+              8741180.53393217,
+              33.764552418949926,
+              9.457958563364839
+            ],
+            [
+              9092270.347458882,
+              33.784547453201455,
+              9.377446399377915
+            ],
+            [
+              6927915.837955903,
+              33.91705544649852,
+              9.56399963731404
+            ],
+            [
+              6169167.132468112,
+              33.89583360375483,
+              9.67312495187326
+            ],
+            [
+              6925106.199878396,
+              34.30011059504549,
+              9.650405983940601
+            ],
+            [
+              5636890.728281182,
+              36.35146209173503,
+              11.36247850781772
+            ],
+            [
+              5339249.448745959,
+              39.322613432036036,
+              11.233454976188888
+            ],
+            [
+              5890515.10023587,
+              36.68592514719216,
+              10.833099486101144
+            ],
+            [
+              5683546.4420654345,
+              38.219544169731954,
+              10.78583681074386
+            ]
+          ]
+        },
+        {
+          "seed": 1,
+          "front_size": 7,
+          "best_cost": 6198025.296350401,
+          "cost_gap_pct": 39.812053294899286,
+          "elapsed_sec": 49.41476893424988,
+          "n_evaluations": 1300,
+          "generations": 25,
+          "archive_objs": [
+            [
+              6720804.147122242,
+              35.85285331674325,
+              10.566565243588146
+            ],
+            [
+              7930468.474905902,
+              33.58672956625694,
+              9.277162673888565
+            ],
+            [
+              6198025.296350401,
+              39.75235662955558,
+              11.688775973025693
+            ],
+            [
+              7650918.906149034,
+              33.483630995580626,
+              9.340210553984907
+            ],
+            [
+              6652408.457343852,
+              37.17029949939403,
+              10.205733017335708
+            ],
+            [
+              6811346.430773746,
+              33.53479848578352,
+              9.362950981711274
+            ],
+            [
+              6879742.120552136,
+              32.21735230313274,
+              9.723783207963711
+            ]
+          ]
+        },
+        {
+          "seed": 2,
+          "front_size": 7,
+          "best_cost": 5135568.252385172,
+          "cost_gap_pct": 15.845661782771147,
+          "elapsed_sec": 50.675745487213135,
+          "n_evaluations": 1300,
+          "generations": 25,
+          "archive_objs": [
+            [
+              9447910.88888576,
+              33.11536171898254,
+              9.182267862409926
+            ],
+            [
+              5135568.252385172,
+              41.17813989253767,
+              12.789656159401254
+            ],
+            [
+              7094305.802945155,
+              33.93531947360357,
+              9.508827264528616
+            ],
+            [
+              8125185.001255361,
+              33.19578113074724,
+              9.931882313389615
+            ],
+            [
+              5619788.560133816,
+              34.92041030873348,
+              10.050527238244037
+            ],
+            [
+              6852361.239702171,
+              36.93186792144734,
+              9.846237340336481
+            ],
+            [
+              7094305.802945155,
+              33.93531947360357,
+              9.508827264528616
+            ]
+          ]
+        }
+      ],
+      "mean_cost_gap_pct": 25.36597288569651,
+      "mean_elapsed_sec": 50.087958574295044,
+      "mean_front_size": 7.666666666666667,
+      "mean_best_cost": 5557614.332493844
+    },
+    "alns_v3": {
+      "runs": [
+        {
+          "seed": 0,
+          "front_size": 17,
+          "best_cost": 4681049.878343126,
+          "cost_gap_pct": 5.592856397724369,
+          "elapsed_sec": 97.0103006362915,
+          "n_evaluations": 1505,
+          "iterations": 1500,
+          "archive_objs": [
+            [
+              6115085.081143819,
+              31.712816381021103,
+              9.130967304064777
+            ],
+            [
+              5600910.108728694,
+              32.40174545164104,
+              9.442854471949925
+            ],
+            [
+              6253873.051245839,
+              31.28526571241256,
+              9.136828059902648
+            ],
+            [
+              5780725.471847047,
+              32.36703542305473,
+              9.436173410050497
+            ],
+            [
+              5600910.108728694,
+              32.40174545164104,
+              9.442854471949925
+            ],
+            [
+              4832879.126352689,
+              35.77408497342518,
+              10.260447754824835
+            ],
+            [
+              4832879.126352689,
+              35.77408497342518,
+              10.260447754824835
+            ],
+            [
+              5560889.3491563685,
+              34.239267195836064,
+              9.232620048305943
+            ],
+            [
+              5984495.633843285,
+              31.71616383899954,
+              8.915242019876475
+            ],
+            [
+              5044604.400947764,
+              32.669566891752126,
+              9.350806994666653
+            ],
+            [
+              5402684.909603174,
+              32.47174356045484,
+              9.240763729048565
+            ],
+            [
+              4848541.801097334,
+              33.761710372869466,
+              9.737609459913013
+            ],
+            [
+              4681049.878343126,
+              36.066489194152275,
+              10.201820313186268
+            ],
+            [
+              4895847.399289425,
+              34.99164294390227,
+              9.622738130368795
+            ],
+            [
+              6216756.242007817,
+              31.64276346312996,
+              8.955143205946293
+            ],
+            [
+              7255820.872512041,
+              31.017959341210954,
+              8.6181343154883
+            ],
+            [
+              5914489.450839497,
+              31.431334540383236,
+              9.815516284777859
+            ]
+          ]
+        },
+        {
+          "seed": 1,
+          "front_size": 12,
+          "best_cost": 4572443.656053754,
+          "cost_gap_pct": 3.1429698269450452,
+          "elapsed_sec": 95.94340324401855,
+          "n_evaluations": 1505,
+          "iterations": 1500,
+          "archive_objs": [
+            [
+              6920687.693723345,
+              34.58852741614426,
+              9.543870164990683
+            ],
+            [
+              4634106.029178237,
+              36.66726997462529,
+              10.471845914322435
+            ],
+            [
+              4634106.029178237,
+              36.66726997462529,
+              10.471845914322435
+            ],
+            [
+              5061029.646105276,
+              36.40979827939801,
+              10.280645251477788
+            ],
+            [
+              4634106.029178237,
+              36.66726997462529,
+              10.471845914322435
+            ],
+            [
+              5317530.488909509,
+              34.5849099850109,
+              9.614712279477352
+            ],
+            [
+              5504566.4692200115,
+              32.83248983613184,
+              9.639047612019997
+            ],
+            [
+              4572443.656053754,
+              38.09232705121062,
+              11.306904474136717
+            ],
+            [
+              7644214.713918334,
+              34.8306675808995,
+              9.361347318577693
+            ],
+            [
+              7718637.263802094,
+              32.83399911628511,
+              9.146621615474206
+            ],
+            [
+              7524732.264345509,
+              34.714007094398646,
+              9.516329217886994
+            ],
+            [
+              6559445.097847209,
+              34.80775415196836,
+              9.386170904940299
+            ]
+          ]
+        },
+        {
+          "seed": 2,
+          "front_size": 11,
+          "best_cost": 4526680.9886473175,
+          "cost_gap_pct": 2.1106777357667728,
+          "elapsed_sec": 96.11216044425964,
+          "n_evaluations": 1505,
+          "iterations": 1500,
+          "archive_objs": [
+            [
+              7594219.775407732,
+              34.16183502240346,
+              10.109194552178218
+            ],
+            [
+              4526680.9886473175,
+              41.82549048594941,
+              12.88680839856388
+            ],
+            [
+              4610078.717307367,
+              38.27309300876369,
+              12.061490646830027
+            ],
+            [
+              5080852.630905378,
+              37.78383765567889,
+              10.421796012578083
+            ],
+            [
+              5368407.1535100145,
+              34.386915353278724,
+              9.57078269405847
+            ],
+            [
+              5080852.630905378,
+              37.78383765567889,
+              10.421796012578083
+            ],
+            [
+              4585756.440305115,
+              40.25226878579961,
+              11.873955017505487
+            ],
+            [
+              4752694.8804583745,
+              38.066564447078,
+              11.334166898785595
+            ],
+            [
+              4707585.375504642,
+              39.95939395715334,
+              11.43474835239898
+            ],
+            [
+              5003730.448411535,
+              37.73181124187119,
+              11.005521883746628
+            ],
+            [
+              8407879.497232905,
+              34.26936942025609,
+              9.556258339034187
+            ]
+          ]
+        }
+      ],
+      "mean_cost_gap_pct": 3.615501320145396,
+      "mean_elapsed_sec": 96.3552881081899,
+      "mean_front_size": 13.333333333333334,
+      "mean_best_cost": 4593391.507681399
+    }
+  },
+  "claim_boundary": "Four-method comparison on v3.0 capacity-chain MIP with OSM road-network distances. Gurobi/AI warm: single-objective weighted cost with 1% gap tolerance. NSGA-III/ALNS: multi-objective Pareto over (cost, loss_ton, carbon_ton); best_cost is the minimum-cost Pareto point. Heuristics use the same v3.0 evaluator with LP subproblem (z heuristic, x LP-optimal). AI warm start trained on 4 priority scenarios (XGBoost), with the adopted warm-start version injected here. County-level case (39 nodes), not enterprise-scale validation."
+}

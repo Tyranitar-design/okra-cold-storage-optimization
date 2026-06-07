@@ -1,0 +1,66 @@
+# ============================================================
+# 秋葵冷库优化项目 — 完整本地开发依赖
+# 解释器：D:\智能数据分析平台\backend\venv\Scripts\python.exe (Python 3.11.4)
+# 该 venv 已包含以下所有包；本文件作为版本锁定记录，
+# 同时作为新机器环境恢复的参考。
+#
+# ⚠ Gurobi：需单独安装并配置 GRB_LICENSE_FILE 指向 Node 许可证
+#   pip install gurobipy==13.0.2
+# ⚠ torch+CUDA：需配套 CUDA 12.6 驱动；CPU-only 见 requirements-api.txt
+# ============================================================
+
+# -- Web / API -------------------------------------------------
+fastapi==0.136.0
+uvicorn[standard]==0.46.0
+starlette==1.0.0
+pydantic==2.13.3
+pydantic-settings==2.14.1
+python-multipart==0.0.26
+python-dotenv==1.2.2
+aiofiles==25.1.0
+httpx==0.28.1
+orjson==3.11.9
+passlib[bcrypt]==1.7.4
+
+# -- Database --------------------------------------------------
+psycopg[binary]==3.3.4
+psycopg2-binary==2.9.12
+SQLAlchemy==2.0.49
+
+# -- Data / Numerical ------------------------------------------
+pandas==3.0.2
+numpy==2.4.4
+scipy==1.17.1
+scikit-learn==1.8.0
+xgboost==3.2.0
+lightgbm==4.6.0
+openpyxl==3.1.5
+
+# -- Optimization / OR -----------------------------------------
+pyomo==6.10.0
+# gurobipy==13.0.2  # 单独安装，需 NODE 许可证
+pymoo==0.6.1.6
+alns==7.0.0
+networkx==3.6.1
+
+# -- ML / DL (GPU) --------------------------------------------
+# torch==2.12.0+cu126        # 需 CUDA 12.6；从 pytorch.org 安装
+# torch-geometric==2.7.0     # 配套 torch 安装后 pip install
+# torch_scatter==2.1.2
+# torch_sparse==0.6.18
+
+# -- Visualization ---------------------------------------------
+matplotlib==3.10.8
+plotly==6.7.0
+seaborn==0.13.2
+
+# -- Testing ---------------------------------------------------
+pytest==9.0.3
+pytest-asyncio==0.26.0
+
+# -- Utilities -------------------------------------------------
+python-dateutil==2.9.0.post0
+colorama==0.4.6
+rich==15.0.0
+tqdm==4.67.3
+requests==2.33.1

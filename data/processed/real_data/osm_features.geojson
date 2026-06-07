@@ -1,0 +1,1301 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.3713307,
+          29.5855048
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "node:4814712324",
+        "feature_type": "supermarket",
+        "name": "好润佳",
+        "highway": null,
+        "amenity": null,
+        "shop": "supermarket",
+        "building": null,
+        "lat": 29.5855048,
+        "lon": 111.3713307,
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.6940133,
+          29.0441878
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "node:4815096405",
+        "feature_type": "supermarket",
+        "name": "大润发",
+        "highway": null,
+        "amenity": null,
+        "shop": "supermarket",
+        "building": null,
+        "lat": 29.0441878,
+        "lon": 111.6940133,
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.3939947,
+          29.5855744
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "node:4826737972",
+        "feature_type": "marketplace",
+        "name": "宝峰农贸市场",
+        "highway": null,
+        "amenity": "marketplace",
+        "shop": null,
+        "building": null,
+        "lat": 29.5855744,
+        "lon": 111.3939947,
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.4056645,
+          29.583677
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "node:4831972786",
+        "feature_type": "convenience",
+        "name": null,
+        "highway": null,
+        "amenity": "fuel",
+        "shop": "convenience",
+        "building": null,
+        "lat": 29.583677,
+        "lon": 111.4056645,
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.4023419,
+          29.5843254
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "node:4831972787",
+        "feature_type": "convenience",
+        "name": null,
+        "highway": null,
+        "amenity": "fuel",
+        "shop": "convenience",
+        "building": null,
+        "lat": 29.5843254,
+        "lon": 111.4023419,
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.3923748,
+          29.582534
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "node:4831972788",
+        "feature_type": "convenience",
+        "name": null,
+        "highway": null,
+        "amenity": "fuel",
+        "shop": "convenience",
+        "building": null,
+        "lat": 29.582534,
+        "lon": 111.3923748,
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.3971821,
+          29.5925799
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "node:12458467250",
+        "feature_type": "convenience",
+        "name": "桔城便利店",
+        "highway": null,
+        "amenity": null,
+        "shop": "convenience",
+        "building": null,
+        "lat": 29.5925799,
+        "lon": 111.3971821,
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.3680277,
+          29.5868239
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "node:12458472453",
+        "feature_type": "marketplace",
+        "name": null,
+        "highway": null,
+        "amenity": "marketplace",
+        "shop": null,
+        "building": null,
+        "lat": 29.5868239,
+        "lon": 111.3680277,
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.3863266,
+          29.5978746
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "node:12460439273",
+        "feature_type": "marketplace",
+        "name": "综合批发城",
+        "highway": null,
+        "amenity": "marketplace",
+        "shop": null,
+        "building": null,
+        "lat": 29.5978746,
+        "lon": 111.3863266,
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.6802106,
+          29.0609982
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "node:13734381144",
+        "feature_type": "marketplace",
+        "name": "沙港农贸市场",
+        "highway": null,
+        "amenity": "marketplace",
+        "shop": null,
+        "building": null,
+        "lat": 29.0609982,
+        "lon": 111.6802106,
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.6775919,
+          29.064713
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "node:13739877123",
+        "feature_type": "convenience",
+        "name": "易捷速购",
+        "highway": null,
+        "amenity": null,
+        "shop": "convenience",
+        "building": null,
+        "lat": 29.064713,
+        "lon": 111.6775919,
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.6133134,
+          29.0265106
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "node:13748611865",
+        "feature_type": "supermarket",
+        "name": "龙过超市",
+        "highway": null,
+        "amenity": null,
+        "shop": "supermarket",
+        "building": null,
+        "lat": 29.0265106,
+        "lon": 111.6133134,
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.6150009,
+          29.0292547
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "node:13748652699",
+        "feature_type": "convenience",
+        "name": "玉果园",
+        "highway": null,
+        "amenity": null,
+        "shop": "convenience",
+        "building": null,
+        "lat": 29.0292547,
+        "lon": 111.6150009,
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.7341486,
+              28.9394365
+            ],
+            [
+              111.7341761,
+              28.9393236
+            ],
+            [
+              111.7342282,
+              28.9392176
+            ],
+            [
+              111.734303,
+              28.9391225
+            ],
+            [
+              111.7343976,
+              28.939042
+            ],
+            [
+              111.7345083,
+              28.9389792
+            ],
+            [
+              111.7346308,
+              28.9389365
+            ],
+            [
+              111.7347606,
+              28.9389155
+            ],
+            [
+              111.7348925,
+              28.9389171
+            ],
+            [
+              111.7350215,
+              28.9389412
+            ],
+            [
+              111.7351427,
+              28.9389868
+            ],
+            [
+              111.7352514,
+              28.9390523
+            ],
+            [
+              111.7353434,
+              28.939135
+            ],
+            [
+              111.7354151,
+              28.9392319
+            ],
+            [
+              111.7354639,
+              28.9393391
+            ],
+            [
+              111.7354879,
+              28.9394527
+            ],
+            [
+              111.7354861,
+              28.9395681
+            ],
+            [
+              111.7354586,
+              28.939681
+            ],
+            [
+              111.7354064,
+              28.9397871
+            ],
+            [
+              111.7353316,
+              28.9398822
+            ],
+            [
+              111.7352371,
+              28.9399627
+            ],
+            [
+              111.7351264,
+              28.9400255
+            ],
+            [
+              111.7350038,
+              28.9400682
+            ],
+            [
+              111.7348741,
+              28.9400892
+            ],
+            [
+              111.7347422,
+              28.9400876
+            ],
+            [
+              111.7346131,
+              28.9400635
+            ],
+            [
+              111.734492,
+              28.9400178
+            ],
+            [
+              111.7343833,
+              28.9399524
+            ],
+            [
+              111.7342913,
+              28.9398696
+            ],
+            [
+              111.7342195,
+              28.9397728
+            ],
+            [
+              111.7341707,
+              28.9396655
+            ],
+            [
+              111.7341468,
+              28.939552
+            ],
+            [
+              111.7341486,
+              28.9394365
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "way:486948580",
+        "feature_type": "industrial",
+        "name": null,
+        "highway": null,
+        "amenity": null,
+        "shop": null,
+        "building": "industrial",
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.7341238,
+              28.9378149
+            ],
+            [
+              111.7341514,
+              28.937702
+            ],
+            [
+              111.7342035,
+              28.937596
+            ],
+            [
+              111.7342783,
+              28.9375009
+            ],
+            [
+              111.7343729,
+              28.9374204
+            ],
+            [
+              111.7344835,
+              28.9373575
+            ],
+            [
+              111.7346061,
+              28.9373148
+            ],
+            [
+              111.7347358,
+              28.9372939
+            ],
+            [
+              111.7348678,
+              28.9372955
+            ],
+            [
+              111.7349968,
+              28.9373195
+            ],
+            [
+              111.735118,
+              28.9373652
+            ],
+            [
+              111.7352266,
+              28.9374306
+            ],
+            [
+              111.7353186,
+              28.9375134
+            ],
+            [
+              111.7353904,
+              28.9376103
+            ],
+            [
+              111.7354392,
+              28.9377175
+            ],
+            [
+              111.7354632,
+              28.9378311
+            ],
+            [
+              111.7354613,
+              28.9379465
+            ],
+            [
+              111.7354338,
+              28.9380594
+            ],
+            [
+              111.7353817,
+              28.9381655
+            ],
+            [
+              111.7353069,
+              28.9382606
+            ],
+            [
+              111.7352123,
+              28.9383411
+            ],
+            [
+              111.7351016,
+              28.9384039
+            ],
+            [
+              111.7349791,
+              28.9384466
+            ],
+            [
+              111.7348493,
+              28.9384676
+            ],
+            [
+              111.7347174,
+              28.938466
+            ],
+            [
+              111.7345884,
+              28.9384419
+            ],
+            [
+              111.7344672,
+              28.9383962
+            ],
+            [
+              111.7343586,
+              28.9383308
+            ],
+            [
+              111.7342666,
+              28.938248
+            ],
+            [
+              111.7341948,
+              28.9381512
+            ],
+            [
+              111.734146,
+              28.9380439
+            ],
+            [
+              111.734122,
+              28.9379304
+            ],
+            [
+              111.7341238,
+              28.9378149
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "way:788487358",
+        "feature_type": "industrial",
+        "name": null,
+        "highway": null,
+        "amenity": null,
+        "shop": null,
+        "building": "industrial",
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.5630584,
+              29.1960365
+            ],
+            [
+              111.5629124,
+              29.1960985
+            ],
+            [
+              111.5627513,
+              29.1961161
+            ],
+            [
+              111.5625924,
+              29.1960874
+            ],
+            [
+              111.5624525,
+              29.1960155
+            ],
+            [
+              111.5623467,
+              29.195908
+            ],
+            [
+              111.5622863,
+              29.1957765
+            ],
+            [
+              111.5622777,
+              29.1956349
+            ],
+            [
+              111.5623219,
+              29.1954986
+            ],
+            [
+              111.5624141,
+              29.195382
+            ],
+            [
+              111.5625445,
+              29.1952975
+            ],
+            [
+              111.5627014,
+              29.195254
+            ],
+            [
+              111.5628659,
+              29.1952577
+            ],
+            [
+              111.56302,
+              29.1953082
+            ],
+            [
+              111.5631468,
+              29.1953999
+            ],
+            [
+              111.5632322,
+              29.1955227
+            ],
+            [
+              111.5632669,
+              29.1956632
+            ],
+            [
+              111.5632471,
+              29.1958059
+            ],
+            [
+              111.5631749,
+              29.195935
+            ],
+            [
+              111.5630584,
+              29.1960365
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "way:893545704",
+        "feature_type": "industrial",
+        "name": null,
+        "highway": null,
+        "amenity": null,
+        "shop": null,
+        "building": "industrial",
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.5633864,
+              29.1972911
+            ],
+            [
+              111.5632405,
+              29.1973532
+            ],
+            [
+              111.5630794,
+              29.1973708
+            ],
+            [
+              111.5629204,
+              29.1973421
+            ],
+            [
+              111.5627806,
+              29.1972701
+            ],
+            [
+              111.5626748,
+              29.1971627
+            ],
+            [
+              111.5626143,
+              29.1970311
+            ],
+            [
+              111.5626057,
+              29.1968896
+            ],
+            [
+              111.5626499,
+              29.1967533
+            ],
+            [
+              111.5627421,
+              29.1966366
+            ],
+            [
+              111.5628725,
+              29.1965522
+            ],
+            [
+              111.5630294,
+              29.1965087
+            ],
+            [
+              111.5631939,
+              29.1965124
+            ],
+            [
+              111.5633481,
+              29.1965629
+            ],
+            [
+              111.5634748,
+              29.1966546
+            ],
+            [
+              111.5635602,
+              29.1967774
+            ],
+            [
+              111.563595,
+              29.1969179
+            ],
+            [
+              111.5635751,
+              29.1970605
+            ],
+            [
+              111.563503,
+              29.1971897
+            ],
+            [
+              111.5633864,
+              29.1972911
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "way:893545705",
+        "feature_type": "industrial",
+        "name": null,
+        "highway": null,
+        "amenity": null,
+        "shop": null,
+        "building": "industrial",
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.8692438,
+              29.5938261
+            ],
+            [
+              111.8689713,
+              29.5924043
+            ],
+            [
+              111.8700543,
+              29.5922935
+            ],
+            [
+              111.8702772,
+              29.593703
+            ],
+            [
+              111.8692438,
+              29.5938261
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "way:1183811831",
+        "feature_type": "industrial",
+        "name": "湖南中联重科车桥有限公司",
+        "highway": null,
+        "amenity": null,
+        "shop": null,
+        "building": "industrial",
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.7237854,
+              29.593003
+            ],
+            [
+              111.7237384,
+              29.5926532
+            ],
+            [
+              111.72456,
+              29.5925697
+            ],
+            [
+              111.724607,
+              29.5929194
+            ],
+            [
+              111.7237854,
+              29.593003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "way:1348703183",
+        "feature_type": "industrial",
+        "name": null,
+        "highway": null,
+        "amenity": null,
+        "shop": null,
+        "building": "industrial",
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.7230279,
+              29.5930812
+            ],
+            [
+              111.7229806,
+              29.5927422
+            ],
+            [
+              111.7235422,
+              29.592683
+            ],
+            [
+              111.7235894,
+              29.5930219
+            ],
+            [
+              111.7230279,
+              29.5930812
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "way:1348703184",
+        "feature_type": "industrial",
+        "name": null,
+        "highway": null,
+        "amenity": null,
+        "shop": null,
+        "building": "industrial",
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.7252662,
+              29.5936625
+            ],
+            [
+              111.7255598,
+              29.5933225
+            ],
+            [
+              111.7258731,
+              29.593527
+            ],
+            [
+              111.7255795,
+              29.5938671
+            ],
+            [
+              111.7252662,
+              29.5936625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "way:1348703185",
+        "feature_type": "industrial",
+        "name": null,
+        "highway": null,
+        "amenity": null,
+        "shop": null,
+        "building": "industrial",
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.7234842,
+              29.5925723
+            ],
+            [
+              111.7234481,
+              29.5923059
+            ],
+            [
+              111.7249223,
+              29.5921548
+            ],
+            [
+              111.7249584,
+              29.5924209
+            ],
+            [
+              111.7234842,
+              29.5925723
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "way:1348703186",
+        "feature_type": "industrial",
+        "name": null,
+        "highway": null,
+        "amenity": null,
+        "shop": null,
+        "building": "industrial",
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.7091277,
+              29.6075696
+            ],
+            [
+              111.7112522,
+              29.6077543
+            ],
+            [
+              111.7105133,
+              29.6135926
+            ],
+            [
+              111.7083703,
+              29.6134319
+            ],
+            [
+              111.7091277,
+              29.6075696
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "way:1348703220",
+        "feature_type": "industrial",
+        "name": null,
+        "highway": null,
+        "amenity": null,
+        "shop": null,
+        "building": "industrial",
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.6728188,
+              28.9997985
+            ],
+            [
+              111.6728147,
+              28.9996098
+            ],
+            [
+              111.6729852,
+              28.9995703
+            ],
+            [
+              111.6734843,
+              28.9995487
+            ],
+            [
+              111.6734926,
+              28.9997841
+            ],
+            [
+              111.6728188,
+              28.9997985
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "way:1459290578",
+        "feature_type": "supermarket",
+        "name": "远观酒店超市",
+        "highway": null,
+        "amenity": null,
+        "shop": "supermarket",
+        "building": "yes",
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.6792758,
+              28.9736651
+            ],
+            [
+              111.6846349,
+              28.9718255
+            ],
+            [
+              111.6844008,
+              28.9713036
+            ],
+            [
+              111.684974,
+              28.9710996
+            ],
+            [
+              111.6849408,
+              28.970758
+            ],
+            [
+              111.6849495,
+              28.9703858
+            ],
+            [
+              111.6849882,
+              28.9701081
+            ],
+            [
+              111.6841167,
+              28.9704228
+            ],
+            [
+              111.6814128,
+              28.9713205
+            ],
+            [
+              111.6811152,
+              28.9706345
+            ],
+            [
+              111.6796928,
+              28.9711117
+            ],
+            [
+              111.6796928,
+              28.970457
+            ],
+            [
+              111.6796195,
+              28.9703332
+            ],
+            [
+              111.6792858,
+              28.9704172
+            ],
+            [
+              111.6792758,
+              28.9736651
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "way:1459465278",
+        "feature_type": "marketplace",
+        "name": "常德水产市场",
+        "highway": null,
+        "amenity": "marketplace",
+        "shop": null,
+        "building": null,
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.6920077,
+              28.9269675
+            ],
+            [
+              111.6938095,
+              28.9267479
+            ],
+            [
+              111.6936962,
+              28.926036
+            ],
+            [
+              111.6918944,
+              28.9262557
+            ],
+            [
+              111.6920077,
+              28.9269675
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "source_id": "SRC-E-001",
+        "osm_id": "way:1459582176",
+        "feature_type": "industrial",
+        "name": "湖南大北互互感器有限公司",
+        "highway": null,
+        "amenity": null,
+        "shop": null,
+        "building": "industrial",
+        "raw_file_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+        "source_url": "https://overpass-api.de/api/interpreter"
+      }
+    }
+  ],
+  "metadata": {
+    "dataset_id": "osm_features_overpass",
+    "source_id": "SRC-E-001",
+    "source_name": "Overpass API / OpenStreetMap",
+    "target_table": "okra.osm_features",
+    "raw_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json",
+    "cleaned_path": "D:\\秋葵冷库优化项目\\data\\processed\\real_data\\osm_features.geojson",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "bbox": [
+      28.913270263142287,
+      111.23441769369889,
+      29.7168730399388,
+      112.08159915325136
+    ],
+    "feature_count": 26,
+    "counts": {
+      "node_features": 13,
+      "way_features": 13
+    },
+    "raw_meta": {
+      "dataset_id": "osm_features_overpass",
+      "source_id": "SRC-E-001",
+      "source_name": "Overpass API / OpenStreetMap",
+      "target_table": "okra.osm_features",
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "bbox": [
+        28.913270263142287,
+        111.23441769369889,
+        29.7168730399388,
+        112.08159915325136
+      ],
+      "query": "[out:json][timeout:180];\n(\n  nwr[\"building\"=\"warehouse\"](28.913270,111.234418,29.716873,112.081599);\n  nwr[\"building\"=\"storage\"](28.913270,111.234418,29.716873,112.081599);\n  nwr[\"industrial\"=\"warehouse\"](28.913270,111.234418,29.716873,112.081599);\n  nwr[\"building\"=\"industrial\"](28.913270,111.234418,29.716873,112.081599);\n  nwr[\"amenity\"=\"marketplace\"](28.913270,111.234418,29.716873,112.081599);\n  nwr[\"shop\"=\"supermarket\"](28.913270,111.234418,29.716873,112.081599);\n  nwr[\"shop\"=\"greengrocer\"](28.913270,111.234418,29.716873,112.081599);\n  nwr[\"shop\"=\"convenience\"](28.913270,111.234418,29.716873,112.081599);\n);\nout body geom;\n",
+      "status_code": 200,
+      "headers": {
+        "Date": "Sat, 30 May 2026 03:57:27 GMT",
+        "Server": "Apache/2.4.67 (Debian)",
+        "Vary": "Accept-Encoding",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "application/json"
+      },
+      "fetched_at": "2026-05-30T03:57:27.416846+00:00",
+      "finished_at": "2026-05-30T03:57:30.332524+00:00",
+      "response_bytes": 17121,
+      "write_raw": true,
+      "raw_path": "D:\\秋葵冷库优化项目\\data\\raw\\osm\\overpass_features_raw.json"
+    },
+    "cleaned_at": "2026-05-30T03:57:30.349591+00:00",
+    "claim_boundary": "This cleaned artifact is produced from a raw Overpass JSON response. It remains limited to the bbox and tag filters used by the query."
+  }
+}

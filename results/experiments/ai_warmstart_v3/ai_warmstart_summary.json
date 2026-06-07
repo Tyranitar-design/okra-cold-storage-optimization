@@ -1,0 +1,1573 @@
+{
+  "experiment": "v3_ai_warmstart",
+  "built_at": "2026-06-02T05:25:47Z",
+  "available_versions": [
+    "site_only",
+    "site_type",
+    "site_type_capacity"
+  ],
+  "target_version": "site_type_capacity",
+  "target_label": "V3 site + type + capacity",
+  "target_strategy": "site_ranking + site_history_or_nearest_neighbor_type_capacity",
+  "recommended_version": "site_only",
+  "recommended_label": "V1 site-only",
+  "recommended_strategy": "site_ranking + default_type_capacity_fallback",
+  "recommended_reason": "best elapsed_sec among warm-start strategies solved to the configured tolerance",
+  "warm_versions": {
+    "site_only": {
+      "label": "V1 site-only",
+      "strategy": "site_ranking + default_type_capacity_fallback",
+      "description": "Only inject ranked sites; type/capacity fall back to the default cold mid-cap template.",
+      "assignment_source_breakdown": {
+        "default_site_only_fallback": 8
+      }
+    },
+    "site_type": {
+      "label": "V2 site + type",
+      "strategy": "site_ranking + site_history_or_nearest_neighbor_type + default_capacity",
+      "description": "Inject ranked sites plus inferred storage type; capacity falls back to the default slot for that type.",
+      "assignment_source_breakdown": {
+        "site_history_type": 8
+      }
+    },
+    "site_type_capacity": {
+      "label": "V3 site + type + capacity",
+      "strategy": "site_ranking + site_history_or_nearest_neighbor_type_capacity",
+      "description": "Inject ranked sites plus inferred storage type and capacity using historical facility labels with nearest-neighbor fallback.",
+      "assignment_source_breakdown": {
+        "site_history": 8
+      }
+    }
+  },
+  "training": {
+    "n_runs_used": 4,
+    "variants": [
+      "ca_heavy_cold50_ca40_frozen10",
+      "fresh_heavy_cold70_ca20_frozen10",
+      "max_facilities_tight_5",
+      "processing_heavy_cold50_ca30_frozen20"
+    ],
+    "n_features": 13,
+    "n_train_rows": 108,
+    "n_positive": 21,
+    "feature_importances": [
+      {
+        "feature": "production_ton",
+        "importance": 0.5321019887924194
+      },
+      {
+        "feature": "max_dist",
+        "importance": 0.2324124127626419
+      },
+      {
+        "feature": "dist_to_C1",
+        "importance": 0.14613136649131775
+      },
+      {
+        "feature": "lat",
+        "importance": 0.07475311309099197
+      },
+      {
+        "feature": "lon",
+        "importance": 0.005461035296320915
+      },
+      {
+        "feature": "population",
+        "importance": 0.004848087206482887
+      },
+      {
+        "feature": "weighted_dist",
+        "importance": 0.004292030353099108
+      },
+      {
+        "feature": "level",
+        "importance": 0.0
+      },
+      {
+        "feature": "is_county",
+        "importance": 0.0
+      },
+      {
+        "feature": "is_town",
+        "importance": 0.0
+      },
+      {
+        "feature": "min_dist",
+        "importance": 0.0
+      },
+      {
+        "feature": "precool_cover_2h",
+        "importance": 0.0
+      },
+      {
+        "feature": "cover_4h",
+        "importance": 0.0
+      }
+    ],
+    "facility_label_variant_count": 4,
+    "facility_label_count": 21
+  },
+  "joint_strategy": "site_ranking + site_history_or_nearest_neighbor_type_capacity",
+  "facility_labels_used": {
+    "variants": [
+      "ca_heavy_cold50_ca40_frozen10",
+      "fresh_heavy_cold70_ca20_frozen10",
+      "max_facilities_tight_5",
+      "processing_heavy_cold50_ca30_frozen20"
+    ],
+    "count": 21
+  },
+  "ai_top_k": [
+    "C1",
+    "T6",
+    "T4",
+    "T5",
+    "T7",
+    "T8",
+    "V21",
+    "V10"
+  ],
+  "version_facilities": {
+    "site_only": [
+      {
+        "site": "C1",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T6",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T4",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T5",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T7",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T8",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "V21",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "V10",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      }
+    ],
+    "site_type": [
+      {
+        "site": "C1",
+        "type": "precool",
+        "capacity_idx": 1,
+        "capacity": 10,
+        "site_rank": 1,
+        "score": 0.990512,
+        "assignment_source": "site_history_type",
+        "matched_site": "C1"
+      },
+      {
+        "site": "T6",
+        "type": "frozen",
+        "capacity_idx": 1,
+        "capacity": 50,
+        "site_rank": 2,
+        "score": 0.990512,
+        "assignment_source": "site_history_type",
+        "matched_site": "T6"
+      },
+      {
+        "site": "T4",
+        "type": "ca",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "site_rank": 3,
+        "score": 0.990512,
+        "assignment_source": "site_history_type",
+        "matched_site": "T4"
+      },
+      {
+        "site": "T5",
+        "type": "frozen",
+        "capacity_idx": 1,
+        "capacity": 50,
+        "site_rank": 4,
+        "score": 0.805845,
+        "assignment_source": "site_history_type",
+        "matched_site": "T5"
+      },
+      {
+        "site": "T7",
+        "type": "ca",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "site_rank": 5,
+        "score": 0.804292,
+        "assignment_source": "site_history_type",
+        "matched_site": "T7"
+      },
+      {
+        "site": "T8",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "site_rank": 6,
+        "score": 0.583124,
+        "assignment_source": "site_history_type",
+        "matched_site": "T8"
+      },
+      {
+        "site": "V21",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "site_rank": 7,
+        "score": 0.578586,
+        "assignment_source": "site_history_type",
+        "matched_site": "V21"
+      },
+      {
+        "site": "V10",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "site_rank": 8,
+        "score": 0.573121,
+        "assignment_source": "site_history_type",
+        "matched_site": "V10"
+      }
+    ],
+    "site_type_capacity": [
+      {
+        "site": "C1",
+        "type": "precool",
+        "capacity_idx": 0,
+        "capacity": 5,
+        "site_rank": 1,
+        "score": 0.990512,
+        "assignment_source": "site_history",
+        "matched_site": "C1"
+      },
+      {
+        "site": "T6",
+        "type": "frozen",
+        "capacity_idx": 0,
+        "capacity": 20,
+        "site_rank": 2,
+        "score": 0.990512,
+        "assignment_source": "site_history",
+        "matched_site": "T6"
+      },
+      {
+        "site": "T4",
+        "type": "cold",
+        "capacity_idx": 2,
+        "capacity": 50,
+        "site_rank": 3,
+        "score": 0.990512,
+        "assignment_source": "site_history",
+        "matched_site": "T4"
+      },
+      {
+        "site": "T5",
+        "type": "frozen",
+        "capacity_idx": 0,
+        "capacity": 20,
+        "site_rank": 4,
+        "score": 0.805845,
+        "assignment_source": "site_history",
+        "matched_site": "T5"
+      },
+      {
+        "site": "T7",
+        "type": "ca",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "site_rank": 5,
+        "score": 0.804292,
+        "assignment_source": "site_history",
+        "matched_site": "T7"
+      },
+      {
+        "site": "T8",
+        "type": "cold",
+        "capacity_idx": 0,
+        "capacity": 10,
+        "site_rank": 6,
+        "score": 0.583124,
+        "assignment_source": "site_history",
+        "matched_site": "T8"
+      },
+      {
+        "site": "V21",
+        "type": "cold",
+        "capacity_idx": 2,
+        "capacity": 50,
+        "site_rank": 7,
+        "score": 0.578586,
+        "assignment_source": "site_history",
+        "matched_site": "V21"
+      },
+      {
+        "site": "V10",
+        "type": "cold",
+        "capacity_idx": 2,
+        "capacity": 50,
+        "site_rank": 8,
+        "score": 0.573121,
+        "assignment_source": "site_history",
+        "matched_site": "V10"
+      }
+    ]
+  },
+  "ai_warm_facilities": [
+    {
+      "site": "C1",
+      "type": "precool",
+      "capacity_idx": 0,
+      "capacity": 5,
+      "site_rank": 1,
+      "score": 0.990512,
+      "assignment_source": "site_history",
+      "matched_site": "C1"
+    },
+    {
+      "site": "T6",
+      "type": "frozen",
+      "capacity_idx": 0,
+      "capacity": 20,
+      "site_rank": 2,
+      "score": 0.990512,
+      "assignment_source": "site_history",
+      "matched_site": "T6"
+    },
+    {
+      "site": "T4",
+      "type": "cold",
+      "capacity_idx": 2,
+      "capacity": 50,
+      "site_rank": 3,
+      "score": 0.990512,
+      "assignment_source": "site_history",
+      "matched_site": "T4"
+    },
+    {
+      "site": "T5",
+      "type": "frozen",
+      "capacity_idx": 0,
+      "capacity": 20,
+      "site_rank": 4,
+      "score": 0.805845,
+      "assignment_source": "site_history",
+      "matched_site": "T5"
+    },
+    {
+      "site": "T7",
+      "type": "ca",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "site_rank": 5,
+      "score": 0.804292,
+      "assignment_source": "site_history",
+      "matched_site": "T7"
+    },
+    {
+      "site": "T8",
+      "type": "cold",
+      "capacity_idx": 0,
+      "capacity": 10,
+      "site_rank": 6,
+      "score": 0.583124,
+      "assignment_source": "site_history",
+      "matched_site": "T8"
+    },
+    {
+      "site": "V21",
+      "type": "cold",
+      "capacity_idx": 2,
+      "capacity": 50,
+      "site_rank": 7,
+      "score": 0.578586,
+      "assignment_source": "site_history",
+      "matched_site": "V21"
+    },
+    {
+      "site": "V10",
+      "type": "cold",
+      "capacity_idx": 2,
+      "capacity": 50,
+      "site_rank": 8,
+      "score": 0.573121,
+      "assignment_source": "site_history",
+      "matched_site": "V10"
+    }
+  ],
+  "site_type_capacity_predictions": [
+    {
+      "site": "C1",
+      "type": "precool",
+      "capacity_idx": 0,
+      "capacity": 5,
+      "site_rank": 1,
+      "score": 0.990512,
+      "assignment_source": "site_history",
+      "matched_site": "C1"
+    },
+    {
+      "site": "T6",
+      "type": "frozen",
+      "capacity_idx": 0,
+      "capacity": 20,
+      "site_rank": 2,
+      "score": 0.990512,
+      "assignment_source": "site_history",
+      "matched_site": "T6"
+    },
+    {
+      "site": "T4",
+      "type": "cold",
+      "capacity_idx": 2,
+      "capacity": 50,
+      "site_rank": 3,
+      "score": 0.990512,
+      "assignment_source": "site_history",
+      "matched_site": "T4"
+    },
+    {
+      "site": "T5",
+      "type": "frozen",
+      "capacity_idx": 0,
+      "capacity": 20,
+      "site_rank": 4,
+      "score": 0.805845,
+      "assignment_source": "site_history",
+      "matched_site": "T5"
+    },
+    {
+      "site": "T7",
+      "type": "ca",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "site_rank": 5,
+      "score": 0.804292,
+      "assignment_source": "site_history",
+      "matched_site": "T7"
+    },
+    {
+      "site": "T8",
+      "type": "cold",
+      "capacity_idx": 0,
+      "capacity": 10,
+      "site_rank": 6,
+      "score": 0.583124,
+      "assignment_source": "site_history",
+      "matched_site": "T8"
+    },
+    {
+      "site": "V21",
+      "type": "cold",
+      "capacity_idx": 2,
+      "capacity": 50,
+      "site_rank": 7,
+      "score": 0.578586,
+      "assignment_source": "site_history",
+      "matched_site": "V21"
+    },
+    {
+      "site": "V10",
+      "type": "cold",
+      "capacity_idx": 2,
+      "capacity": 50,
+      "site_rank": 8,
+      "score": 0.573121,
+      "assignment_source": "site_history",
+      "matched_site": "V10"
+    }
+  ],
+  "site_type_predictions": [
+    {
+      "site": "C1",
+      "type": "precool",
+      "capacity_idx": 1,
+      "capacity": 10,
+      "site_rank": 1,
+      "score": 0.990512,
+      "assignment_source": "site_history_type",
+      "matched_site": "C1"
+    },
+    {
+      "site": "T6",
+      "type": "frozen",
+      "capacity_idx": 1,
+      "capacity": 50,
+      "site_rank": 2,
+      "score": 0.990512,
+      "assignment_source": "site_history_type",
+      "matched_site": "T6"
+    },
+    {
+      "site": "T4",
+      "type": "ca",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "site_rank": 3,
+      "score": 0.990512,
+      "assignment_source": "site_history_type",
+      "matched_site": "T4"
+    },
+    {
+      "site": "T5",
+      "type": "frozen",
+      "capacity_idx": 1,
+      "capacity": 50,
+      "site_rank": 4,
+      "score": 0.805845,
+      "assignment_source": "site_history_type",
+      "matched_site": "T5"
+    },
+    {
+      "site": "T7",
+      "type": "ca",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "site_rank": 5,
+      "score": 0.804292,
+      "assignment_source": "site_history_type",
+      "matched_site": "T7"
+    },
+    {
+      "site": "T8",
+      "type": "cold",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "site_rank": 6,
+      "score": 0.583124,
+      "assignment_source": "site_history_type",
+      "matched_site": "T8"
+    },
+    {
+      "site": "V21",
+      "type": "cold",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "site_rank": 7,
+      "score": 0.578586,
+      "assignment_source": "site_history_type",
+      "matched_site": "V21"
+    },
+    {
+      "site": "V10",
+      "type": "cold",
+      "capacity_idx": 1,
+      "capacity": 30,
+      "site_rank": 8,
+      "score": 0.573121,
+      "assignment_source": "site_history_type",
+      "matched_site": "V10"
+    }
+  ],
+  "scored_candidates": [
+    {
+      "node_id": "C1",
+      "score": 0.9905118346214294
+    },
+    {
+      "node_id": "T6",
+      "score": 0.9905118346214294
+    },
+    {
+      "node_id": "T4",
+      "score": 0.9905118346214294
+    },
+    {
+      "node_id": "T5",
+      "score": 0.8058447241783142
+    },
+    {
+      "node_id": "T7",
+      "score": 0.8042919039726257
+    },
+    {
+      "node_id": "T8",
+      "score": 0.5831243991851807
+    },
+    {
+      "node_id": "V21",
+      "score": 0.578585684299469
+    },
+    {
+      "node_id": "V10",
+      "score": 0.5731214880943298
+    },
+    {
+      "node_id": "T2",
+      "score": 0.5719771981239319
+    },
+    {
+      "node_id": "V14",
+      "score": 0.5572476387023926
+    },
+    {
+      "node_id": "T1",
+      "score": 0.01941843144595623
+    },
+    {
+      "node_id": "V27",
+      "score": 0.01941843144595623
+    },
+    {
+      "node_id": "V11",
+      "score": 0.015091207809746265
+    },
+    {
+      "node_id": "T3",
+      "score": 0.012050922960042953
+    },
+    {
+      "node_id": "V17",
+      "score": 0.012050922960042953
+    },
+    {
+      "node_id": "V25",
+      "score": 0.011944164521992207
+    },
+    {
+      "node_id": "V4",
+      "score": 0.011944164521992207
+    },
+    {
+      "node_id": "V19",
+      "score": 0.011944164521992207
+    },
+    {
+      "node_id": "V12",
+      "score": 0.011944164521992207
+    },
+    {
+      "node_id": "V1",
+      "score": 0.009351334534585476
+    },
+    {
+      "node_id": "V24",
+      "score": 0.009351334534585476
+    },
+    {
+      "node_id": "V28",
+      "score": 0.009351334534585476
+    },
+    {
+      "node_id": "V8",
+      "score": 0.0073922681622207165
+    },
+    {
+      "node_id": "V16",
+      "score": 0.0073922681622207165
+    },
+    {
+      "node_id": "V5",
+      "score": 0.0073922681622207165
+    },
+    {
+      "node_id": "V7",
+      "score": 0.0073922681622207165
+    },
+    {
+      "node_id": "V20",
+      "score": 0.0073922681622207165
+    }
+  ],
+  "results": [
+    {
+      "label": "cold_start",
+      "status": "OPTIMAL",
+      "objective": 4433112.274860297,
+      "bound": 4392781.275002808,
+      "mip_gap_pct": 0.9098,
+      "elapsed_sec": 174.97,
+      "warm_sites": [],
+      "warm_sites_injected": 0,
+      "warm_facilities": [],
+      "warm_facilities_injected": 0,
+      "warm_strategy_version": null,
+      "warm_strategy_name": null,
+      "assignment_source_breakdown": {},
+      "solved_to_tol": true
+    },
+    {
+      "label": "warm_v1_site_only",
+      "status": "OPTIMAL",
+      "objective": 4433112.274860297,
+      "bound": 4392452.524044325,
+      "mip_gap_pct": 0.9172,
+      "elapsed_sec": 26.3,
+      "warm_sites": [
+        "C1",
+        "T6",
+        "T4",
+        "T5",
+        "T7",
+        "T8",
+        "V21",
+        "V10"
+      ],
+      "warm_sites_injected": 8,
+      "warm_facilities": [
+        {
+          "site": "C1",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T6",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T4",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T5",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T7",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T8",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "V21",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "V10",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        }
+      ],
+      "warm_facilities_injected": 8,
+      "warm_strategy_version": "site_only",
+      "warm_strategy_name": "site_ranking + default_type_capacity_fallback",
+      "assignment_source_breakdown": {
+        "default_site_only_fallback": 8
+      },
+      "solved_to_tol": true
+    },
+    {
+      "label": "warm_v2_site_type",
+      "status": "OPTIMAL",
+      "objective": 4433112.274860297,
+      "bound": 4394828.278754005,
+      "mip_gap_pct": 0.8636,
+      "elapsed_sec": 220.86,
+      "warm_sites": [
+        "C1",
+        "T6",
+        "T4",
+        "T5",
+        "T7",
+        "T8",
+        "V21",
+        "V10"
+      ],
+      "warm_sites_injected": 8,
+      "warm_facilities": [
+        {
+          "site": "C1",
+          "type": "precool",
+          "capacity_idx": 1,
+          "capacity": 10,
+          "site_rank": 1,
+          "score": 0.990512,
+          "assignment_source": "site_history_type",
+          "matched_site": "C1"
+        },
+        {
+          "site": "T6",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 2,
+          "score": 0.990512,
+          "assignment_source": "site_history_type",
+          "matched_site": "T6"
+        },
+        {
+          "site": "T4",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 3,
+          "score": 0.990512,
+          "assignment_source": "site_history_type",
+          "matched_site": "T4"
+        },
+        {
+          "site": "T5",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 4,
+          "score": 0.805845,
+          "assignment_source": "site_history_type",
+          "matched_site": "T5"
+        },
+        {
+          "site": "T7",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 5,
+          "score": 0.804292,
+          "assignment_source": "site_history_type",
+          "matched_site": "T7"
+        },
+        {
+          "site": "T8",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 6,
+          "score": 0.583124,
+          "assignment_source": "site_history_type",
+          "matched_site": "T8"
+        },
+        {
+          "site": "V21",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 7,
+          "score": 0.578586,
+          "assignment_source": "site_history_type",
+          "matched_site": "V21"
+        },
+        {
+          "site": "V10",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 8,
+          "score": 0.573121,
+          "assignment_source": "site_history_type",
+          "matched_site": "V10"
+        }
+      ],
+      "warm_facilities_injected": 8,
+      "warm_strategy_version": "site_type",
+      "warm_strategy_name": "site_ranking + site_history_or_nearest_neighbor_type + default_capacity",
+      "assignment_source_breakdown": {
+        "site_history_type": 8
+      },
+      "solved_to_tol": true
+    },
+    {
+      "label": "warm_v3_site_type_capacity",
+      "status": "OPTIMAL",
+      "objective": 4433112.274860297,
+      "bound": 4392136.109040305,
+      "mip_gap_pct": 0.9243,
+      "elapsed_sec": 189.36,
+      "warm_sites": [
+        "C1",
+        "T6",
+        "T4",
+        "T5",
+        "T7",
+        "T8",
+        "V21",
+        "V10"
+      ],
+      "warm_sites_injected": 8,
+      "warm_facilities": [
+        {
+          "site": "C1",
+          "type": "precool",
+          "capacity_idx": 0,
+          "capacity": 5,
+          "site_rank": 1,
+          "score": 0.990512,
+          "assignment_source": "site_history",
+          "matched_site": "C1"
+        },
+        {
+          "site": "T6",
+          "type": "frozen",
+          "capacity_idx": 0,
+          "capacity": 20,
+          "site_rank": 2,
+          "score": 0.990512,
+          "assignment_source": "site_history",
+          "matched_site": "T6"
+        },
+        {
+          "site": "T4",
+          "type": "cold",
+          "capacity_idx": 2,
+          "capacity": 50,
+          "site_rank": 3,
+          "score": 0.990512,
+          "assignment_source": "site_history",
+          "matched_site": "T4"
+        },
+        {
+          "site": "T5",
+          "type": "frozen",
+          "capacity_idx": 0,
+          "capacity": 20,
+          "site_rank": 4,
+          "score": 0.805845,
+          "assignment_source": "site_history",
+          "matched_site": "T5"
+        },
+        {
+          "site": "T7",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 5,
+          "score": 0.804292,
+          "assignment_source": "site_history",
+          "matched_site": "T7"
+        },
+        {
+          "site": "T8",
+          "type": "cold",
+          "capacity_idx": 0,
+          "capacity": 10,
+          "site_rank": 6,
+          "score": 0.583124,
+          "assignment_source": "site_history",
+          "matched_site": "T8"
+        },
+        {
+          "site": "V21",
+          "type": "cold",
+          "capacity_idx": 2,
+          "capacity": 50,
+          "site_rank": 7,
+          "score": 0.578586,
+          "assignment_source": "site_history",
+          "matched_site": "V21"
+        },
+        {
+          "site": "V10",
+          "type": "cold",
+          "capacity_idx": 2,
+          "capacity": 50,
+          "site_rank": 8,
+          "score": 0.573121,
+          "assignment_source": "site_history",
+          "matched_site": "V10"
+        }
+      ],
+      "warm_facilities_injected": 8,
+      "warm_strategy_version": "site_type_capacity",
+      "warm_strategy_name": "site_ranking + site_history_or_nearest_neighbor_type_capacity",
+      "assignment_source_breakdown": {
+        "site_history": 8
+      },
+      "solved_to_tol": true
+    }
+  ],
+  "results_by_version": {
+    "site_only": {
+      "label": "warm_v1_site_only",
+      "status": "OPTIMAL",
+      "objective": 4433112.274860297,
+      "bound": 4392452.524044325,
+      "mip_gap_pct": 0.9172,
+      "elapsed_sec": 26.3,
+      "warm_sites": [
+        "C1",
+        "T6",
+        "T4",
+        "T5",
+        "T7",
+        "T8",
+        "V21",
+        "V10"
+      ],
+      "warm_sites_injected": 8,
+      "warm_facilities": [
+        {
+          "site": "C1",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T6",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T4",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T5",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T7",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "T8",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "V21",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        },
+        {
+          "site": "V10",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "assignment_source": "default_site_only_fallback",
+          "matched_site": null
+        }
+      ],
+      "warm_facilities_injected": 8,
+      "warm_strategy_version": "site_only",
+      "warm_strategy_name": "site_ranking + default_type_capacity_fallback",
+      "assignment_source_breakdown": {
+        "default_site_only_fallback": 8
+      },
+      "solved_to_tol": true
+    },
+    "site_type": {
+      "label": "warm_v2_site_type",
+      "status": "OPTIMAL",
+      "objective": 4433112.274860297,
+      "bound": 4394828.278754005,
+      "mip_gap_pct": 0.8636,
+      "elapsed_sec": 220.86,
+      "warm_sites": [
+        "C1",
+        "T6",
+        "T4",
+        "T5",
+        "T7",
+        "T8",
+        "V21",
+        "V10"
+      ],
+      "warm_sites_injected": 8,
+      "warm_facilities": [
+        {
+          "site": "C1",
+          "type": "precool",
+          "capacity_idx": 1,
+          "capacity": 10,
+          "site_rank": 1,
+          "score": 0.990512,
+          "assignment_source": "site_history_type",
+          "matched_site": "C1"
+        },
+        {
+          "site": "T6",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 2,
+          "score": 0.990512,
+          "assignment_source": "site_history_type",
+          "matched_site": "T6"
+        },
+        {
+          "site": "T4",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 3,
+          "score": 0.990512,
+          "assignment_source": "site_history_type",
+          "matched_site": "T4"
+        },
+        {
+          "site": "T5",
+          "type": "frozen",
+          "capacity_idx": 1,
+          "capacity": 50,
+          "site_rank": 4,
+          "score": 0.805845,
+          "assignment_source": "site_history_type",
+          "matched_site": "T5"
+        },
+        {
+          "site": "T7",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 5,
+          "score": 0.804292,
+          "assignment_source": "site_history_type",
+          "matched_site": "T7"
+        },
+        {
+          "site": "T8",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 6,
+          "score": 0.583124,
+          "assignment_source": "site_history_type",
+          "matched_site": "T8"
+        },
+        {
+          "site": "V21",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 7,
+          "score": 0.578586,
+          "assignment_source": "site_history_type",
+          "matched_site": "V21"
+        },
+        {
+          "site": "V10",
+          "type": "cold",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 8,
+          "score": 0.573121,
+          "assignment_source": "site_history_type",
+          "matched_site": "V10"
+        }
+      ],
+      "warm_facilities_injected": 8,
+      "warm_strategy_version": "site_type",
+      "warm_strategy_name": "site_ranking + site_history_or_nearest_neighbor_type + default_capacity",
+      "assignment_source_breakdown": {
+        "site_history_type": 8
+      },
+      "solved_to_tol": true
+    },
+    "site_type_capacity": {
+      "label": "warm_v3_site_type_capacity",
+      "status": "OPTIMAL",
+      "objective": 4433112.274860297,
+      "bound": 4392136.109040305,
+      "mip_gap_pct": 0.9243,
+      "elapsed_sec": 189.36,
+      "warm_sites": [
+        "C1",
+        "T6",
+        "T4",
+        "T5",
+        "T7",
+        "T8",
+        "V21",
+        "V10"
+      ],
+      "warm_sites_injected": 8,
+      "warm_facilities": [
+        {
+          "site": "C1",
+          "type": "precool",
+          "capacity_idx": 0,
+          "capacity": 5,
+          "site_rank": 1,
+          "score": 0.990512,
+          "assignment_source": "site_history",
+          "matched_site": "C1"
+        },
+        {
+          "site": "T6",
+          "type": "frozen",
+          "capacity_idx": 0,
+          "capacity": 20,
+          "site_rank": 2,
+          "score": 0.990512,
+          "assignment_source": "site_history",
+          "matched_site": "T6"
+        },
+        {
+          "site": "T4",
+          "type": "cold",
+          "capacity_idx": 2,
+          "capacity": 50,
+          "site_rank": 3,
+          "score": 0.990512,
+          "assignment_source": "site_history",
+          "matched_site": "T4"
+        },
+        {
+          "site": "T5",
+          "type": "frozen",
+          "capacity_idx": 0,
+          "capacity": 20,
+          "site_rank": 4,
+          "score": 0.805845,
+          "assignment_source": "site_history",
+          "matched_site": "T5"
+        },
+        {
+          "site": "T7",
+          "type": "ca",
+          "capacity_idx": 1,
+          "capacity": 30,
+          "site_rank": 5,
+          "score": 0.804292,
+          "assignment_source": "site_history",
+          "matched_site": "T7"
+        },
+        {
+          "site": "T8",
+          "type": "cold",
+          "capacity_idx": 0,
+          "capacity": 10,
+          "site_rank": 6,
+          "score": 0.583124,
+          "assignment_source": "site_history",
+          "matched_site": "T8"
+        },
+        {
+          "site": "V21",
+          "type": "cold",
+          "capacity_idx": 2,
+          "capacity": 50,
+          "site_rank": 7,
+          "score": 0.578586,
+          "assignment_source": "site_history",
+          "matched_site": "V21"
+        },
+        {
+          "site": "V10",
+          "type": "cold",
+          "capacity_idx": 2,
+          "capacity": 50,
+          "site_rank": 8,
+          "score": 0.573121,
+          "assignment_source": "site_history",
+          "matched_site": "V10"
+        }
+      ],
+      "warm_facilities_injected": 8,
+      "warm_strategy_version": "site_type_capacity",
+      "warm_strategy_name": "site_ranking + site_history_or_nearest_neighbor_type_capacity",
+      "assignment_source_breakdown": {
+        "site_history": 8
+      },
+      "solved_to_tol": true
+    }
+  },
+  "cold_start": {
+    "label": "cold_start",
+    "status": "OPTIMAL",
+    "objective": 4433112.274860297,
+    "bound": 4392781.275002808,
+    "mip_gap_pct": 0.9098,
+    "elapsed_sec": 174.97,
+    "warm_sites": [],
+    "warm_sites_injected": 0,
+    "warm_facilities": [],
+    "warm_facilities_injected": 0,
+    "warm_strategy_version": null,
+    "warm_strategy_name": null,
+    "assignment_source_breakdown": {},
+    "solved_to_tol": true
+  },
+  "target_warm": {
+    "label": "warm_v3_site_type_capacity",
+    "status": "OPTIMAL",
+    "objective": 4433112.274860297,
+    "bound": 4392136.109040305,
+    "mip_gap_pct": 0.9243,
+    "elapsed_sec": 189.36,
+    "warm_sites": [
+      "C1",
+      "T6",
+      "T4",
+      "T5",
+      "T7",
+      "T8",
+      "V21",
+      "V10"
+    ],
+    "warm_sites_injected": 8,
+    "warm_facilities": [
+      {
+        "site": "C1",
+        "type": "precool",
+        "capacity_idx": 0,
+        "capacity": 5,
+        "site_rank": 1,
+        "score": 0.990512,
+        "assignment_source": "site_history",
+        "matched_site": "C1"
+      },
+      {
+        "site": "T6",
+        "type": "frozen",
+        "capacity_idx": 0,
+        "capacity": 20,
+        "site_rank": 2,
+        "score": 0.990512,
+        "assignment_source": "site_history",
+        "matched_site": "T6"
+      },
+      {
+        "site": "T4",
+        "type": "cold",
+        "capacity_idx": 2,
+        "capacity": 50,
+        "site_rank": 3,
+        "score": 0.990512,
+        "assignment_source": "site_history",
+        "matched_site": "T4"
+      },
+      {
+        "site": "T5",
+        "type": "frozen",
+        "capacity_idx": 0,
+        "capacity": 20,
+        "site_rank": 4,
+        "score": 0.805845,
+        "assignment_source": "site_history",
+        "matched_site": "T5"
+      },
+      {
+        "site": "T7",
+        "type": "ca",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "site_rank": 5,
+        "score": 0.804292,
+        "assignment_source": "site_history",
+        "matched_site": "T7"
+      },
+      {
+        "site": "T8",
+        "type": "cold",
+        "capacity_idx": 0,
+        "capacity": 10,
+        "site_rank": 6,
+        "score": 0.583124,
+        "assignment_source": "site_history",
+        "matched_site": "T8"
+      },
+      {
+        "site": "V21",
+        "type": "cold",
+        "capacity_idx": 2,
+        "capacity": 50,
+        "site_rank": 7,
+        "score": 0.578586,
+        "assignment_source": "site_history",
+        "matched_site": "V21"
+      },
+      {
+        "site": "V10",
+        "type": "cold",
+        "capacity_idx": 2,
+        "capacity": 50,
+        "site_rank": 8,
+        "score": 0.573121,
+        "assignment_source": "site_history",
+        "matched_site": "V10"
+      }
+    ],
+    "warm_facilities_injected": 8,
+    "warm_strategy_version": "site_type_capacity",
+    "warm_strategy_name": "site_ranking + site_history_or_nearest_neighbor_type_capacity",
+    "assignment_source_breakdown": {
+      "site_history": 8
+    },
+    "solved_to_tol": true
+  },
+  "ai_warm": {
+    "label": "warm_v1_site_only",
+    "status": "OPTIMAL",
+    "objective": 4433112.274860297,
+    "bound": 4392452.524044325,
+    "mip_gap_pct": 0.9172,
+    "elapsed_sec": 26.3,
+    "warm_sites": [
+      "C1",
+      "T6",
+      "T4",
+      "T5",
+      "T7",
+      "T8",
+      "V21",
+      "V10"
+    ],
+    "warm_sites_injected": 8,
+    "warm_facilities": [
+      {
+        "site": "C1",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T6",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T4",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T5",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T7",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "T8",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "V21",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      },
+      {
+        "site": "V10",
+        "type": "cold",
+        "capacity_idx": 1,
+        "capacity": 30,
+        "assignment_source": "default_site_only_fallback",
+        "matched_site": null
+      }
+    ],
+    "warm_facilities_injected": 8,
+    "warm_strategy_version": "site_only",
+    "warm_strategy_name": "site_ranking + default_type_capacity_fallback",
+    "assignment_source_breakdown": {
+      "default_site_only_fallback": 8
+    },
+    "solved_to_tol": true
+  },
+  "ai_vs_cold_speedup": 6.65,
+  "target_ai_vs_cold_speedup": 0.92,
+  "claim_boundary": "AI guided warm start for v3.0 capacity-chain MIP. Trained on 4 priority scenario runs (small data, XGBoost). Stage A ranks candidate sites from structural features (production, distance, coverage). This report then compares V1 site-only, V2 site + type, and V3 site + type + capacity warm-start injection. Gurobi makes final decisions; AI only seeds search. County-level case (39 nodes), not enterprise-scale validation."
+}

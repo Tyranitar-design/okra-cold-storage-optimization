@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.vite/
+
+# Local env / secrets
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+*.lic
+
+# Local databases and generated solver binaries
+.local_pg/
+.local_pg_data/
+*.db
+*.sqlite
+*.sqlite3
+*.pkl
+*.pickle
+*.joblib
+
+# Large generated deliverables
+*.apk
+*.ipa
+*.tar
+*.tar.gz
+*.zip
+*.7z
+
+# Office temporary / backup files
+~$*
+*.bak
+*.tmp
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

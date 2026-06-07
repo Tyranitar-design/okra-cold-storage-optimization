@@ -1,0 +1,31 @@
+{
+  "pages": [
+    {"path": "pages/index/index", "style": {"navigationBarTitleText": "🌿 秋葵冷库优化"}},
+    {"path": "pages/layout/layout", "style": {"navigationBarTitleText": "🗺️ 冷库布局"}},
+    {"path": "pages/recommend/recommend", "style": {"navigationBarTitleText": "⭐ AI选址推荐"}},
+    {"path": "pages/weather/weather", "style": {"navigationBarTitleText": "🌤️ 气象预警"}},
+    {"path": "pages/agent/agent", "style": {"navigationBarTitleText": "🤖 AI决策助手"}},
+    {"path": "pages/logistics/logistics", "style": {"navigationBarTitleText": "🚛 物流路线"}},
+    {"path": "pages/scan/scan", "style": {"navigationBarTitleText": "📷 扫码入库"}},
+    {"path": "pages/my-storage/my-storage", "style": {"navigationBarTitleText": "🏭 我的冷库"}}
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#0F172A",
+    "backgroundColor": "#F8FAFC",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#64748B",
+    "selectedColor": "#0F766E",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {"pagePath": "pages/index/index", "text": "首页", "iconPath": "static/home.png", "selectedIconPath": "static/home.png"},
+      {"pagePath": "pages/layout/layout", "text": "布局", "iconPath": "static/map.png", "selectedIconPath": "static/map.png"},
+      {"pagePath": "pages/recommend/recommend", "text": "推荐", "iconPath": "static/star.png", "selectedIconPath": "static/star.png"},
+      {"pagePath": "pages/weather/weather", "text": "气象", "iconPath": "static/weather.png", "selectedIconPath": "static/weather.png"}
+    ]
+  }
+}

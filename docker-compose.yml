@@ -1,0 +1,113 @@
+# ============================================================
+# 秋葵冷库优化 MIS — Docker Compose
+#
+# 快速启动：
+#   1. cp .env.example .env  # 填入真实密码和 API Key
+#   2. docker compose up -d
+#   3. 浏览器打开 http://localhost:8014/app
+#
+# 服务：
+#   db    — PostgreSQL 18（含 PostGIS）
+#   api   — FastAPI + MIS 静态文件
+#
+# 生产部署时在 api service 前加 nginx 反代（见 deploy/nginx.conf.example）
+# ============================================================
+
+services:
+
+  # ── PostgreSQL + PostGIS ────────────────────────────────────
+  db:
+    image: postgis/postgis:17-3.5-alpine
+    container_name: okra-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-okra_cold_storage}
+      POSTGRES_USER: ${POSTGRES_USER:-okra}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?请在 .env 中设置 POSTGRES_PASSWORD}
+    volumes:
+      # 数据持久化
+      - okra-pg-data:/var/lib/postgresql/data
+      # 自动执行初始化 SQL（schema 建表 + 扩展）
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    ports:
+      # 本地调试可访问；生产时可移除或改为 127.0.0.1:5432:5432
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-okra} -d ${POSTGRES_DB:-okra_cold_storage}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  # ── FastAPI 后端 + MIS 前端静态服务 ──────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    image: okra-mis:latest
+    container_name: okra-api
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      # 数据库 URL 使用内部 service 名 "db"
+      OKRA_DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-okra}:${POSTGRES_PASSWORD:?}@db:5432/${POSTGRES_DB:-okra_cold_storage}
+
+      # 高德地图（从 .env 透传）
+      OKRA_MAP_PROVIDER: ${OKRA_MAP_PROVIDER:-file}
+      OKRA_MAP_PUBLIC_KEY_ALLOWED: ${OKRA_MAP_PUBLIC_KEY_ALLOWED:-false}
+      OKRA_AMAP_JS_KEY: ${OKRA_AMAP_JS_KEY:-}
+      OKRA_AMAP_WEB_SERVICE_KEY: ${OKRA_AMAP_WEB_SERVICE_KEY:-}
+      OKRA_AMAP_SECURITY_CODE: ${OKRA_AMAP_SECURITY_CODE:-}
+
+      # 物流集成
+      LOGISTICS_BASE_URL: ${LOGISTICS_BASE_URL:-}
+
+      # 服务绑定
+      API_HOST: "0.0.0.0"
+      API_PORT: "8014"
+    ports:
+      - "${API_PORT:-8014}:8014"
+    volumes:
+      # 默认保留镜像内置 results/，避免空 volume 覆盖演示证据。
+      # 如需持久化新的运行日志，可继续挂载 logs；若需外置 results，建议用 override 文件单独启用。
+      - okra-logs:/app/logs
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import os, urllib.request; port = os.environ.get('API_PORT', '8014'); urllib.request.urlopen(f'http://127.0.0.1:{port}/health', timeout=5).read()",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  # ── 数据种子任务（一次性）────────────────────────────────────
+  # 手动触发：docker compose run --rm seed
+  seed:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    image: okra-mis:latest
+    container_name: okra-seed
+    profiles:
+      - seed   # 仅 docker compose --profile seed run seed 时执行
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      OKRA_DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-okra}:${POSTGRES_PASSWORD:?}@db:5432/${POSTGRES_DB:-okra_cold_storage}
+    command: >
+      sh -c "python scripts/seed_postgres_from_current_files.py --apply --init-schema"
+
+volumes:
+  okra-pg-data:
+    driver: local
+  okra-logs:
+    driver: local
